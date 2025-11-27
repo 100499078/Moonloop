@@ -131,69 +131,63 @@ header {
 
 /*EXPERIENCIAS DESTACADAS*/
 .experiencias {
-    padding: 70px 40px;
-    background-color: #ffffff;
-    text-align: center;
-    padding-top: 60px;
-}
-
-/*Para que no se expande demasiado en pantallas grandes*/
-main, .experiencias {
+    padding: 80px 40px;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .experiencias h2 {
     font-size: 28px;
     font-weight: 600;
-    margin-bottom: 50px;
-    color: #222;
+    margin-bottom: 40px;
 }
 
-
-.experiencias-items {
+/*Carrousel*/
+.carousel {
     display: flex;
-    justify-content: center;
-    gap: 35px;
-    flex-wrap: nowrap; /* 3 columnas fijas */
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    padding-bottom: 10px;
+    scrollbar-width: none;
 }
 
-.experiencia-item {
-    width: 300px;
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel-item {
+    width: 300px;      /* tamaño ideal como antes */
+    background-color: #fff;
+    border-radius: 12px;
+    flex-shrink: 0;
     text-align: left;
-    font-family: "Segoe UI", Tahoma, sans-serif;
-}
-
-.experiencia-item img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    border-radius: 14px;   /* borde suave como en figma */
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-
-.experiencia-item img:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+.carousel-item img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 12px;
+    aspect-ratio: 16/10;
 }
 
-
-.experiencia-item h3 {
+.carousel-item h3 {
     font-size: 18px;
     font-weight: 600;
-    color: #222;
-    margin-top: 14px;
-    margin-bottom: 8px;
+    margin: 12px 10px 6px;
 }
 
-
-.experiencia-item p {
+.carousel-item p {
     font-size: 14px;
-    line-height: 1.5;
     color: #555;
-    margin-bottom: 10px;
-    max-width: 95%;
+    margin: 0 10px 15px;
+}
+.carousel-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
 }
 
 /*TARJETA REGALO*/
