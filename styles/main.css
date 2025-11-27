@@ -195,7 +195,8 @@ header {
     max-width: 1200px;
     margin: 80px auto; 
     padding: 20px 40px;
-    background-color: #ffffff;
+    background-color: #cec9c9;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
