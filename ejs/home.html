@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="../styles/main.css">
+        <script src="../js/main.js" defer></script>
+    </head>
+
+
+    <body>
+        <!-- HEADER -->
+        <header>
+
+            <!-- Sección izquierda: logo -->
+             <div class="logo-section">
+                <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
+             </div>
+
+             <!-- Sección central: índice -->
+              <nav class="nav-menu">
+                <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#usuario">Usuario</a></li>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#otrosrincones">Otros rincones</a></li>
+                <li><a href="#comunidad">Comunidad</a></li>
+                </ul>
+              </nav>
+            <!-- Sección derecha: idiomas -->
+             <div class="language-section">
+                <select name="language" id="language-select">
+                    <option value="es">ES</option>
+                    <option value="en">IN</option>
+                </select>
+             </div>
+        </header>
+
+        <!-- CONTENIDO HOME -->
+
+            <!-- BANNER -->
+            <div class="banner">
+                <div class="banner-text">
+                    <h2>TU AVENTURA EMPIEZA AQUÍ</h2>
+                </div>
+            </div>
+
+            <!-- EXPERIENCIAS DESTACADAS -->
+
+            <section class="experiencias">
+                <h2>Experiencias Destacadas</h2>
+                <div class="experiencias-items">
+                    <div class="experiencia-item">
+                        <img src="../images/ex-colombia.jpg" alt="Experiencia 1">
+                        <h3>Experiencia Colombia</h3>
+                        <p>Recorre paisajes tropicales, descubre la riqueza cultural y vive la alegría única del pueblo colombiano.</p>
+                    </div>
+                    <div class="experiencia-item">
+                        <img src="../images/ex-vietnam.jpg" alt="Experiencia 2">
+                        <h3>Vietnam y sus sendas escondidas</h3>
+                        <p>Adéntrate en templos ancestrales, aldeas flotantes y caminos rodeados de naturaleza salvaje.</p>
+                    </div>
+                    <div class="experiencia-item">
+                        <img src="../images/ex-panama.jpg" alt="Experiencia 3">
+                        <h3>La ruta de los manglares por Panamá</h3>
+                        <p>Navega entre manglares, descubre fauna exótica y conecta con uno de los ecosistemas más fascinantes del país.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <section class="gift-card">
+                <div class="gift-text">
+                    <h2>¡Regala un viaje inolvidable!</h2>
+                    <p>No hay mejor regalo que el de una experiencia.</p>
+                    <button class="gift-btn">Ver más</button>
+                </div>
+                <div class="gift-image">
+                    <img src="../images/giftcard.png" alt="Tarjeta de regalo Moonloop">
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <section class="comunidad-section">
+                <div class="comunidad-image">
+                    <img src="../images/comunidad.png" alt="Comunidad Moonloop">
+                </div>
+
+                <div class="comunidad-text">
+                    <h2>¿Pensando en recorrer el mundo?</h2>
+                    <h3>¡Todo lo que necesitas saber en nuestra comunidad!</h3>
+                    <p>Únete a miles de viajeros que comparten consejos, rutas, dudas y experiencias reales para sacar el máximo partido a tus viajes.</p>
+                    <button class="comunidad-btn">Saber más</button>
+                </div>
+            </section>
+        
+            <!-- FOOTER -->
+             <footer class="footer">
+    
+                <div class="footer-left">
+                    <img src="../images/logo.png" alt="Moonloop logo" class="footer-logo">
+                    <p>Contacto +34 666 722 227</p>
+                    <a href="#">Políticas</a>
+                    <a href="#">FAQs</a>
+                </div>
+
+                <div class="footer-newsletter">
+                    <label for="email-input">¡No te pierdas nada con nuestra Newsletter!</label>
+                    <div class="newsletter-box">
+                        <input type="email" id="email-input" placeholder="Introduce tu correo">
+                        <button id="subscribe-btn">Enviar</button>
+                    </div>
+                    <p class="newsletter-msg"></p>
+                </div>
+
+                <div class="footer-icons">
+                    <a href="#"><img src="../images/ig.webp" alt="Instagram"></a>
+                    <a href="#"><img src="../images/whatsapp.webp" alt="LinkedIn"></a>
+                    <a href="#"><img src="../images/x.png" alt="X"></a>
+                </div>
+
+            </footer>
+
+        
+    </body>

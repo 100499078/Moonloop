@@ -1,0 +1,552 @@
+/* Estilos generales: quitar los márgenes y paddings por defecto*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* CABECERA */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #cec9c9;
+    padding: 12px 40px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/*Logo*/
+
+.logo-section .logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Navegación */
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    color: #7c7b84;
+}
+
+/*Selección de idioma*/
+.language-section select {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+
+    appearance: none;
+    padding-right: 26px;
+}
+
+.language-section {
+    position: relative;
+}
+
+.language-section::after {
+    content: "▾";
+    font-size: 11px;
+    color: #222;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.language-section select:hover {
+    border-color: #7c7b84;
+}
+
+/*CONTENIDO PRINCIPAL*/
+
+/*BANNER*/
+.banner{
+    position: relative; /*Para poner el texto sobre la imagen*/
+    margin-top: 40px;
+    width: 100%;
+    height: 240px;
+    color: #333;
+    background: url("../images/banner.jpg") no-repeat center center / cover; /*Imagen de fondo*/
+    text-align: center;
+    overflow: hidden;
+    border-radius: 12px; /* Bordes redondeados */
+}
+
+.banner::after{
+    content: "";
+    position: absolute; /*Dentro del banner*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /*Capa oscura sobre la imagen*/
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff; /* mejor con overlay oscuro */
+    text-align: center;
+}
+.banner-text h2{
+    font-size: 28px;
+    margin-top: 60px; /* mueve el h1 hacia abajo */
+   
+}
+
+
+/*EXPERIENCIAS DESTACADAS*/
+.experiencias {
+    padding: 70px 40px;
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 60px;
+}
+
+/*Para que no se expande demasiado en pantallas grandes*/
+main, .experiencias {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experiencias h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #222;
+}
+
+
+.experiencias-items {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: nowrap; /* 3 columnas fijas */
+}
+
+.experiencia-item {
+    width: 300px;
+    text-align: left;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.experiencia-item img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 14px;   /* borde suave como en figma */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+.experiencia-item img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+.experiencia-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin-top: 14px;
+    margin-bottom: 8px;
+}
+
+
+.experiencia-item p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 10px;
+    max-width: 95%;
+}
+
+/*TARJETA REGALO*/
+.gift-card {
+    max-width: 1200px;
+    margin: 80px auto; 
+    padding: 20px 40px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.gift-text {
+    flex: 1;
+}
+
+.gift-text h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.gift-text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 22px;
+    max-width: 420px;
+}
+
+/* BOTÓN */
+.gift-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+    cursor: pointer;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.gift-btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+.gift-image img {
+    width: 320px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.section-divider {
+    width: 100%;
+    max-width: 1200px;      /* igual que el contenido principal */
+    height: 1px;
+    background-color: #e8e8e8;  /* gris MUY suave */
+    margin: 60px auto;      /* separación entre bloques */
+}
+
+/*COMUNIDAD*/
+.comunidad-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.comunidad-image img {
+    width: 500px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.comunidad-text {
+    flex: 1;
+}
+
+.comunidad-text h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.comunidad-text h3 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.comunidad-text p {
+    font-size: 15px;
+    color: #555;
+    max-width: 460px;
+    margin-bottom: 22px;
+}
+
+.comunidad-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.comunidad-btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    border-top: 1px solid #eee;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 15px;
+}
+
+.footer-left p,
+.footer-left a {
+    color: #555;
+    text-decoration: none;
+}
+
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    height: 32px;
+    object-fit: contain;
+}
+
+/* NEWSLETTER */
+.footer-newsletter {
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.footer-newsletter label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.newsletter-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter-box input {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 200px;
+    font-size: 14px;
+}
+
+.newsletter-box button {
+    padding: 7px 16px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.newsletter-box button:hover {
+    background-color: #333;
+}
+
+.newsletter-msg {
+    font-size: 13px;
+    color: green;
+    margin-top: 5px;
+}
+
+.footer-icons img {
+    width: 22px;
+    opacity: 0.7;
+    transition: 0.2s ease;
+}
+
+.footer-icons img:hover {
+    opacity: 1;
+}
+
+/*RESPONSIVE: móvil*/
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    /* CABECERA */
+    header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-menu ul {
+        flex-wrap: wrap;
+        gap: 18px;
+        justify-content: center;
+    }
+
+    .language-section select {
+        width: 100px;
+        font-size: 13px;
+    }
+
+
+    .banner {
+        height: 180px; 
+    }
+
+    .banner-text h2 {
+        font-size: 20px;
+        margin-top: 0; 
+        padding: 0 10px;
+    }
+
+
+    .experiencias {
+        padding: 50px 20px;
+    }
+
+    .experiencias-items {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .experiencia-item {
+        width: 90%;
+    }
+
+    .experiencia-item img {
+        height: 180px;
+    }
+
+
+    .gift-card {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .gift-text p {
+        margin: 0 auto 22px;
+    }
+
+    .gift-image img {
+        width: 240px;
+    }
+
+
+    .comunidad-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .comunidad-image img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .comunidad-text p {
+        margin: 0 auto 20px;
+    }
+
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 30px 20px;
+    }
+
+    .footer-left {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-box {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .newsletter-box input {
+        width: 100%;
+    }
+
+    .footer-icons {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+/*RESPONSIVE: tablet*/
+@media (max-width: 1024px) {
+
+    .experiencias-items {
+        gap: 20px;
+    }
+
+    .gift-card {
+        gap: 40px;
+    }
+
+    .comunidad-section {
+        gap: 40px;
+    }
+
+    header {
+        padding: 15px 30px;
+    }
+}
+
+
+
