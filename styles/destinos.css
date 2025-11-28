@@ -1,0 +1,585 @@
+/* BANNER DESTINOS */
+:root {
+    /*colores*/
+    --color-cabecera: #F5F0EB;
+    --azul-clarito:   #C3CBD6;  /* Azul muy suave para fondos */    
+    --color-texto-principal: #333;  /* Gris oscuro para textos */
+    --color-destacado: #007bff;     /* Azul eléctrico para precios o botones */
+    --fondo-overlay: #F6F4F2; /* Blanco casi opaco */
+}
+
+.banner-destinos {
+    margin-top: 40px;
+    width: 100%;
+    height: 240px;
+    background: url("../images/banner-destinos.jpg") center/cover no-repeat;
+    position: relative;
+    border-radius: 12px;
+}
+
+.banner-destinos::after {
+    content:"";
+    position:absolute;
+    inset:0;
+    background: rgba(0,0,0,0.35);
+    border-radius:12px;
+}
+
+.banner-destinos-text {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    color:white;
+}
+
+/* FILTROS */
+.destinos-filtros {
+    max-width:1200px;
+    margin:60px auto 20px;
+    padding:0 40px;
+}
+
+.destinos-filtros h3 {
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.filtros-grid {
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.filtros-grid select,
+.filtros-grid input {
+    padding:10px 16px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+}
+
+/* GRID DESTINOS */
+.destinos-listado {
+    max-width:1200px;
+    margin:0 auto;
+    padding:40px;
+}
+
+.destinos-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap:28px;
+}
+
+.dest-card {
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition:0.25s ease;
+}
+
+.dest-card:hover {
+    transform: translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.dest-card img {
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.dest-card-text {
+    padding:16px;
+}
+
+.dest-card-text h3 {
+    margin-bottom:8px;
+    font-size:20px;
+    font-weight:600;
+}
+
+.dest-card-text p {
+    font-size:14px;
+    color:#555;
+    margin-bottom:14px;
+}
+
+.dest-btn {
+    display:inline-block;
+    padding:10px 20px;
+    background:#000;
+    color:white;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.dest-btn:hover {
+    background:#333;
+}
+
+
+.search-bar {
+    width: 100%;
+    background-color: #f9f8f8;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-container {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Estilos para la barra de búsqueda 
+.search-container input[type="text"] {
+    flex: 1;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.search-container input[type="range"] {
+    width: 200px;
+}
+
+#budget-value {
+    font-weight: 600;
+    margin-left: 10px;
+}
+*/
+
+/* --- ESTILOS DEL HERO (La portada) --- */
+.hero-section {
+    position: relative;
+    height: 80vh; /* Altura de la pantalla */
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/bluemoon2.jpg'); /* Pon tu imagen de fondo aquí */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* La barra bonita redondeada (Trigger) */
+.search-trigger {
+    background: white;
+    width: 600px;
+    max-width: 90%;
+    padding: 15px 25px;
+    border-radius: 50px; /* Forma de píldora */
+    display: flex;
+    align-items: center;
+    cursor: text; /* El cursor parece de texto */
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+    position: relative; 
+    z-index: 50;
+    cursor: pointer; /* Fuerza el icono de la manita */
+}
+
+.search-trigger:hover {
+    transform: scale(1.02);
+}
+
+.search-icon {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #666;
+}
+
+.placeholder-text {
+    color: #888;
+    font-size: 18px;
+}
+
+/* --- ESTILOS DEL OVERLAY (La ventana que se abre) --- */
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--fondo-overlay);
+    z-index: 1000;
+    display: flex; /* Flex para centrar */
+    justify-content: center;
+    align-items: flex-start; /* Alineado arriba */
+    padding-top: 80px;
+    
+    /* Efecto de aparición */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    
+}
+
+.search-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-content {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Input Real dentro del Overlay */
+.real-search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.real-search-box input {
+    width: 100%;
+    padding: 15px;
+    font-size: 24px;
+    border: none;
+    border-bottom: 2px solid #ddd; /* Solo línea abajo */
+    outline: none;
+    background: transparent;
+}
+
+.search-btn-action {
+    padding: 10px 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* --- ESTILOS DEL SLIDER DE PRESUPUESTO --- */
+.budget-filter-container {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.budget-filter-container label {
+    font-size: 18px;
+    color: #333;
+    display: block;
+    margin-bottom: 15px;
+}
+
+#budget-value {
+    font-weight: bold;
+    color: #007bff; /* Azul destacado */
+}
+
+input[type=range] {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+   
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.budget-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #888;
+    font-size: 14px;
+}
+
+/* --- SUGERENCIAS (Más buscados) --- */
+.mas-buscados h3 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.grid-suggestions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.suggestion-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.suggestion-card p {
+    margin-top: 10px;
+    font-weight: 600;
+}
+.suggestion-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.suggestion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+/* DESTACADOS */
+.destacados {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.destacados h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.destacados-carousel {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.destacados-item {
+    min-width: 300px;
+    background-color: #fff;
+    border-radius: 12px;
+    flex-shrink: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.destacados-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destacados-text {
+    padding: 15px;
+}
+
+.destacados-text h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.destacados-text p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.destacados-text .price {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.btn-vermas {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.btn-vermas:hover {
+    background-color: #333;
+}
+
+/* PLANIFICA TU RUTA */
+.planifica {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: var(--color-cabecera)
+    ;
+}
+
+.planifica h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.planifica p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.planifica-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.planifica-btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+/* --- ESTILOS GENERALES DE SECCIÓN (Contenedores) --- */
+.por-region,
+.por-compania,
+.por-tematica {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Centramos todo por defecto */
+}
+
+.por-region h2,
+.por-compania h2,
+.por-tematica h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333; /* Ajusta el color si es necesario */
+}
+
+/* --- GRID LAYOUT (La estructura de 3 columnas) --- */
+.grid-region,
+.grid-compania,
+.grid-tematica {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 20px;
+}
+
+/* --- TARJETAS (Items) --- */
+.region-item,
+.compania-item,
+.tematica-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    display: block; /* Asegura que ocupen el espacio de la celda */
+}
+
+/* --- IMÁGENES --- */
+.region-item img,
+.compania-item img,
+.tematica-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    filter: brightness(70%) contrast(1.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    display: block; /* Elimina espacios fantasma debajo de la imagen */
+}
+
+/* Efecto Hover en la Imagen */
+.region-item:hover img,
+.compania-item:hover img,
+.tematica-item:hover img {
+    transform: scale(1.05);
+    filter: brightness(80%) contrast(1.2);
+}
+
+/* --- TÍTULOS DENTRO DE LAS TARJETAS (H3) --- */
+.region-item h3,
+.compania-item h3,
+.tematica-item h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    z-index: 2;
+    font-size: 18px;
+    margin: 0; /* Importante para evitar desplazamientos */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Mejora la lectura */
+}
+
+/* --- OVERLAY (Capa oscura al pasar el ratón) --- */
+.overlay {
+    position: absolute;
+    inset: 0; /* Cubre todo el padre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background: rgba(0,0,0,0.25);
+    transition: opacity 0.3s ease;
+    z-index: 3;
+}
+
+/* Mostrar Overlay al Hover en cualquiera de los items */
+.region-item:hover .overlay,
+.compania-item:hover .overlay,
+.tematica-item:hover .overlay {
+    opacity: 1;
+}
+
+/* --- FLECHA --- */
+.arrow {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* --- RESPONSIVE (Opcional: Para móviles) --- */
+@media (max-width: 768px) {
+    .grid-region,
+    .grid-compania,
+    .grid-tematica {
+        grid-template-columns: 1fr; /* 1 columna en móvil */
+    }
+}

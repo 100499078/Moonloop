@@ -1,4 +1,13 @@
 /* Estilos generales: quitar los márgenes y paddings por defecto*/
+:root {
+    /* Aquí inventas los nombres. Deben empezar con dos guiones -- */
+    --color-cabeceraS: #cec9c9;
+    --color-cabecera:#F5F0EB;
+    --azul-clarito:   #C3CBD6;  /* Azul muy suave para fondos */    
+    --color-texto-principal: #333;  /* Gris oscuro para textos */
+    --color-destacado: #007bff;     /* Azul eléctrico para precios o botones */
+    --fondo-overlay: rgba(255, 255, 255, 0.95); /* Blanco casi opaco */
+}
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +28,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    background-color: #cec9c9;
+    background-color: var(--color-cabecera);
     padding: 12px 40px;
 
     border-bottom: 1px solid #e5e5e5;
@@ -311,7 +320,7 @@ header {
     max-width: 1200px;
     margin: 80px auto; 
     padding: 20px 40px;
-    background-color: #cec9c9;
+    background-color: var(--color-cabecera);
     border-radius: 12px;
     display: flex;
     align-items: center;

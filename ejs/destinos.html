@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos - Moonloop</title>
+
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/destinos.css"> 
+    <script src="../js/translation.js" defer></script>
+    <script src="../js/barrabuscar.js" defer></script>
+    <link rel="icon" type="image/png" href="../images/luna.png">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo-section">
+            <img src="../images/logo.png" class="logo">
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a data-i18n="nav_home" href="home.html">Inicio</a></li>
+                <li><a data-i18n="nav_user" href="#">Usuario</a></li>
+                <li><a data-i18n="nav_destinations" href="destinos.html">Destinos</a></li>
+                <li><a data-i18n="nav_otherplaces" href="#">Otros rincones</a></li>
+                <li><a data-i18n="nav_community" href="#">Comunidad</a></li>
+            </ul>
+        </nav>
+
+        <div class="language-section">
+            <select id="language-select">
+                <option value="es">ES</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- HERO SECTION: BUSCADOR -->
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Tú viajas, tú decides</h1>
+            <p>Somos viajeros que entienden a viajeros</p>
+            
+            <div class="search-trigger" id="trigger-buscador">
+                <span class="search-icon">🔍</span>
+                <span class="placeholder-text">Busca tu destino...</span>
+            </div>
+        </div>
+    </section>
+
+    <div id="search-overlay" class="search-overlay">
+        <button class="close-btn" id="btn-cerrar">x</button>
+        
+        <div class="overlay-content">
+            <h2>Busca tu destino</h2>
+            
+            <div class="real-search-box">
+                <input type="text" placeholder="Ej: Viaje exótico..." id="destination-search">
+                <button class="search-btn-action">Buscar</button>
+            </div>
+
+            <div class="budget-filter-container">
+                <label>Tu presupuesto máximo: <span id="budget-value">2500€</span></label>
+                <input type="range" id="budget-range" min="100" max="5000" step="50" value="2500">
+                <div class="budget-labels">
+                    <span>Low Cost</span>
+                    <span>Lujo</span>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="mas-buscados">
+                <h3>Más buscados</h3>
+                <div class="grid-suggestions">
+                    <div class="suggestion-card">
+                        <img src="../images/bali.jpg" alt="Egipto"> <p>Bali Zen & SPA</p>
+                    </div>
+                    <div class="suggestion-card">
+                        <img src="../images/pack-japon.jpg" alt="Japón">
+                        <p>Japón Ancestral</p>
+                    </div>
+                    <div class="suggestion-card">
+                        <img src="../images/costarica.jpg" alt="Caribe">
+                        <p>Pura Vida Costa Rica</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- DESTACADOS -->
+    <section class="destacados">
+    <h2>MOONLOOP recomienda <h2>
+        <div class="destacados-carousel">
+            <div class="destacados-item">
+                <img src="../images/pack-japon.jpg" alt="Pack Japón">
+                <div class="destacados-text">
+                    <h3>Japón Mágico</h3>
+                    <p>Recorre templos ancestrales y ciudades modernas.</p>
+                    <span class="price">€1,200</span>
+                    <a href="pack-japon.html" class="btn-vermas">Ver más</a>
+                </div>
+            </div>
+            <!-- Más items aquí -->
+        </div>
+    </section>
+
+    <!-- PLANIFICA TU RUTA -->
+    <section class="planifica">
+        <div class="planifica-container">
+            <h2>Planifica tu ruta</h2>
+            <p>Crea tu itinerario a medida y descubre experiencias únicas.</p>
+            <button class="planifica-btn">Planifica ya</button>
+        </div>
+    </section>
+
+
+    <!-- POR REGION -->
+    <section class="por-region">
+        <h2>Por Región</h2>
+        <div class="grid-region">
+            <a href="norteamerica.html" class="region-item">
+                <img src="../images/usa.jpg" alt="Norteamérica">
+                <div class="overlay"><span class="arrow">→</span></div>
+                <h3>Norteamérica</h3>
+            </a>
+            <a href="latinoamerica.html" class="region-item">
+                <img src="../images/latam.jpg" alt="Latinoamérica">
+                <div class="overlay"><span class="arrow">→</span></div>
+                <h3>Latinoamérica</h3>
+            </a>
+            <a href="africa.html" class="region-item">
+                <img src="../images/africa.jpg" alt="África">
+                <div class="overlay"><span class="arrow">→</span></div>
+                <h3>África</h3>
+            </a>
+            <a href="asia.html" class="region-item">
+                <img src="../images/ASIA.jpg" alt="Asia">
+                <div class="overlay"><span class="arrow">→</span></div>
+                <h3>Asia</h3>
+            </a>
+            <a href="europa.html" class="region-item">
+                <img src="../images/europa.jpg" alt="Europa">
+                <div class="overlay"><span class="arrow">→</span></div>
+                <h3>Europa</h3>
+            </a>
+            <a href="pacifico.html" class="region-item">
+                <img src="../images/PACIFICO.jpg" alt="Pacífico">
+                <div class="overlay"><span class="arrow">→</span></div>
+                <h3>Pacífico</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- POR COMPAÑIA -->
+    <section class="por-compania">
+        <h2>Por Compañía</h2>
+        <div class="grid-compania">
+            <a href="compania.html" class="compania-item">
+                <img src="../images/group.jpg" alt="Viaja en grupo">
+                <div class="overlay"><span class="arrow">→</span></div>
+                <h3>Viaja en grupo </h3>
+            </a>
+            <a href="compania.html" class="compania-item">
+                <img src="../images/solo.jpg" alt="Viaja solo">
+                <div class="overlay"><span class="arrow">→</span></div>
+                <h3>Viaja solo </h3>
+            </a>
+            <a href="compania.html" class="compania-item">
+                <img src="../images/couple.jpg" alt="Viaja en pareja">
+                <div class="overlay"><span class="arrow">→</span></div>
+                <h3>Viaja en pareja </h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- POR TEMÁTICA -->
+    <section class="por-tematica">
+        <h2>Por Temática</h2>
+        <div class="grid-tematica">
+            <a href="aventura.html" class="tematica-item">
+                <img src="../images/aventura.jpg" alt="Aventura">
+                <div class="overlay"><span class="arrow">→</span></div>
+                <h3>Aventura </h3>
+            </a>
+            <a href="cultural.html" class="tematica-item">
+                <img src="../images/cosmopolita.jpg" alt="Cosmopolita">
+                <div class="overlay"><span class="arrow">→</span></div>
+                <h3>Cosmopolita </h3>
+            </a>
+            <a href="relax.html" class="tematica-item">
+                <img src="../images/relax.jpg" alt="Relax">
+                <div class="overlay"><span class="arrow">→</span></div>
+                <h3>Relax </h3>
+            </a>
+        </div>
+    </section>
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="../images/logo.png" class="footer-logo">
+            <p>Contacto +34 666 722 227</p>
+            <a href="#">Políticas</a>
+            <a href="#">FAQs</a>
+        </div>
+
+        <div class="footer-newsletter">
+            <label>¡No te pierdas nada con nuestra Newsletter!</label>
+            <div class="newsletter-box">
+                <input type="email" placeholder="Introduce tu correo">
+                <button>Enviar</button>
+            </div>
+        </div>
+
+        <div class="footer-icons">
+            <a href="#"><img src="../images/ig.webp"></a>
+            <a href="#"><img src="../images/whatsapp.webp"></a>
+            <a href="#"><img src="../images/x.png"></a>
+        </div>
+    </footer>
+
+    <script src="barrabuscar.js"></script>
+
+</body>
+
+</html>
