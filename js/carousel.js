@@ -19,3 +19,15 @@ function startCarousel() {
 }
 
 startCarousel();
+
+// PACKS CAROUSEL
+const packSlides = document.querySelectorAll(".pack");
+let currentPack = 0;
+
+function showNextPack() {
+    packSlides[currentPack].classList.remove("active");
+    currentPack = (currentPack + 1) % packSlides.length;
+    packSlides[currentPack].classList.add("active");
+}
+
+setInterval(showNextPack, 2000);

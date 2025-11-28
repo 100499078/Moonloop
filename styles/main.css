@@ -40,9 +40,13 @@ header {
     gap: 32px;
     margin: 0;
     padding: 0;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .nav-menu ul li a {
+    white-space: nowrap;
     text-decoration: none;
     color: #222;
     font-size: 16px;
@@ -127,6 +131,118 @@ header {
     margin-top: 60px; /* mueve el h1 hacia abajo */
    
 }
+
+/*PACKS DESTACADOS*/
+/* PACKS DESTACADOS */
+.packs {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.packs h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+/* Contenedor del slider */
+.packs-carousel {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* Cada pack (slide) */
+.pack {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.pack.active {
+    opacity: 1;
+}
+
+.pack img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* Degradado ligero para legibilidad del texto */
+.pack::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.05));
+    border-radius: 14px;
+    z-index: 1;
+}
+
+/* Texto sobre la imagen */
+.slide-text {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 2;
+    text-align: left;
+    color: white;
+    max-width: 420px;
+}
+
+.slide-text h3 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.slide-text p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.pack-btn {
+    display: inline-block;
+    margin-top: 12px;
+
+    background-color: #f9f8f8;
+    color: #222;
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+.pack-btn:hover {
+    background-color: #f4f4f4;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .packs-carousel {
+        height: 300px;
+    }
+
+    .slide-text {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .slide-text h3 {
+        font-size: 20px;
+    }
+}
+
 
 
 /*EXPERIENCIAS DESTACADAS*/
@@ -443,24 +559,49 @@ header {
         margin-top: 0; 
         padding: 0 10px;
     }
-
-
-    .experiencias {
-        padding: 50px 20px;
+    .packs {
+    padding: 50px 20px;
     }
 
-    .experiencias-items {
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
+    .packs-carousel {
+        height: 250px;              /* más pequeño en móvil */
+        border-radius: 12px;
     }
 
-    .experiencia-item {
-        width: 90%;
+    .pack img {
+        height: 100%;
+        object-fit: cover;
     }
 
-    .experiencia-item img {
-        height: 180px;
+    .slide-text {
+        bottom: 20px;
+        left: 20px;
+        max-width: 260px;           /* caja más pequeña */
+    }
+
+    .slide-text h3 {
+        font-size: 18px;
+    }
+
+    .pack-btn {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    /* CARRUSEL DE EXPERIENCIAS (horizontal) */
+    .carousel {
+        overflow-x: auto;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .carousel-item {
+        min-width: 230px;
+    }
+
+    .carousel-item img {
+        aspect-ratio: 16/10;
+        height: auto;
     }
 
 
@@ -540,6 +681,36 @@ header {
 
     header {
         padding: 15px 30px;
+    }
+    .packs {
+    padding: 60px 30px;
+    }
+
+    .packs-carousel {
+        height: 320px;
+    }
+
+    .slide-text {
+        bottom: 30px;
+        left: 30px;
+        max-width: 340px;
+    }
+
+    .slide-text h3 {
+        font-size: 22px;
+    }
+
+    .pack-btn {
+        font-size: 15px;
+    }
+
+    .carousel-item {
+        min-width: 260px;
+    }
+
+    .carousel-item img {
+        height: 170px;
+        object-fit: cover;
     }
 }
 

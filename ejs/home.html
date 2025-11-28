@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../styles/main.css">
         <script src="../js/main.js" defer></script>
         <script src="../js/carousel.js" defer></script>
+        <script src="../js/translation.js" defer></script>
     </head>
 
 
@@ -22,18 +23,18 @@
              <!-- Sección central: índice -->
               <nav class="nav-menu">
                 <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#usuario">Usuario</a></li>
-                <li><a href="#destinos">Destinos</a></li>
-                <li><a href="#otrosrincones">Otros rincones</a></li>
-                <li><a href="#comunidad">Comunidad</a></li>
+                <li><a data-i18n="nav_home" href="#inicio">Inicio</a></li>
+                <li><a data-i18n="nav_user" href="#usuario">Usuario</a></li>
+                <li><a data-i18n="nav_destinations" href="#destinos">Destinos</a></li>
+                <li><a data-i18n="nav_otherplaces" href="#otrosrincones">Otros rincones</a></li>
+                <li><a data-i18n="nav_community" href="#comunidad">Comunidad</a></li>
                 </ul>
               </nav>
             <!-- Sección derecha: idiomas -->
              <div class="language-section">
                 <select name="language" id="language-select">
                     <option value="es">ES</option>
-                    <option value="en">IN</option>
+                    <option value="en">EN</option>
                 </select>
              </div>
         </header>
@@ -43,59 +44,90 @@
             <!-- BANNER -->
             <div class="banner">
                 <div class="banner-text">
-                    <h2>TU AVENTURA EMPIEZA AQUÍ</h2>
+                    <h2 data-i18n="banner_text">TU AVENTURA EMPIEZA AQUÍ</h2>
                 </div>
             </div>
+
+            <!-- PACKS DESTACADOS -->
+             <section class="packs">
+                <h2 data-i18n="packs_title">Packs Destacados</h2>
+
+                <div class="packs-carousel">
+                    <div class="pack active">
+                        <img src="../images/pack-japon.jpg" alt="Pack Japón">
+                        <div class="slide-text">
+                            <h3 data-i18n="pack_japan_title">Aventura en Japón</h3>
+                            <a href="#destinos" class="pack-btn" data-i18n="see_destinations">Ver destinos</a>
+                        </div>
+                    </div>
+
+                    <div class="pack">
+                        <img src="../images/pack-colombia.jpg" alt="Pack Perú">
+                        <div class="slide-text">
+                            <h3 data-i18n="pack_colombia_title">Ruta Andina por Colombia</h3>
+                            <a href="#destinos" class="pack-btn" data-i18n="see_destinations">Ver destinos</a>
+                        </div>
+                    </div>
+
+                    <div class="pack">
+                        <img src="../images/pack-sudafrica.jpg" alt="Pack Tailandia">
+                        <div class="slide-text">
+                            <h3 data-i18n="pack_southafrica_title">Cataratas Victoria en Sudáfrica</h3>
+                            <a href="#destinos" class="pack-btn" data-i18n="see_destinations">Ver destinos</a>
+                        </div>
+                    </div>
+                </div>
+             </section>
 
             <!-- EXPERIENCIAS DESTACADAS -->
 
             <section class="experiencias">
-                <h2>Experiencias Destacadas</h2>
+                <h2 data-i18n="exp_title">Experiencias Destacadas</h2>
                 <div class="carousel">
                     <div class="carousel-item">
                         <img src="../images/ex-colombia.jpg" alt="Experiencia 1">
-                        <h3>Experiencia Colombia</h3>
-                        <p>Recorre paisajes tropicales, descubre la riqueza cultural y vive la alegría única del pueblo colombiano.</p>
+                        <h3 data-i18n="exp_colombia_title">Experiencia Colombia</h3>
+                        <p data-i18n="exp_colombia_desc">Recorre paisajes tropicales, descubre la riqueza cultural y vive la alegría única del pueblo colombiano.</p>
                     </div>
                     <div class="carousel-item">
                         <img src="../images/ex-vietnam.jpg" alt="Experiencia 2">
-                        <h3>Vietnam y sus sendas escondidas</h3>
-                        <p>Adéntrate en templos ancestrales, aldeas flotantes y caminos rodeados de naturaleza salvaje.</p>
+                        <h3 data-i18n="exp_vietnam_title">Vietnam y sus sendas escondidas</h3>
+                        <p data-i18n="exp_vietnam_desc">Adéntrate en templos ancestrales, aldeas flotantes y caminos rodeados de naturaleza salvaje.</p>
                     </div>
                     <div class="carousel-item">
                         <img src="../images/ex-panama.jpg" alt="Experiencia 3">
-                        <h3>La ruta de los manglares por Panamá</h3>
-                        <p>Navega entre manglares, descubre fauna exótica y conecta con uno de los ecosistemas más fascinantes del país.</p>
+                        <h3 data-i18n="exp_panama_title">La ruta de los manglares por Panamá</h3>
+                        <p data-i18n="exp_panama_desc">Navega entre manglares, descubre fauna exótica y conecta con uno de los ecosistemas más fascinantes del país.</p>
                     </div>
                     <div class="carousel-item">
                         <img src="../images/ex-islandia.avif" alt="Experiencia 4">
-                        <h3>Exploración de glaciares en Islandia</h3>
-                        <p>Camina sobre antiguas masas de hielo y descubre cuevas de tonos azules imposibles.</p>
+                        <h3 data-i18n="exp_iceland_title">Exploración de glaciares en Islandia</h3>
+                        <p data-i18n="exp_iceland_desc">Camina sobre antiguas masas de hielo y descubre cuevas de tonos azules imposibles.</p>
                     </div>
                     <div class="carousel-item">
                         <img src="../images/ex-peru.jpg" alt="Experiencia 5">
-                        <h3>Ruta a la Montaña de 7 colores en Perú</h3>
-                        <p>Un trekking único entre paisajes surrealistas.</p>
+                        <h3 data-i18n="exp_peru_title">Ruta a la Montaña de 7 colores en Perú</h3>
+                        <p data-i18n="exp_peru_desc">Un trekking único entre paisajes surrealistas.</p>
                     </div>
                     <div class="carousel-item">
                         <img src="../images/ex-turquia.jpeg" alt="Experiencia 6">
-                        <h3>Cappadocia en globo en Turquía</h3>
-                        <p>Un cielo lleno de globos sobre formaciones rocosas únicas.</p>
+                        <h3 data-i18n="exp_turkey_title">Cappadocia en globo en Turquía</h3>
+                        <p data-i18n="exp_turkey_desc">Un cielo lleno de globos sobre formaciones rocosas únicas.</p>
                     </div>
                     <div class="carousel-item">
                         <img src="../images/ex-filipinas.jpg" alt="Experiencia 7">
-                        <h3>Filipinas, cuevas y laguna de El Nido</h3>
-                        <p>Kayak entre aguas turquesas y formaciones kársticas.</p>
+                        <h3 data-i18n="exp_philippines_title">Filipinas, cuevas y laguna de El Nido</h3>
+                        <p data-i18n="exp_philippines_desc">Kayak entre aguas turquesas y formaciones kársticas.</p>
                     </div>
                     <div class="carousel-item">
                         <img src="../images/ex-kenia.jpg" alt="Experiencia 8">
-                        <h3>Un safari en Masai Mara, Kenia</h3>
-                        <p>Los cinco grandes y puestas de sol épicas.</p>
+                        <h3 data-i18n="exp_kenya_title">Un safari en Masai Mara, Kenia</h3>
+                        <p data-i18n="exp_kenya_desc">Los cinco grandes y puestas de sol épicas.</p>
                     </div>
                     <div class="carousel-item">
                         <img src="../images/ex-shibuya.jpg" alt="Experiencia 9">
-                        <h3>Ver las luces de Shibuya de noche</h3>
-                        <p>El cruce más famoso del mundo.</p>
+                        <h3 data-i18n="exp_shibuya_title">Ver las luces de Shibuya de noche</h3>
+                        <p data-i18n="exp_shibuya_desc">El cruce más famoso del mundo.</p>
                     </div>
 
 
@@ -107,9 +139,9 @@
 
             <section class="gift-card">
                 <div class="gift-text">
-                    <h2>¡Regala un viaje inolvidable!</h2>
-                    <p>No hay mejor regalo que el de una experiencia.</p>
-                    <button class="gift-btn">Ver más</button>
+                    <h2 data-i18n="gift_title">¡Regala un viaje inolvidable!</h2>
+                    <p data-i18n="gift_desc">No hay mejor regalo que el de una experiencia.</p>
+                    <button class="gift-btn" data-i18n="gift_button">Ver más</button>
                 </div>
                 <div class="gift-image">
                     <img src="../images/giftcard.png" alt="Tarjeta de regalo Moonloop">
@@ -124,10 +156,10 @@
                 </div>
 
                 <div class="comunidad-text">
-                    <h2>¿Pensando en recorrer el mundo?</h2>
-                    <h3>¡Todo lo que necesitas saber en nuestra comunidad!</h3>
-                    <p>Únete a miles de viajeros que comparten consejos, rutas, dudas y experiencias reales para sacar el máximo partido a tus viajes.</p>
-                    <button class="comunidad-btn">Saber más</button>
+                    <h2 data-i18n="community_title">¿Pensando en recorrer el mundo?</h2>
+                    <h3 data-i18n="community_subtitle">¡Todo lo que necesitas saber en nuestra comunidad!</h3>
+                    <p data-i18n="community_desc">Únete a miles de viajeros que comparten consejos, rutas, dudas y experiencias reales para sacar el máximo partido a tus viajes.</p>
+                    <button class="comunidad-btn" data-i18n="community_button">Saber más</button>
                 </div>
             </section>
         
@@ -137,15 +169,15 @@
                 <div class="footer-left">
                     <img src="../images/logo.png" alt="Moonloop logo" class="footer-logo">
                     <p>Contacto +34 666 722 227</p>
-                    <a href="#">Políticas</a>
-                    <a href="#">FAQs</a>
+                    <a href="#" data-i18n="footer_policies">Políticas</a>
+                    <a href="#" data-i18n="footer_faqs">FAQs</a>
                 </div>
 
                 <div class="footer-newsletter">
-                    <label for="email-input">¡No te pierdas nada con nuestra Newsletter!</label>
+                    <label for="email-input" data-i18n="newsletter_title">¡No te pierdas nada con nuestra Newsletter!</label>
                     <div class="newsletter-box">
-                        <input type="email" id="email-input" placeholder="Introduce tu correo">
-                        <button id="subscribe-btn">Enviar</button>
+                        <input type="email" id="email-input" placeholder="Introduce tu correo" data-i18n-placeholder="newsletter_placeholder">
+                        <button id="subscribe-btn" data-i18n="newsletter_button">Enviar</button>
                     </div>
                     <p class="newsletter-msg"></p>
                 </div>
