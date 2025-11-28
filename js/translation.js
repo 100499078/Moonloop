@@ -8,7 +8,7 @@ const translations = {
         nav_community: "Comunidad",
 
         //BANNER
-        banner_text: "TU AVENURA EMPIEZA AQUÍ",
+        banner_text: "TU AVENTURA EMPIEZA AQUÍ",
 
         // PACKS
         packs_title: "Packs Destacados",
