@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Región</title>
+
+    <link rel="stylesheet" href="../styles/region.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="icon" type="image/png" href="../images/luna.png">
+    <script src="../js/packs.js" defer></script>
+    <script src="../js/region.js" defer></script>
+</head>
+
+
+<body>
+
+    <header>
+
+    <!-- Sección izquierda: logo -->
+        <div class="logo-section">
+        <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
+        </div>
+
+        <!-- Sección central: índice -->
+        <nav class="nav-menu">
+        <ul>
+        <li><a data-i18n="nav_home" href="home.html">Inicio</a></li>
+        <li><a data-i18n="nav_user" href="#usuario">Usuario</a></li>
+        <li><a data-i18n="nav_destinations" href="destinos.html">Destinos</a></li>
+        <li><a data-i18n="nav_otherplaces" href="#otrosrincones">Otros rincones</a></li>
+        <li><a data-i18n="nav_community" href="comunidad.html">Comunidad</a></li>
+        </ul>
+        </nav>
+        <!-- Sección derecha: idiomas -->
+        <div class="language-section">
+        <select name="language" id="language-select">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+        </select>
+        </div>
+    </header>
+
+    <!-- Imagen + título + descripción -->
+    <section class="region-header">
+        <img id="region-imagen" src="" alt="Imagen región">
+        <h1 id="region-titulo"></h1>
+        <p id="region-descripcion"></p>
+    </section>
+
+    <!-- Packs destacados -->
+    <section class="region-destacados">
+        <h2>Packs destacados</h2>
+        <div id="destacados-list" class="lista-destacados"></div>
+    </section>
+
+    <!-- Todos los packs -->
+
+    <section class="region-todos">
+        <h2>Todos los packs</h2>
+        <div id="todos-list" class="grid-packs"></div>
+    </section>
+    
+    <!-- Otras regiones -->
+    <section class="otras-regiones">
+        <h2>Descubre otros rincones</h2>
+        <div id="otras-regiones-list" class="grid-region">
+            </div>
+    </section>
+
+</body>
+</html>

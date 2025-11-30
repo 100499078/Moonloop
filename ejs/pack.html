@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Viaje</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/pack-detail.css"> <script src="../js/packs.js" defer></script>
+    <script src="../js/pack-detail.js" defer></script>
+</head>
+<body>
+
+    <header>
+
+    <!-- Sección izquierda: logo -->
+        <div class="logo-section">
+        <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
+        </div>
+
+        <!-- Sección central: índice -->
+        <nav class="nav-menu">
+        <ul>
+        <li><a data-i18n="nav_home" href="home.html">Inicio</a></li>
+        <li><a data-i18n="nav_user" href="#usuario">Usuario</a></li>
+        <li><a data-i18n="nav_destinations" href="destinos.html">Destinos</a></li>
+        <li><a data-i18n="nav_otherplaces" href="#otrosrincones">Otros rincones</a></li>
+        <li><a data-i18n="nav_community" href="comunidad.html">Comunidad</a></li>
+        </ul>
+        </nav>
+        <!-- Sección derecha: idiomas -->
+        <div class="language-section">
+        <select name="language" id="language-select">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+        </select>
+        </div>
+    </header>
+
+    <main class="pack-container">
+        
+        <h1 id="pack-nombre" class="pack-title">Cargando viaje...</h1>
+
+        <div class="pack-meta">
+            <p class="destinos">📍 <span id="pack-destinos"></span></p>
+            <p class="precio">Desde <span id="pack-precio"></span>€</p>
+        </div>
+
+        <div class="pack-body">
+            <div class="pack-image-container">
+                <img id="pack-imagen" src="" alt="Imagen del viaje">
+            </div>
+            
+            <div class="pack-description">
+                <h3>Sobre el viaje</h3>
+                <p id="pack-descripcion"></p>
+                
+                <button class="btn-reservar">Solicitar Presupuesto</button>
+            </div>
+        </div>
+
+        <section class="pack-includes">
+            <h3>¿Qué incluye este pack?</h3>
+            <ul id="pack-incluye-list">
+                </ul>
+        </section>
+
+    </main>
+
+    </body>
+</html>
