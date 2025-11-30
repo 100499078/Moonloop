@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comunidad</title>
+        <link rel="stylesheet" href="../styles/comunidad.css">
+        <link rel="stylesheet" href="../styles/main.css">
+        <script src="../js/main.js" defer></script>
+        <script src="../js/comunidad.js" defer></script>
+        <link rel="icon" type="image/png" href="../images/luna.png">
+    </head>
+
+<body>  
+    <header>
+
+            <!-- Sección izquierda: logo -->
+             <div class="logo-section">
+                <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
+             </div>
+
+             <!-- Sección central: índice -->
+              <nav class="nav-menu">
+                <ul>
+                <li><a data-i18n="nav_home" href="home.html">Inicio</a></li>
+                <li><a data-i18n="nav_user" href="#usuario">Usuario</a></li>
+                <li><a data-i18n="nav_destinations" href="destinos.html">Destinos</a></li>
+                <li><a data-i18n="nav_otherplaces" href="#otrosrincones">Otros rincones</a></li>
+                <li><a data-i18n="nav_community" href="comunidad.html">Comunidad</a></li>
+                </ul>
+              </nav>
+            <!-- Sección derecha: idiomas -->
+             <div class="language-section">
+                <select name="language" id="language-select">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                </select>
+             </div>
+    </header>
+
+    <main>
+    <section class="comunidad-main">
+
+        <div class="comunidad-subheader">
+        <h1>Comunidad</h1>
+
+        <div class="comunidad-tabs">
+            <button class="tab-btn active" data-tab="experiencias">Experiencias</button>
+            <button class="tab-btn" data-tab="foro">Foro / Consejos</button>
+        </div>
+        </div>
+
+        <div class="comunidad-layout">
+        <!-- EXPERIENCIAS -->
+        <div class="comunidad-lista" id="tab-experiencias">
+            <div class="comunidad-filtros-superior">
+            <label for="filtro-pais">Filtrar:</label>
+            <select id="filtro-pais">
+                <option value="todos">Todos los países</option>
+                <option value="colombia">Colombia</option>
+                <option value="japon">Japón</option>
+                <option value="islandia">Islandia</option>
+                <option value="tailandia">Tailandia</option>
+            </select>
+            </div>
+
+            <div class="cards-grid">
+            <!-- 1 -->
+            <article class="exp-card" data-pais="colombia">
+                <div class="exp-img"></div>
+                <div class="exp-content">
+                <h3>Trekking por la Sierra Nevada</h3>
+                <p>Ruta de 4 días durmiendo en hamacas y visitando comunidades locales.</p>
+                <div class="exp-meta">
+                    <span class="exp-pais">Colombia</span>
+                    <button class="like-btn">♡ 24</button>
+                </div>
+                </div>
+            </article>
+
+            <!-- 2 -->
+            <article class="exp-card" data-pais="japon">
+                <div class="exp-img"></div>
+                <div class="exp-content">
+                <h3>Noches en ryokan y onsens</h3>
+                <p>Consejos para moverte en tren y aprovechar al máximo el JR Pass.</p>
+                <div class="exp-meta">
+                    <span class="exp-pais">Japón</span>
+                    <button class="like-btn">♡ 41</button>
+                </div>
+                </div>
+            </article>
+
+            <!-- 3 -->
+            <article class="exp-card" data-pais="islandia">
+                <div class="exp-img"></div>
+                <div class="exp-content">
+                <h3>Vuelta a Islandia en furgoneta</h3>
+                <p>Itinerario de 7 días durmiendo en parkings autorizados y termas naturales.</p>
+                <div class="exp-meta">
+                    <span class="exp-pais">Islandia</span>
+                    <button class="like-btn">♡ 17</button>
+                </div>
+                </div>
+            </article>
+
+            <!-- 4 -->
+            <article class="exp-card" data-pais="colombia">
+                <div class="exp-img"></div>
+                <div class="exp-content">
+                <h3>Senderismo por el Eje Cafetero</h3>
+                <p>Rutas fáciles de 1 día y recomendaciones de hostels económicos.</p>
+                <div class="exp-meta">
+                    <span class="exp-pais">Colombia</span>
+                    <button class="like-btn">♡ 12</button>
+                </div>
+                </div>
+            </article>
+
+            <!-- 5 -->
+            <article class="exp-card" data-pais="japon">
+                <div class="exp-img"></div>
+                <div class="exp-content">
+                <h3>Ruta de templos en Kansai</h3>
+                <p>Itinerario de 3 días entre Kioto, Nara y Osaka.</p>
+                <div class="exp-meta">
+                    <span class="exp-pais">Japón</span>
+                    <button class="like-btn">♡ 28</button>
+                </div>
+                </div>
+            </article>
+
+            <!-- 6 -->
+            <article class="exp-card" data-pais="tailandia">
+                <div class="exp-img"></div>
+                <div class="exp-content">
+                <h3>Islas del sur en mochila</h3>
+                <p>Cómo moverte en ferry, evitar zonas masificadas y ahorrar en alojamiento.</p>
+                <div class="exp-meta">
+                    <span class="exp-pais">Tailandia</span>
+                    <button class="like-btn">♡ 35</button>
+                </div>
+                </div>
+            </article>
+            </div>
+        </div>
+
+        <!-- FORO / CONSEJOS -->
+        <div class="comunidad-lista hidden" id="tab-foro">
+            <div class="cards-grid">
+            <article class="exp-card">
+                <div class="exp-content">
+                <h3>Consejos para viajar solo por Asia</h3>
+                <p>Dudas frecuentes sobre seguridad, presupuesto y transporte.</p>
+                <div class="exp-meta">
+                    <span class="exp-pais">General</span>
+                    <button class="like-btn">♡ 33</button>
+                </div>
+                </div>
+            </article>
+
+            <article class="exp-card">
+                <div class="exp-content">
+                <h3>Trucos para encontrar vuelos baratos</h3>
+                <p>Buscadores, alertas y mejores días para comprar billetes.</p>
+                <div class="exp-meta">
+                    <span class="exp-pais">Consejos</span>
+                    <button class="like-btn">♡ 19</button>
+                </div>
+                </div>
+            </article>
+
+            <article class="exp-card">
+                <div class="exp-content">
+                <h3>Presupuesto mensual como mochilero</h3>
+                <p>Ejemplos reales de gastos por regiones y tipos de viaje.</p>
+                <div class="exp-meta">
+                    <span class="exp-pais">General</span>
+                    <button class="like-btn">♡ 21</button>
+                </div>
+                </div>
+            </article>
+
+            <article class="exp-card">
+                <div class="exp-content">
+                <h3>Mejores apps para organizar rutas</h3>
+                <p>Mapas offline, gestión de reservas y seguimiento del presupuesto.</p>
+                <div class="exp-meta">
+                    <span class="exp-pais">Herramientas</span>
+                    <button class="like-btn">♡ 14</button>
+                </div>
+                </div>
+            </article>
+
+            <article class="exp-card">
+                <div class="exp-content">
+                <h3>Viajar en pareja sin discutir</h3>
+                <p>Consejos para repartir tareas y tomar decisiones en ruta.</p>
+                <div class="exp-meta">
+                    <span class="exp-pais">Consejos</span>
+                    <button class="like-btn">♡ 27</button>
+                </div>
+                </div>
+            </article>
+            </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="comunidad-sidebar">
+            <div class="search-box">
+            <label for="buscador-comunidad">Buscar</label>
+            <input type="text" id="buscador-comunidad" placeholder="Experiencias, país...">
+            </div>
+
+            <div class="sidebar-filtros">
+            <h4>Ordenar por</h4>
+            <label>
+                <input type="radio" name="orden" value="recientes" checked>
+                Más recientes
+            </label>
+            <label>
+                <input type="radio" name="orden" value="likes">
+                Más likes
+            </label>
+            </div>
+        </aside>
+        </div>
+    </section>
+    </main>
+    <footer class="footer">
+    
+        <div class="footer-left">
+            <img src="../images/logo.png" alt="Moonloop logo" class="footer-logo">
+            <p>Contacto +34 666 722 227</p>
+            <a href="#" data-i18n="footer_policies">Políticas</a>
+            <a href="#" data-i18n="footer_faqs">FAQs</a>
+        </div>
+
+        <div class="footer-newsletter">
+            <label for="email-input" data-i18n="newsletter_title">¡No te pierdas nada con nuestra Newsletter!</label>
+            <div class="newsletter-box">
+                <input type="email" id="email-input" placeholder="Introduce tu correo" data-i18n-placeholder="newsletter_placeholder">
+                <button id="subscribe-btn" data-i18n="newsletter_button">Enviar</button>
+            </div>
+            <p class="newsletter-msg"></p>
+        </div>
+
+        <div class="footer-icons">
+            <a href="#"><img src="../images/ig.webp" alt="Instagram"></a>
+            <a href="#"><img src="../images/whatsapp.webp" alt="LinkedIn"></a>
+            <a href="#"><img src="../images/x.png" alt="X"></a>
+        </div>
+
+    </footer>
+
+    
+</body>

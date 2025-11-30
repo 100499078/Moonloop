@@ -1,0 +1,203 @@
+/* ===== PÁGINA COMUNIDAD ===== */
+
+.comunidad-main {
+  max-width: 1200px;
+  margin: 60px auto 80px;
+  padding: 0 40px;
+}
+
+.comunidad-subheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 10px;
+}
+
+.comunidad-subheader h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+}
+
+.comunidad-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tab-btn {
+  border: none;
+  background-color: transparent;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #555;
+}
+
+.tab-btn.active {
+  background-color: var(--azul-clarito);
+  color: #222;
+}
+
+/* Layout 2 columnas */
+
+.comunidad-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.comunidad-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.comunidad-filtros-superior {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.comunidad-filtros-superior select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Tarjetas de experiencias / hilos */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.exp-card {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.exp-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+
+.exp-img {
+  height: 150px;
+  background-color: var(--azul-clarito);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Si quieres, aquí puedes poner imágenes concretas con nth-child */
+/*
+#tab-experiencias .exp-card:nth-child(1) .exp-img { background-image: url('../images/colombia.jpg'); }
+*/
+
+.exp-content {
+  padding: 14px 16px 12px;
+}
+
+.exp-content h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.exp-content p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.exp-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.exp-pais {
+  color: #777;
+}
+
+.like-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* Sidebar derecha */
+
+.comunidad-sidebar {
+  background-color: var(--color-cabecera);
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.search-box label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.sidebar-filtros h4 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.sidebar-filtros label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+/* Utilidad */
+
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .comunidad-main {
+    padding: 0 20px;
+  }
+
+  .comunidad-subheader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .comunidad-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .comunidad-sidebar {
+    order: -1; /* sidebar arriba en móvil */
+  }
+}
