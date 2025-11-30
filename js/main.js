@@ -18,3 +18,22 @@ document.getElementById("subscribe-btn").addEventListener("click", function () {
 
     document.getElementById("email-input").value = "";
 });
+
+// Cargar el usuario cuando se ha logeado
+const navUser = document.getElementById("nav-user");
+
+if (navUser) {
+    navUser.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const current = localStorage.getItem("currentUser");
+
+        if (current) {
+            // Usuario YA está logueado, entra directo a su perfil
+            window.location.href = "profile.html";
+        } else {
+            // Usuario NO logueado, se va a iniciar sesión
+            window.location.href = "acceso_user.html";
+        }
+    });
+}
