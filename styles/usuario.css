@@ -418,7 +418,7 @@ header {
     object-fit: cover;
 }
 
-/* ===== PERFIL ===== */
+/* PERFIL  */
 
 .profile {
     max-width: 1000px;
@@ -526,6 +526,63 @@ header {
 .logout button:hover {
      background: #b1bbc9;
 }
+/*  MODAL LOGOUT */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); /* Fondo oscurecido suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: var(--fondo-overlay);
+    border: 1px solid var(--azul-clarito);
+    border-radius: 14px;
+    padding: 28px;
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.modal-content h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+    color: var(--color-texto-principal);
+    font-weight: 800;
+}
+
+.modal-content p {
+    font-size: 15px;
+    color: #444;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.modal-buttons .btn-primary,
+.modal-buttons .btn-secondary {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 
 /* RESPONSIVE */
 
