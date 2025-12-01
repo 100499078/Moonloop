@@ -1,0 +1,182 @@
+/* VARIABLES */
+:root {
+    /* Aquí inventas los nombres. Deben empezar con dos guiones -- */
+    --color-cabecera:#F5F0EB;
+    --azul-clarito:   #C3CBD6;  /* Azul muy suave para fondos */    
+    --color-texto-principal: #333;  /* Gris oscuro para textos */
+    --color-destacado: #007bff;     /* Azul eléctrico para precios o botones */
+    --fondo-overlay: rgba(255, 255, 255, 0.95); /* Blanco casi opaco */
+    --azul-oscuro:   #233248; 
+    --negro-premium: #111111;
+    --texto-gris: #444;
+}
+
+body {
+    background-color: #ffffff; /* FONDO BLANCO PURO */
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* ESTRUCTURA PRINCIPAL */
+#regiones-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 80px;
+    color: var(--negro-premium);
+    letter-spacing: -1px;
+}
+
+/* SECCIÓN POR REGIÓN */
+.region-section {
+    margin-bottom: 100px; /* Separación grande entre regiones */
+}
+
+/* HEADER DE LA REGIÓN (Foto redonda + Título) */
+.region-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.region-header img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%; /* Círculo perfecto */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.region-header h2 {
+    font-size: 2.2rem;
+    margin: 0;
+    color: var(--negro-premium);
+}
+
+/* Botón "Ver todos" estilo Pill (Píldora) */
+.ver-toda-region {
+    margin-left: auto;
+    text-decoration: none;
+    color: var(--negro-premium);
+    background-color: var(--color-cabecera);
+    border: 2px solid #eee;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.ver-toda-region:hover {
+    background-color: var(--negro-premium);
+    color: white;
+    border-color: var(--negro-premium);
+}
+
+/* GRID DE PACKS */
+.packs-region {
+    display: grid;
+    /* Tarjetas más anchas y responsive */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 30px;
+}
+
+/* TARJETA DEL PACK (Diseño Premium) */
+.pack-card {
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none; /* Por si hacemos toda la tarjeta clicable */
+}
+
+.pack-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.pack-card img {
+    width: 100%;
+    height: 220px; /* Fotos más altas */
+    object-fit: cover;
+}
+
+/* Contenedor de texto dentro de la tarjeta */
+.card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.pack-card h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+    color: var(--negro-premium);
+}
+
+.meta-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pack-card .pais {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--texto-gris);
+    font-weight: 500;
+}
+
+.pack-card .precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+    margin: 0;
+}
+
+/* Botón "Ver Pack" dentro de la tarjeta */
+.pack-card .ver {
+    margin-top: auto; /* Empuja el botón al fondo */
+    display: block;
+    text-align: center;
+    padding: 12px;
+    background-color: var(--color-cabecera);
+    color: var(--negro-premium);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.pack-card .ver:hover {
+    background-color: #e0e0e0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .region-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .ver-toda-region {
+        margin-left: 0;
+    }
+}

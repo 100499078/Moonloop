@@ -5,67 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del Viaje</title>
     <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/pack-detail.css"> <script src="../js/packs.js" defer></script>
-    <script src="../js/pack-detail.js" defer></script>
-    <script src="../js/main.js" defer></script>
+    <link rel="stylesheet" href="../styles/pack.css">
+    
+    <!-- Scripts -->
+    <script src="../js/packs.js" defer></script>
+    <script src="../js/pag_packs.js" defer></script>
+    <link rel="icon" type="image/png" href="../images/luna.png">
 </head>
+
 <body>
 
     <header>
 
-    <!-- Sección izquierda: logo -->
-        <div class="logo-section">
-        <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
-        </div>
+        <!-- Sección izquierda: logo -->
+            <div class="logo-section">
+            <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
+            </div>
 
-        <!-- Sección central: índice -->
-        <nav class="nav-menu">
-        <ul>
-        <li><a data-i18n="nav_home" href="home.html">Inicio</a></li>
-        <li><a id="nav_user" href="#usuario">Usuario</a></li>
-        <li><a data-i18n="nav_destinations" href="destinos.html">Destinos</a></li>
-        <li><a data-i18n="nav_otherplaces" href="#otrosrincones">Otros rincones</a></li>
-        <li><a data-i18n="nav_community" href="comunidad.html">Comunidad</a></li>
-        </ul>
-        </nav>
+            <!-- Sección central: índice -->
+            <nav class="nav-menu">
+            <ul>
+            <li><a data-i18n="nav_home" href="home.html">Inicio</a></li>
+            <li><a data-i18n="nav_user" href="acceso_user.html">Usuario</a></li>
+            <li><a data-i18n="nav_destinations" href="destinos.html">Destinos</a></li>
+            <li><a data-i18n="nav_otherplaces" href="#otrosrincones">Otros rincones</a></li>
+            <li><a data-i18n="nav_community" href="comunidad.html">Comunidad</a></li>
+            </ul>
+            </nav>
         <!-- Sección derecha: idiomas -->
-        <div class="language-section">
-        <select name="language" id="language-select">
-            <option value="es">ES</option>
-            <option value="en">EN</option>
-        </select>
-        </div>
+            <div class="language-section">
+            <select name="language" id="language-select">
+                <option value="es">ES</option>
+                <option value="en">EN</option>
+            </select>
+            </div>
     </header>
 
-    <main class="pack-container">
-        
-        <h1 id="pack-nombre" class="pack-title">Cargando viaje...</h1>
+        <!-- Breadcrumb -->
+    <nav id="breadcrumb" class="breadcrumb">
+        <!-- JS generará los enlaces aquí -->
+    </nav>
 
-        <div class="pack-meta">
-            <p class="destinos">📍 <span id="pack-destinos"></span></p>
-            <p class="precio">Desde <span id="pack-precio"></span>€</p>
+
+    <!-- Usamos el ID que tu JS espera -->
+    <main id="pack-container">
+        
+        <!-- CABECERA DE TEXTO (Nombre, Precio, Destinos) -->
+        <div class="pack-header">
+            <h1 id="pack-nombre">Cargando...</h1>
+            <div class="meta-data">
+                <span id="pack-pais" class="meta-tag"></span>
+                <span id="pack-destinos" class="meta-tag"></span>
+                <span id="pack-duracion" class="meta-tag"></span> 
+                <span id="pack-precio" class="meta-price"></span>
+            </div>
         </div>
 
-        <div class="pack-body">
-            <div class="pack-image-container">
+        <!-- ESTRUCTURA PRINCIPAL (Grid: Foto Izquierda - Texto Derecha) -->
+        <section class="pack-main-grid">
+            
+            <!-- Columna 1: Imagen -->
+            <div class="image-wrapper">
                 <img id="pack-imagen" src="" alt="Imagen del viaje">
             </div>
-            
-            <div class="pack-description">
-                <h3>Sobre el viaje</h3>
-                <p id="pack-descripcion"></p>
-                
-                <button class="btn-reservar">Solicitar Presupuesto</button>
-            </div>
-        </div>
 
-        <section class="pack-includes">
-            <h3>¿Qué incluye este pack?</h3>
-            <ul id="pack-incluye-list">
-                </ul>
+            <!-- Columna 2: Descripción y Botón -->
+            <div class="info-wrapper">
+                <h2>La Experiencia</h2>
+                <p id="pack-descripcion"></p>
+
+                <div class="includes-box">
+                    <h3>¿Qué incluye?</h3>
+                    <ul id="pack-incluye"></ul>
+                </div>
+
+                <!-- Botón colocado manualmente donde queda bien -->
+                <a href="#" class="boton-comprar-manual">Comprar ya</a>
+            </div>
+
+        </section>
+
+        <!-- ITINERARIO (Fondo Beige) -->
+        <section class="itinerary-section">
+            <h2>Itinerario de viaje</h2>
+            <!-- Tu JS llenará esto con divs clase "it-item" -->
+            <div id="pack-itinerario"></div>
         </section>
 
     </main>
 
-    </body>
+</body>
 </html>

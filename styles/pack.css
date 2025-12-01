@@ -1,0 +1,239 @@
+/* VARIABLES Y RESET */
+:root {
+    /* Aquí inventas los nombres. Deben empezar con dos guiones -- */
+    --color-cabecera:#F5F0EB;
+    --azul-clarito:   #C3CBD6;  /* Azul muy suave para fondos */    
+    --color-texto-principal: #333;  /* Gris oscuro para textos */
+    --color-destacado: #007bff;     /* Azul eléctrico para precios o botones */
+    --fondo-overlay: rgba(255, 255, 255, 0.95); /* Blanco casi opaco */
+    --azul-oscuro:   #233248; 
+    --negro-premium: #111111;
+    --texto-gris: #444;
+}
+
+body {
+    background-color: #ffffff; /* FONDO BLANCO PURO */
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+#pack-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    /* Esto es importante para que el botón generado por JS no rompa el layout si decidimos mostrarlo, 
+       pero lo vamos a ocultar */
+    display: block; 
+}
+.breadcrumb {
+    font-size: 0.9rem;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.breadcrumb a {
+    color: var(--azul-oscuro);
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    margin: 0 5px;
+    color: #555;
+}
+
+
+/* --- CABECERA --- */
+.pack-header {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 20px;
+}
+
+h1#pack-nombre {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: 700;
+}
+
+.meta-data {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.meta-price {
+    margin-left: auto; /* Empuja el precio a la derecha */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+}
+
+/* --- GRID PRINCIPAL (FOTO + INFO) --- */
+.pack-main-grid {
+    display: grid;
+    /* La columna de la foto ocupa el 60% (1.5fr) y el texto el resto */
+    grid-template-columns: 1.5fr 1fr; 
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+/* Estilo de la Imagen */
+.image-wrapper img {
+    width: 100%;
+    height: 550px; /* Altura fija para que todas sean iguales y grandes */
+    object-fit: cover; /* Recorta la imagen para llenar sin deformar */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra suave elegante */
+}
+
+/* Columna Derecha */
+.info-wrapper h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #000;
+}
+
+.info-wrapper p#pack-descripcion {
+    font-size: 1.1rem;
+    color: var(--texto-gris);
+    margin-bottom: 30px;
+}
+
+/* Caja de "Incluye" */
+.includes-box {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.includes-box h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+ul#pack-incluye {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul#pack-incluye li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+ul#pack-incluye li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: green;
+    font-weight: bold;
+}
+
+/* BOTÓN DE COMPRA (El manual) */
+.boton-comprar-manual {
+    display: block;
+    width: 100%;
+    background-color: var(--negro-premium);
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.boton-comprar-manual:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+
+/* --- ITINERARIO (Fondo Beige) --- */
+.itinerary-section {
+    background-color: var(--color-cabecera);
+    padding: 50px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.itinerary-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* Estilizando las clases que genera tu JS (.it-item) */
+#pack-itinerario {
+    border-left: 2px solid #ccc; /* Línea vertical */
+    padding-left: 30px;
+    margin-left: 20px;
+}
+
+.it-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Bolita del timeline usando ::before en el div que crea tu JS */
+.it-item::before {
+    content: "";
+    position: absolute;
+    left: -37px; /* Ajustar a la línea */
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    border-radius: 50%;
+    border: 3px solid var(--color-fondo-itinerario); /* Borde del color de fondo */
+}
+
+.it-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.it-item p {
+    margin: 0;
+    color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .pack-main-grid {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+    }
+    .image-wrapper img {
+        height: 300px;
+    }
+    .meta-data {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .meta-price {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}

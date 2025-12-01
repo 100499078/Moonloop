@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todas las Regiones</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/todas_regiones.css">
+    <script src="../js/packs.js" defer></script>
+    <script src="../js/todas_regiones.js" defer></script>
+    <link rel="icon" type="image/png" href="../images/luna.png">
+</head>
+<body>
+
+<header>
+    <div class="logo-section">
+        <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
+    </div>
+
+    <nav class="nav-menu">
+        <ul>
+            <li><a data-i18n="nav_home" href="home.html">Inicio</a></li>
+            <li><a data-i18n="nav_user" href="acceso_user.html">Usuario</a></li>
+            <li><a data-i18n="nav_destinations" href="destinos.html">Destinos</a></li>
+            <li><a data-i18n="nav_otherplaces" href="#otrosrincones">Otros rincones</a></li>
+            <li><a data-i18n="nav_community" href="comunidad.html">Comunidad</a></li>
+        </ul>
+    </nav>
+
+    <div class="language-section">
+        <select name="language" id="language-select">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+        </select>
+    </div>
+</header>
+
+<main id="regiones-container">
+    <h1>Todas las Regiones</h1>
+    <div id="regiones-list"></div>
+</main>
+
+</body>
+</html>

@@ -55,55 +55,52 @@ document.addEventListener("DOMContentLoaded", () => {
     const packsRegion = (typeof PACKS !== 'undefined') ? PACKS.filter(pack => pack.region === regionNombre) : [];
 
 
-    // --- 6. Rellenar PACKS DESTACADOS (Solo 2, diseño Zig-Zag) ---
-    const destacadosContainer = document.getElementById("destacados-list");
-    
-    if (destacadosContainer && packsRegion.length > 0) {
-        // Cogemos solo los 2 primeros
-        const destacados = packsRegion.slice(0, 2); 
-        
-        destacadosContainer.innerHTML = destacados.map(pack => {
-            // HTML Específico para el diseño horizontal grande
-            return `
-                <div class="destacado-row">
-                    <img src="${pack.imagen}" alt="${pack.nombre}">
-                    <div class="destacado-info">
-                        <h3>${pack.nombre}</h3>
-                        <p>${pack.descripcion || "Descubre una experiencia inolvidable con este pack exclusivo."}</p>
-                        <span class="destacado-precio">${pack.precio}€</span>
-                        <div class="acciones">
-                            <a href="#" class="ver">Ver detalles</a>
-                            <a href="#" class="like">♥</a>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }).join("");
-    }
+   // --- 6. Rellenar PACKS DESTACADOS (Solo 2, diseño Zig-Zag) ---
+const destacadosContainer = document.getElementById("destacados-list");
 
+if (destacadosContainer && packsRegion.length > 0) {
+    const destacados = packsRegion.slice(0, 2);
 
-    // --- 7. Rellenar TODOS LOS PACKS (Diseño Grid .experiencia) ---
-    const todosContainer = document.getElementById("todos-list");
-    
-    if (todosContainer) {
-        // Usamos todos los packs de la región
-        todosContainer.innerHTML = packsRegion.map(pack => {
-            // HTML Específico para la tarjeta vertical (.experiencia)
-            return `
-                <div class="experiencia">
-                    <img src="${pack.imagen}" alt="${pack.nombre}">
+    destacadosContainer.innerHTML = destacados.map((pack, index) => {
+        return `
+            <div class="destacado-row ${index % 2 === 1 ? "invertido" : ""}">
+                <img src="${pack.imagen}" alt="${pack.nombre}">
+                <div class="destacado-info">
                     <h3>${pack.nombre}</h3>
-                    <p>${pack.destinos || "Varios destinos"}</p>
-                    <p style="font-weight:bold; color:steelblue;">${pack.precio}€</p>
-                    
+                    <p>${pack.descripcion || "Descubre una experiencia inolvidable con este pack exclusivo."}</p>
+                    <span class="destacado-precio">${pack.precio}€</span>
                     <div class="acciones">
-                        <a href="#" class="ver">Ver más</a>
-                        <a href="#" class="like">♥</a>
+                        <a href="pack.html?id=${pack.id}" class="ver">Ver detalles</a>
+                        <a class="like">♥</a>
                     </div>
                 </div>
-            `;
-        }).join("");
-    }
+            </div>
+        `;
+    }).join("");
+}
+
+
+ // --- 7. Rellenar TODOS LOS PACKS (Diseño Grid .experiencia) ---
+const todosContainer = document.getElementById("todos-list");
+
+if (todosContainer) {
+    todosContainer.innerHTML = packsRegion.map(pack => {
+        return `
+            <div class="experiencia">
+                <img src="${pack.imagen}" alt="${pack.nombre}">
+                <h3>${pack.nombre}</h3>
+                <p>${pack.destinos || "Varios destinos"}</p>
+                <p style="font-weight:bold; color:steelblue;">${pack.precio}€</p>
+
+                <div class="acciones">
+                    <a href="pack.html?id=${pack.id}" class="ver">Ver</a>
+                    <a class="like">♥</a>
+                </div>
+            </div>
+        `;
+    }).join("");
+}
+
 
 // --- 9. Rellenar OTRAS REGIONES (Excluyendo la actual) ---
     const otrasRegionesContainer = document.getElementById("otras-regiones-list");
