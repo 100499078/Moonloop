@@ -5,9 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home Page</title>
         <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="../styles/giftcard.css">
         <script src="../js/main.js" defer></script>
         <script src="../js/carousel.js" defer></script>
         <script src="../js/translation.js" defer></script>
+        <script src="../js/giftcard.js" defer></script>
         <link rel="icon" type="image/png" href="../images/luna.png">
     </head>
 
@@ -23,7 +25,7 @@
              <!-- Sección central: índice -->
               <nav class="nav-menu">
                 <ul>
-                <li><a data-i18n="nav_home" href="#inicio">Inicio</a></li>
+                <li><a data-i18n="nav_home" href="home.html">Inicio</a></li>
                 <li><a data-i18n="nav_user" href="acceso_user.html">Usuario</a></li>
                 <li><a data-i18n="nav_destinations" href="destinos.html">Destinos</a></li>
                 <li><a data-i18n="nav_otherplaces" href="#otrosrincones">Otros rincones</a></li>
@@ -47,24 +49,7 @@
 
     <!--Meter un banner que diga ¡REGALA EXPERIENCIAS! CON FOTITO DETRAS-->
         <div class="contenedorGitfCard">
-            <section class="contSuperiorGiftCard">
-                <div class="contSuperiorGiftCard-parteizquierd">
-                    <h2>TARJETA REGALO</h2>
-                    <p>Regala experiencias inolvidables a tus seres queridos de la mano de la mejor compañía</p>
-                </div>
-                <div class=""contSuperiorGirftCard-parteDerecha>
-                    <img src="../images/giftcard.png" alt="Tarjeta de regalo Moonloop">
-            </section>
-            <section class = "contInferiorGiftCard">
-                <h3>¿CÓMO FUNCIONA?</h3>
-                <ol>
-                    <li>Elige el importe que deseas regalar.</li>
-                    <li>Rellena el formulario con los datos del destinatario.</li>
-                    <li>Recibirás un email con la tarjeta regalo para entregar.</li>
-                    <li>El destinatario podrá canjear su tarjeta en nuestra web.</li>
-                </ol>
-            </section>
-            <section class="ComprarGiftCard">
+            <section class="contIzquierdoGiftCard">
                 <h3>¡COMPRA TU TARJETA REGALO!</h3>
                 <form class="contenedorInferiorGitfCard">
                     <label for="amount">Importe a regalar:</label>
@@ -112,35 +97,28 @@
                     </div>
 
                     <button type="submit" class="botonComprarGiftCard">Comprar Tarjeta Regalo</button>
+
+            </section>
+            <section class="contDerechoGiftCard">
+                <div class="bannerGiftCard">
+                    <h2>¡REGALA EXPERIENCIAS INOLVIDABLES!</h2>
+                    <p>Comparte la magia de viajar con tus seres queridos</p>
+                </div>
+                <div class="imagenGiftCard">
+                    <img src="../images/giftcard.png" alt="Tarjeta de regalo Moonloop">
+                </div>
+                <div class="contDerechoGiftCard-texto">
+                    <h3>¿CÓMO FUNCIONA?</h3>
+                    <ol>
+                        <li>Elige el importe que deseas regalar.</li>
+                        <li>Rellena el formulario con los datos del destinatario.</li>
+                        <li>Recibirás un email con la tarjeta regalo para entregar.</li>
+                        <li>El destinatario podrá canjear su tarjeta en nuestra web.</li>
+                    </ol>
+                </div>
             </section>
         </div>
     </main>
-
-               
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             <!-- FOOTER -->
              <footer class="footer">

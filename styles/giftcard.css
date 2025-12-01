@@ -1,0 +1,365 @@
+/* giftcard.css */
+
+/* Contenedor principal */
+.contenedorGitfCard {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 7fr 3fr; /* 70% - 30% */
+    gap: 40px; /* Menos separación */
+    align-items: start;
+}
+
+/* ========== COLUMNA IZQUIERDA: FORMULARIO (70%) ========== */
+.contIzquierdoGiftCard {
+    background-color: var(--color-gris-suave, #f5f5f5);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contIzquierdoGiftCard h3 {
+    font-size: 1.8rem;
+    color: #000000;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.contenedorInferiorGitfCard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilos para labels e inputs */
+.contenedorInferiorGitfCard label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #000000;
+    font-size: 0.95rem;
+}
+
+.contenedorInferiorGitfCard input,
+.contenedorInferiorGitfCard select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: white;
+    color: #000000;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+.contenedorInferiorGitfCard input:focus,
+.contenedorInferiorGitfCard select:focus {
+    outline: none;
+    border-color: #6d5acf;
+    box-shadow: 0 0 0 3px rgba(109, 90, 207, 0.1);
+}
+
+/* Quitar subrayados de todos los enlaces y labels */
+.contenedorInferiorGitfCard label,
+.contIzquierdoGiftCard a,
+.contDerechoGiftCard a {
+    text-decoration: none !important;
+}
+
+/* Encabezados de sección */
+.contenedorInferiorGitfCard h4 {
+    font-size: 1.2rem;
+    color: #000000;
+    margin: 25px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    font-weight: 600;
+}
+
+.contenedorInferiorGitfCard h4:first-of-type {
+    margin-top: 10px;
+}
+
+/* Grupo de fecha de caducidad */
+.fecha-caducidad {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.fecha-caducidad label {
+    margin-bottom: 8px;
+}
+
+.fecha-caducidad input {
+    width: 100%;
+}
+
+/* Botón de compra */
+.botonComprarGiftCard {
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 18px 32px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.botonComprarGiftCard:hover {
+    background: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+/* ========== COLUMNA DERECHA: INFORMACIÓN (30%) ========== */
+.contDerechoGiftCard {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Banner */
+.bannerGiftCard {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.bannerGiftCard h2 {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.bannerGiftCard p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Imagen de la tarjeta */
+.imagenGiftCard {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.imagenGiftCard img {
+    width: 100%; /* Se adapta al 30% del contenedor */
+    max-width: 280px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.imagenGiftCard img:hover {
+    transform: translateY(-5px);
+}
+
+/* Contenedor de texto con pasos */
+.contDerechoGiftCard-texto {
+    background-color: var(--color-gris-suave, #f5f5f5);
+    border-radius: 16px;
+    padding: 35px;
+    margin-top: 20px;
+}
+
+.contDerechoGiftCard-texto h3 {
+    font-size: 1.6rem;
+    color: #000000;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.contDerechoGiftCard-texto ol {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    counter-reset: pasos;
+}
+
+.contDerechoGiftCard-texto li {
+    counter-increment: pasos;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #000000;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 45px;
+    text-decoration: none !important;
+}
+
+.contDerechoGiftCard-texto li:before {
+    content: counter(pasos);
+    background: #000000;
+    color: white;
+    font-weight: bold;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: -3px;
+    font-size: 1rem;
+    text-decoration: none !important;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet (1024px o menos) */
+@media (max-width: 1024px) {
+    .contenedorGitfCard {
+        gap: 35px;
+        padding: 0 30px;
+        grid-template-columns: 6fr 4fr; /* 60% - 40% en tablet */
+    }
+    
+    .contIzquierdoGiftCard,
+    .contDerechoGiftCard {
+        padding: 35px;
+    }
+    
+    .bannerGiftCard h2 {
+        font-size: 1.8rem;
+    }
+    
+    .imagenGiftCard img {
+        max-width: 240px;
+    }
+}
+
+/* Tablet pequeña (768px o menos) */
+@media (max-width: 768px) {
+    .contenedorGitfCard {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+    
+    .contIzquierdoGiftCard,
+    .contDerechoGiftCard {
+        padding: 30px;
+    }
+    
+    .bannerGiftCard h2 {
+        font-size: 1.7rem;
+    }
+    
+    .bannerGiftCard p {
+        font-size: 1.1rem;
+    }
+    
+    .imagenGiftCard img {
+        max-width: 220px;
+    }
+    
+    .contIzquierdoGiftCard h3,
+    .contDerechoGiftCard-texto h3 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Móvil (480px o menos) */
+@media (max-width: 480px) {
+    .contenedorGitfCard {
+        padding: 0 15px;
+        margin: 15px auto;
+        gap: 30px;
+    }
+    
+    .contIzquierdoGiftCard,
+    .contDerechoGiftCard {
+        padding: 25px 20px;
+    }
+    
+    .contIzquierdoGiftCard h3 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+    
+    .bannerGiftCard h2 {
+        font-size: 1.5rem;
+    }
+    
+    .bannerGiftCard p {
+        font-size: 1rem;
+    }
+    
+    .imagenGiftCard img {
+        max-width: 200px;
+    }
+    
+    .contDerechoGiftCard-texto {
+        padding: 25px 20px;
+    }
+    
+    .contDerechoGiftCard-texto h3 {
+        font-size: 1.4rem;
+    }
+    
+    .contDerechoGiftCard-texto li {
+        font-size: 0.95rem;
+        padding-left: 40px;
+        margin-bottom: 18px;
+    }
+    
+    .contDerechoGiftCard-texto li:before {
+        width: 30px;
+        height: 30px;
+        font-size: 0.95rem;
+    }
+    
+    .contenedorInferiorGitfCard input,
+    .contenedorInferiorGitfCard select {
+        padding: 12px 14px;
+        font-size: 0.95rem;
+    }
+    
+    .botonComprarGiftCard {
+        padding: 16px 24px;
+        font-size: 1.1rem;
+        margin-top: 25px;
+    }
+}
+
+/* ========== ESTILOS PARA JAVASCRIPT ========== */
+/* Para los casos donde dan errores */
+
+.input-error {
+    border-color: #e74c3c !important;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2) !important;
+}
+
+.error-mensaje {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: block;
+}
+
+.input-success {
+    border-color: #27ae60 !important;
+    box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.1) !important;
+}
