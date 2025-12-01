@@ -560,7 +560,6 @@ header {
     margin-bottom: 12px;
     font-size: 22px;
     color: var(--color-texto-principal);
-    font-weight: 800;
 }
 
 .modal-content p {
@@ -574,13 +573,32 @@ header {
     margin-top: 25px;
 }
 
-.modal-buttons .btn-primary,
-.modal-buttons .btn-secondary {
+
+.modal-btn {
     flex: 1;
-    padding: 12px;
-    border-radius: 8px;
-    font-weight: 600;
+    height: 48px;
+    border-radius: 10px;
+    border: none;
     cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    white-space: nowrap;
+}
+
+/* Botón azul */
+.modal-btn-primary {
+    background: var(--color-destacado);
+    color: #fff;
+}
+
+/* Botón gris */
+.modal-btn-secondary {
+    background: #d1d5dc;
+    color: var(--color-texto-principal);
 }
 
 
