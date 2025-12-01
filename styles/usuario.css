@@ -109,6 +109,10 @@ header {
     padding: 60px;
     align-items: flex-start;
     color: var(--color-texto-principal);
+    background: 
+        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+        url('../images/profile2.png') center/cover no-repeat;
+
 }
 
 /* COLUMNA IZQUIERDA */
@@ -119,7 +123,6 @@ header {
 
 .access-left h1 {
     font-size: 32px;
-    font-weight: 800;
     margin-bottom: 25px;
     color: var(--color-texto-principal);
 }
@@ -312,124 +315,126 @@ header {
 
 /* ===== PÁGINA DE REGISTRO ===== */
 
-.register {
+/* CONTENEDOR PRINCIPAL */
+.register-wrapper {
     display: flex;
+    flex-direction: row;
+    min-height: 90vh;          /* ambos hijos se adaptan */
+    align-items: stretch;      /* ✨ hace que ambos tengan la MISMA altura */
     justify-content: center;
-    gap: 60px;
-    padding: 60px;
-    align-items: center;
-    color: var(--color-texto-principal);
+    gap: 40px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
-/* COLUMNA IZQUIERDA */
-
-.register-left {
-    width: 400px;
-}
-
-.register-left h1 {
-    font-size: 32px;
-    font-weight: 800;
-    margin-bottom: 25px;
-    color: var(--color-texto-principal);
-}
-
-/* CAJA DEL FORMULARIO */
-
-.register-box {
-    background: var(--fondo-overlay);
-    border: 1px solid var(--azul-clarito);
-    padding: 25px;
-    border-radius: 12px;
+/* IMAGEN (columna izquierda) */
+.register-image-container {
+    flex: 1;                   /* ❗ mismo tamaño que el form */
     display: flex;
-    flex-direction: column;
-    gap: 12px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
 }
-
-.register-box label {
-    font-size: 14px;
-}
-
-.register-box input {
-    padding: 12px;
-    border: 1px solid var(--azul-clarito);
-    border-radius: 8px;
-    background: #fafafa;
-    font-size: 14px;
-    outline: none;
-    transition: 0.2s;
-}
-
-.register-box input:focus {
-    border-color: var(--color-destacado);
-    box-shadow: 0 0 4px var(--color-destacado);
-}
-
-/* BOTONES */
-
-.register-left .btn-primary {
-    margin-top: 10px;
-    background: var(--color-destacado);
-    color: white;
-    padding: 12px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    transition: 0.25s ease;
-}
-
-.register-left .btn-primary:hover {
-    background: #0056c9;
-}
-
-.register-left .btn-secondary {
-    width: 100%;
-    margin-top: 20px;
-    background: var(--azul-clarito);
-    color: var(--color-texto-principal);
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.25s ease;
-}
-
-.register-left .btn-secondary:hover {
-    background: #b1bbc9;
-}
-
-/* IMAGEN DERECHA */
 
 .register-image {
-    width: 430px;
-    height: 500px;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    background: var(--color-cabecera);
+    width: 100%;
+    height: 100%;              /* ✨ misma altura que el form */
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.15);
 }
 
-.register-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* FORMULARIO (columna derecha) */
+.register-form-container {
+    flex: 1;                   /* ❗ tamaño igual al de la imagen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.register-form {
+    background: #fff;
+    padding: 32px;
+    border-radius: 20px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    height: 100%;              /* ✨ ocupa toda la altura de la columna */
+    box-sizing: border-box;
+}
+
+.register-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;      /* centra el título */
+    width: 100%;             /* fuerza que ocupe toda la columna */
+    display: block;          /* asegura el centrado */
+    margin: 0 auto 40px;     /* centra y da espacio debajo */  
+}
+
+
+.register-form input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #d1d1d1;
+}
+
+/* Botones */
+.register-btn-primary {
+    background: #006eff;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.register-btn-secondary {
+    background: #d3d8df;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 
 /* PERFIL  */
 
 .profile {
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 20px;
-    color: var(--color-texto-principal);
+    min-height: 100vh;
+    padding: 120px 40px 80px 40px; /* más aire arriba */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: 
+        linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)),
+        url('../images/profile.png') center/cover no-repeat;
+    backdrop-filter: blur(2px);
+}
+
+.profile-content {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+.profile-header {
+    margin-bottom: 40px;
 }
 
 .profile-header h1 {
     font-size: 32px;
     font-weight: 800;
+    text-align: center;
 }
 
 .profile-header p {
@@ -437,16 +442,45 @@ header {
     font-size: 18px;
 }
 
-/* SECCIONES */
-
-.profile-section {
-    margin: 40px 0;
+.profile-shortcuts {
+    margin-top: 40px;
+    margin-bottom: 50 px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 
-.profile-section h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
+/* Espacio arriba del título Configuración*/
+.profile-settings-title {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Botones grandes estilo “pill” */
+.shortcut-btn {
+    background: #fff;
+    border: 1px solid var(--azul-clarito);
+    padding: 14px 28px;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
     color: var(--color-texto-principal);
+}
+
+.shortcut-btn:hover {
+    background: var(--color-destacado);
+    color: white;
+    border-color: var(--color-destacado);
+}
+
+/* MIS FAVORITOS Y COMPRAS*/
+.subpage h1 {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 /* TARJETAS */
@@ -511,6 +545,10 @@ header {
 
 /* CERRAR SESIÓN */
 
+/* Añadir espacio al botón de cerrar sesión */
+.logout{
+    margin-top: 20px;
+}
 .logout button {
     width: 100%;
     padding: 12px;

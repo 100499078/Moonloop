@@ -37,39 +37,49 @@
 </header>
 
 <!-- MAIN CONTENT -->
-<main class="register">
+<main class="register-wrapper">
 
-    <section class="register-left">
-        <h1>¡Forma parte de nuestra familia viajera!</h1>
+    <!-- Imagen izquierda -->
+    <div class="register-image-container">
+        <img src="../images/user.png" alt="viajeros" class="register-image">
+    </div>
 
-        <div class="register-box">
+    <!-- Formulario derecha -->
+    <div class="register-form-container">
+        
+        <h1 class="register-title">
+            ¡Forma parte de nuestra familia viajera!
+        </h1>
+
+        <form id="register-form" class="register-form">
+
             <label>Nombre</label>
-            <input type="text" id="register-name" placeholder="Tu nombre">
+            <input id="register-name" type="text" placeholder="Tu nombre">
 
             <label>Apellidos</label>
-            <input type="text" id="register-surname" placeholder="Tus apellidos">
+            <input id="register-surname" type="text" placeholder="Tus apellidos">
 
             <label>Email</label>
-            <input type="email" id="register-email" placeholder="example@mail.com">
+            <input id="register-email" type="email" placeholder="example@mail.com">
 
             <label>Contraseña</label>
-            <input type="password" id="register-password" placeholder="••••••••">
+            <input id="register-password" type="password" placeholder="••••••••">
 
             <label>Repite la contraseña</label>
-            <input type="password" id="register-password2" placeholder="••••••••">
+            <input id="register-password2" type="password" placeholder="••••••••">
 
-            <button class="btn-primary" id="register-btn">Registrarse</button>
-        </div>
+            <button id="register-btn" class="register-btn-primary">Registrarse</button>
 
-        <button class="btn-secondary" onclick="window.location.href='acceso_user.html'">Volver</button>
-    </section>
+            <button class="register-btn-secondary"
+                onclick="window.location.href='acceso_user.html'">
+                Volver
+            </button>
 
-    <!-- FOTO A LA DERECHA -->
-    <aside class="register-image">
-        <img src="../images/user.png" alt="Imagen registro Moonloop">
-    </aside>
+        </form>
+    </div>
 
 </main>
+
 
 <!-- FOOTER -->
 <footer class="footer">

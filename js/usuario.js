@@ -103,11 +103,19 @@ function loadUserProfile() {
     }
 
     // Nombre en el saludo
-    document.getElementById("profile-name").textContent = user.name;
+    const profileNameEl = document.getElementById("profile-name");
+    if (profileNameEl) {
+        profileNameEl.textContent = user.name;
+    }
 
-    // Cargar favoritos y compras
-    loadFavorites(user);
-    loadPurchases(user);
+    // Solo cargar favoritos/compras si los contenedores existen en la página
+    if (document.getElementById("favorites-container")) {
+        loadFavorites(user);
+    }
+
+    if (document.getElementById("purchases-container")) {
+        loadPurchases(user);
+    }
 }
 
 // FAVORITOS
@@ -131,6 +139,7 @@ function removeFavorite(productId) {
 
 function loadFavorites(user) {
     const container = document.getElementById("favorites-container");
+    if (!container) return; // 👉 si no existe, salimos sin hacer nada
 
     if (!user.favorites.length) {
         container.innerHTML = "<p>No tienes favoritos aún.</p>";
@@ -160,6 +169,7 @@ function addPurchase(product) {
 
 function loadPurchases(user) {
     const container = document.getElementById("purchases-container");
+    if (!container) return; // 👉 igual aquí
 
     if (!user.purchases.length) {
         container.innerHTML = "<p>No tienes compras realizadas.</p>";
@@ -185,50 +195,55 @@ function logout() {
     document.getElementById("logout-modal").classList.remove("hidden");
 }
 
-// EVENTOS AL CARGAR LA PÁGINA
 document.addEventListener("DOMContentLoaded", () => {
-
-    const path = window.location.pathname;
-
-    // Página de registro
-    if (path.includes("register_user.html")) {
-        document.getElementById("register-btn").addEventListener("click", handleRegister);
+    // Botón registro
+    const registerBtn = document.getElementById("register-btn");
+    if (registerBtn) {
+        registerBtn.addEventListener("click", handleRegister);
     }
 
-    // Página de login
-    if (path.includes("acceso_user.html")) {
-        document.getElementById("login-btn").addEventListener("click", handleLogin);
+    // Botón login
+    const loginBtn = document.getElementById("login-btn");
+    if (loginBtn) {
+        loginBtn.addEventListener("click", handleLogin);
+        
     }
 
-    // Página de perfil
-    if (path.includes("profile.html")) {
+    // Página de perfil (si existe el nombre, estamos en profile)
+    const profileNameSpan = document.getElementById("profile-name");
+    if (profileNameSpan) {
         loadUserProfile();
-        document.getElementById("logout-btn").addEventListener("click", logout);
     }
 
-    // Modal logout 
+    // Botón cerrar sesión (abre el modal)
+    const logoutBtn = document.getElementById("logout-btn");
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", logout);
+    }
+
+    // Modal logout
     const modal = document.getElementById("logout-modal");
     const confirmLogout = document.getElementById("confirm-logout");
     const cancelLogout = document.getElementById("cancel-logout");
 
-    if (confirmLogout) {
+    if (confirmLogout && modal) {
         confirmLogout.addEventListener("click", () => {
             localStorage.removeItem("currentUser");
             window.location.href = "acceso_user.html";
         });
     }
 
-    if (cancelLogout) {
+    if (cancelLogout && modal) {
         cancelLogout.addEventListener("click", () => {
             modal.classList.add("hidden");
         });
     }
 
-    // ----- LÓGICA DEL MENÚ “Usuario” -----
+    // Menú “Usuario”
     const navUser = document.getElementById("nav_user");
     if (navUser) {
-        const isLogged = localStorage.getItem("currentUser") !== null;
         navUser.addEventListener("click", () => {
+            const isLogged = localStorage.getItem("currentUser") !== null;
             window.location.href = isLogged ? "profile.html" : "acceso_user.html";
         });
     }

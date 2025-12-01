@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="../styles/usuario.css">
     <script src="../js/usuario.js" defer></script>
     <script src="../js/main.js" defer></script>
+    <script src="../js/usuario.js" defer></script>
+
 
 </head>
 
-<body>
+<body class="profile-bg">
     <!-- HEADER -->
         <header>
             <!-- Sección izquierda: logo -->
@@ -21,11 +23,11 @@
              <!-- Sección central: índice -->
               <nav class="nav-menu">
                 <ul>
-                <li><a data-i18n="nav_home" href="home.html">Inicio</a></li>
+                <li><a id="nav_home" href="home.html">Inicio</a></li>
                 <li><a id="nav_user" href="#">Usuario</a></li>
-                <li><a data-i18n="nav_destinations" href="destinos.html">Destinos</a></li>
-                <li><a data-i18n="nav_otherplaces" href="#otrosrincones">Otros rincones</a></li>
-                <li><a data-i18n="nav_community" href="comunidad.html">Comunidad</a></li>
+                <li><a id="nav_destinations" href="destinos.html">Destinos</a></li>
+                <li><a id="nav_otherplaces" href="#otrosrincones">Otros rincones</a></li>
+                <li><a id="nav_community" href="comunidad.html">Comunidad</a></li>
                 </ul>
               </nav>
             <!-- Sección derecha: idiomas -->
@@ -36,55 +38,16 @@
                 </select>
              </div>
         </header>
-<!-- MAIN CONTENT -->
- <main class="profile">
-<div class="profile-content">
-    <!-- SALUDO -->
-    <section class="profile-header">
-        <h1>Hola, <span id="profile-name"></span></h1>
-        <p>Bienvenido/a de nuevo a tu espacio Moonloop.</p>
-    </section>
+    <!-- MAIN CONTENT -->
+        <main class="subpage">
+            <h1>Mis compras</h1>
 
+            <div id="purchases-container" class="profile-cards">
+            <!-- cargado por usuario.js -->
+            </div>
 
-    <!-- FAVORITOS Y COMPRAS -->
-    <section class="profile-shortcuts">
-    <button class="shortcut-btn" onclick="window.location.href='favorites.html'">Mis favoritos</button>
-
-    <button class="shortcut-btn" onclick="window.location.href='purchases.html'">Mis compras</button>
-    </section>
-
-
-    <!-- CERRAR SESIÓN -->
-    <section class="logout">
-        <button id="logout-btn">Cerrar sesión</button>
-    </section>
-
-    <!-- CONFIGURACIÓN -->
-    <section class="profile-section config">
-        <a href="#" class="config-link">Configuración</a>
-    </section>
-
-    <!-- MODAL CERRAR SESIÓN -->
-
-    <div id="logout-modal" class="modal hidden">
-    <div class="modal-content">
-        <h2>¿Estás seguro?</h2>
-        <p>¿Deseas cerrar sesión?</p>
-
-        <div class="modal-buttons">
-            <button id="confirm-logout" class="modal-btn modal-btn-primary">
-                Sí, cerrar sesión
-            </button>
-            <button id="cancel-logout" class="modal-btn modal-btn-secondary">
-                Cancelar
-            </button>
-        </div>
-    </div>
-    </div>
-</div>
-</main>
-
- <!-- FOOTER -->
+        </main>
+    <!-- FOOTER -->
     <footer class="footer">
 
         <div class="footer-left">
@@ -110,5 +73,6 @@
         </div>
 
     </footer>
+
 </body>
 </html>
