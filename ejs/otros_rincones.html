@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Usuario | Moonloop</title>
+    <link rel="stylesheet" href="../styles/otrosdestinos.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="../js/usuario.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <!--Mapa interactivo: leaflet-->
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
+
+    <!-- Tu script del mapa -->
+    <script src="../js/mapa-otrosdestinos.js" defer></script>
+    <script src="../js/data/ciudades-del-mundo.js" defer></script>
+
+
+
+</head>
+
+<body>
+    <!-- HEADER -->
+        <header>
+            <!-- Sección izquierda: logo -->
+             <div class="logo-section">
+                <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
+             </div>
+
+             <!-- Sección central: índice -->
+              <nav class="nav-menu">
+                <ul>
+                <li><a data-i18n="nav_home" href="home.html">Inicio</a></li>
+                <li><a id="nav_user" href="#">Usuario</a></li>
+                <li><a data-i18n="nav_destinations" href="destinos.html">Destinos</a></li>
+                <li><a data-i18n="nav_otherplaces" href="#otrosrincones">Otros rincones</a></li>
+                <li><a data-i18n="nav_community" href="comunidad.html">Comunidad</a></li>
+                </ul>
+              </nav>
+            <!-- Sección derecha: idiomas -->
+             <div class="language-section">
+                <select name="language" id="language-select">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                </select>
+             </div>
+        </header>
+<!--MAPA INTERACTIVO-->
+
+<section id="otrosrincones" class="otrosrincones-section">
+    <h2>Otros rincones del mundo</h2>
+    <p>Tú pones la chincheta y nosotros el plan</p>
+
+    <!--Filtro del mapa-->
+    <div id="continent-filters">
+    <button data-continent="all" class="active">Todos</button>
+    <button data-continent="Europa">Europa</button>
+    <button data-continent="Asia">Asia</button>
+    <button data-continent="América">América</button>
+    <button data-continent="África">África</button>
+    <button data-continent="Oceanía">Oceanía</button>
+    </div>
+
+    <!-- Contenedor del mapa -->
+    <div id="world-map"></div>
+</section>

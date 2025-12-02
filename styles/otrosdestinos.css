@@ -1,0 +1,180 @@
+/* Estilos generales: quitar los márgenes y paddings por defecto*/
+:root {
+    /* Aquí inventas los nombres. Deben empezar con dos guiones -- */
+    --color-cabeceraS: #cec9c9;
+    --color-cabecera:#F5F0EB;
+    --azul-clarito:   #C3CBD6;  /* Azul muy suave para fondos */    
+    --color-texto-principal: #333;  /* Gris oscuro para textos */
+    --color-destacado: #007bff;     /* Azul eléctrico para precios o botones */
+    --fondo-overlay: rgba(255, 255, 255, 0.95); /* Blanco casi opaco */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+
+/* OTROS DESTINOS */
+.otrosrincones-section {
+    padding: 80px 40px;
+    background-color: var(--fondo-overlay);
+    text-align: center;
+    border-radius: 12px; /* como el resto de elementos redondeados */
+    margin-top: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.otrosrincones-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--color-texto-principal);
+}
+
+.otrosrincones-section p {
+    font-size: 16px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+}
+
+/* Contenedor del mapa */
+#world-map {
+    width: 100%;
+    height: 520px;
+    margin: 30px auto 0 auto;
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12); /* alineado con tus tarjetas */
+    background: #eaeaea;
+}
+
+/*TARJETAS DE DESTINOS*/
+/* Tarjeta del popup Moonloop */
+.popup-card {
+    width: 240px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Imagen superior */
+.popup-img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+
+/* Contenido */
+.popup-content {
+    padding: 10px 12px;
+    text-align: left;
+}
+
+/* Título (ciudad) */
+.popup-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-texto-principal);
+    margin: 0;
+}
+
+/* Subtítulo (país) */
+.popup-subtitle {
+    font-size: 14px;
+    color: var(--color-texto-principal);
+    margin: 0 0 8px 0;
+}
+
+/* Descripción */
+.popup-description {
+    font-size: 8px;
+    color: var(--color-texto-principal);
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* Botón */
+.popup-btn {
+    width: 100%;
+    padding: 8px;
+    background: var(--color-destacado);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    transition: 0.2s;
+}
+
+.popup-btn:hover {
+    background: #d4b081;
+}
+/* Tarjetas-Chinchetas  */
+.marker-card {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid #F5F0EB; /* borde Moonloop */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.18);
+    background: #fff;
+}
+
+.marker-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*FILTRO COTINENTE*/
+#continent-filters {
+    display: flex;
+    justify-content: center;
+    gap: 40px;                 /* igual separación que el navbar */
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+#continent-filters button {
+    background: none;          /* sin fondo */
+    border: none;              /* sin borde */
+    font-size: 16px;          /* mismo tamaño que navbar */
+    color: #333;               /* color texto navbar */
+    cursor: pointer;
+    padding: 5px 0;
+    transition: color 0.2s ease;
+}
+
+/* Hover igual que el navbar: apenas un cambio de color */
+#continent-filters button:hover {
+    color: #555;               /* un gris un pelín más claro */
+}
+
+/* Botón activo → igual estilo que 'Otros rincones' en tu menú */
+#continent-filters button.active {
+    color: #000;               /* más oscuro, igual que activo del navbar */
+    font-weight: 600;
+}
+
+
+
+
+@media (max-width: 768px) {
+    #world-map {
+        height: 380px;
+    }
+}
+

@@ -345,7 +345,7 @@ header {
 
 /* FORMULARIO (columna derecha) */
 .register-form-container {
-    flex: 1;                   /* ❗ tamaño igual al de la imagen */
+    flex: 1;                   /* tamaño igual al de la imagen */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -550,8 +550,11 @@ header {
     margin-top: 20px;
 }
 .logout button {
-    width: 100%;
-    padding: 12px;
+    width: auto;            
+    padding: 10px 22px;     /* tamaño compacto */
+    font-size: 15px;
+    display: inline-block;  /* botón natural */
+    margin: 0 auto;         /* centrar */
     background: var(--azul-clarito);
     color: var(--color-texto-principal);
     border-radius: 10px;

@@ -37,13 +37,33 @@ function handleRegister() {
     const pass1 = document.getElementById("register-password").value;
     const pass2 = document.getElementById("register-password2").value;
 
+    // Validar campos vacíos
     if (!name || !surname || !email || !pass1 || !pass2) {
         alert("Por favor completa todos los campos.");
         return;
     }
 
+    // Validación: coincidencia
     if (pass1 !== pass2) {
         alert("Las contraseñas no coinciden.");
+        return;
+    }
+
+    // Validación: longitud mínima
+    if (pass1.length < 8) {
+        alert("La contraseña debe tener al menos 8 caracteres, contener al menos una mayúscula, una minúscula y un número.");
+        return;
+    }
+
+    // Validación: al menos una mayúscula
+    if (!/[A-Z]/.test(pass1)) {
+        alert("La contraseña debe tener al menos 8 caracteres, contener al menos una mayúscula, una minúscula y un número.");
+        return;
+    }
+
+    // Validación: al menos un número
+    if (!/[0-9]/.test(pass1)) {
+        alert("La contraseña debe tener al menos 8 caracteres, contener al menos una mayúscula, una minúscula y un número.");
         return;
     }
 
