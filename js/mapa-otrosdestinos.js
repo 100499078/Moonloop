@@ -44,8 +44,6 @@ function crearPopupHTML(city, countryName) {
             <h4 class="popup-subtitle">${countryName}</h4>
 
             <p class="popup-description">${city.description}</p>
-
-            <button class="popup-btn">Ver más</button>
         </div>
     </div>`;
 }
