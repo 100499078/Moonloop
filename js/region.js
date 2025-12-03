@@ -50,6 +50,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if(descEl) descEl.textContent = regionData.descripcion;
     if(imgEl) imgEl.src = regionData.imagen;
 
+     // --- NUEVO: Generar Breadcrumb desde JS ---
+    const breadContainer = document.getElementById("breadcrumb-hero");
+    if (breadContainer) {
+        breadContainer.innerHTML = `
+            <a href="destinos.html">Destinos</a> 
+            <span class="separator">›</span> 
+            <a href="todas_regiones.html">Regiones</a>
+            <span class="separator">›</span>
+            <span class="actual">${regionNombre}</span>
+        `;
+    }
+
     // --- 5. Filtrar packs de esa región ---
     // Asegúrate de que la variable PACKS existe (viene de packs.js)
     const packsRegion = (typeof PACKS !== 'undefined') ? PACKS.filter(pack => pack.region === regionNombre) : [];

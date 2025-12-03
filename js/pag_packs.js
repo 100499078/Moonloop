@@ -22,10 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (breadcrumbEl) {
         // Enlaces: Regiones > Región > País
         breadcrumbEl.innerHTML = `
+            <a href="destinos.html">Destinos</a>
+            <span class="separator">›</span> 
             <a href="todas_regiones.html">Regiones</a>
-            <span>></span>
+            <span class="separator">›</span> 
             <a href="region.html?region=${encodeURIComponent(pack.region)}">${pack.region}</a>
-            ${pack.pais ? `<span>></span><span>${pack.pais}</span>` : ""}
+            ${pack.pais ? `<span class="separator">›</span> <span class= "actual">${pack.pais}</span>` : ""}
         `;
     }
     // Datos básicos

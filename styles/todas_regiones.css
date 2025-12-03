@@ -19,6 +19,39 @@ body {
     margin: 0;
 }
 
+.breadcrumbs-hero {
+    /* Quitamos position: absolute porque ahora es una barra normal */
+    padding: 20px 5%; /* Espaciado lateral alineado con el texto del header */
+    background-color: #f9f9f9; /* Fondo gris muy suave */
+    color: #666; /* Texto gris oscuro */
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #eee; /* Línea separadora sutil */
+}
+
+.breadcrumbs-hero a {
+    color: #666; /* Enlaces en gris */
+    text-decoration: none;
+    transition: color 0.3s;
+    border-bottom: 1px solid transparent;
+}
+
+.breadcrumbs-hero a:hover {
+    color: #000; /* Negro al pasar el ratón */
+    border-bottom: 1px solid #000;
+}
+
+.breadcrumbs-hero .separator {
+    margin: 0 10px;
+    color: #999; /* Separador más clarito */
+}
+
+.breadcrumbs-hero .actual {
+    color: #000; /* La página actual en negro */
+    font-weight: 700;
+}
 
 /* ESTRUCTURA PRINCIPAL */
 #regiones-container {

@@ -54,4 +54,15 @@ document.addEventListener("DOMContentLoaded", () => {
             </section>
         `;
     }).join("");
+
+      // --- NUEVO: Generar Breadcrumb desde JS ---
+    const breadContainer = document.getElementById("breadcrumb-hero");
+    if (breadContainer) {
+        breadContainer.innerHTML = `
+            <a href="destinos.html">Destinos</a> 
+            <span class="separator">›</span> 
+            <a href="todas_regiones.html">Regiones</a>
+        `;
+    }
+
 });

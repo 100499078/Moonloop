@@ -27,26 +27,41 @@ body {
        pero lo vamos a ocultar */
     display: block; 
 }
-.breadcrumb {
+
+
+
+.breadcrumb{
+    /* Quitamos position: absolute porque ahora es una barra normal */
+    padding: 20px 5%; /* Espaciado lateral alineado con el texto del header */
+    background-color: #f9f9f9; /* Fondo gris muy suave */
+    color: #666; /* Texto gris oscuro */
     font-size: 0.9rem;
-    margin: 20px auto;
-    max-width: 1200px;
-    padding: 0 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #eee; /* Línea separadora sutil */
 }
 
 .breadcrumb a {
-    color: var(--azul-oscuro);
+    color: #666; /* Enlaces en gris */
     text-decoration: none;
-    margin-right: 5px;
+    transition: color 0.3s;
+    border-bottom: 1px solid transparent;
 }
 
 .breadcrumb a:hover {
-    text-decoration: underline;
+    color: #000; /* Negro al pasar el ratón */
+    border-bottom: 1px solid #000;
 }
 
-.breadcrumb span {
-    margin: 0 5px;
-    color: #555;
+.breadcrumb .separator {
+    margin: 0 10px;
+    color: #999; /* Separador más clarito */
+}
+
+.breadcrumb .actual {
+    color: #000; /* La página actual en negro */
+    font-weight: 700;
 }
 
 

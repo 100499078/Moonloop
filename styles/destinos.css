@@ -7,6 +7,14 @@
     --color-destacado: #007bff;     /* Azul eléctrico para precios o botones */
     --fondo-overlay: #F6F4F2; /* Blanco casi opaco */
 }
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
 
 .banner-destinos {
     margin-top: 40px;
@@ -140,24 +148,7 @@
     align-items: center;
 }
 
-/* Estilos para la barra de búsqueda 
-.search-container input[type="text"] {
-    flex: 1;
-    padding: 12px 20px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
 
-.search-container input[type="range"] {
-    width: 200px;
-}
-
-#budget-value {
-    font-weight: 600;
-    margin-left: 10px;
-}
-*/
 
 /* --- ESTILOS DEL HERO (La portada) --- */
 .hero-section {
@@ -217,229 +208,525 @@
     font-size: 18px;
 }
 
-/* --- ESTILOS DEL OVERLAY (La ventana que se abre) --- */
+/* =========================================
+   1. MECÁNICA DEL POP-UP (NO BORRAR)
+========================================= */
 .search-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--fondo-overlay);
-    z-index: 1000;
-    display: flex; /* Flex para centrar */
+    background: var(--color-cabecera); /* Fondo blanco casi opaco */
+    z-index: 2000; /* Por encima de todo */
+    display: flex;
     justify-content: center;
     align-items: flex-start; /* Alineado arriba */
-    padding-top: 80px;
+    padding-top: 60px; /* Espacio desde el techo */
     
-    /* Efecto de aparición */
+    /* Efecto de aparición suave */
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    
+    backdrop-filter: blur(5px); /* Efecto borroso detrás */
 }
 
+/* Clase que añade JS para mostrarlo */
 .search-overlay.active {
     opacity: 1;
     visibility: visible;
-}
-
-.overlay-content {
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
-    text-align: center;
 }
 
 .close-btn {
     position: absolute;
     top: 30px;
     right: 40px;
-    font-size: 40px;
+    font-size: 3rem;
     background: none;
     border: none;
     cursor: pointer;
     color: #333;
+    line-height: 1;
+    z-index: 2001;
+    transition: transform 0.2s;
 }
 
-/* Input Real dentro del Overlay */
+.close-btn:hover {
+    transform: scale(1.1) rotate(90deg);
+    color: #000;
+}
+
+/* =========================================
+   2. LAYOUT DE 2 COLUMNAS (NUEVO)
+========================================= */
+.overlay-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+.search-flex-container {
+    display: flex;
+    gap: 80px; /* Separación amplia entre columnas */
+    align-items: flex-start;
+    text-align: left;
+    height: 70vh; /* Altura contenida */
+}
+
+/* --- COLUMNA IZQUIERDA: BUSCADOR --- */
+.search-controls {
+    flex: 1; /* Ocupa el espacio disponible */
+    padding-right: 40px;
+    border-right: 1px solid #eee; /* Línea vertical separadora */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-controls h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #111;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+/* Barra de input */
 .real-search-box {
     display: flex;
-    gap: 10px;
-    margin-bottom: 40px;
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 50px;
+    align-items: center;
+    border-bottom: 3px solid #111; /* Línea negra fuerte */
+    padding-bottom: 10px;
 }
 
 .real-search-box input {
-    width: 100%;
-    padding: 15px;
-    font-size: 24px;
+    flex: 1;
+    padding: 10px 0;
+    font-size: 2rem;
     border: none;
-    border-bottom: 2px solid #ddd; /* Solo línea abajo */
     outline: none;
     background: transparent;
+    font-weight: 400;
+    color: #111;
+}
+
+.real-search-box input::placeholder {
+    color: #ccc;
+    font-weight: 300;
 }
 
 .search-btn-action {
-    padding: 10px 30px;
-    background-color: #333;
+    padding: 15px 40px;
+    background-color: #111;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 50px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
 }
 
-/* --- ESTILOS DEL SLIDER DE PRESUPUESTO --- */
+.search-btn-action:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+}
+
+/* Slider de Presupuesto */
 .budget-filter-container {
     background: #f9f9f9;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 40px;
-    text-align: left;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: auto; /* Empuja esto hacia abajo si sobra espacio */
 }
 
 .budget-filter-container label {
-    font-size: 18px;
-    color: #333;
+    font-size: 1.1rem;
+    color: #444;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 #budget-value {
-    font-weight: bold;
-    color: #007bff; /* Azul destacado */
+    color: #007bff;
+    font-size: 1.3rem;
 }
 
 input[type=range] {
     width: 100%;
-    height: 8px;
-    background: #ddd;
+    height: 6px;
+    background: #e0e0e0;
     border-radius: 5px;
     outline: none;
-   
+    cursor: pointer;
+    appearance: none; /* Estándar moderno */
 }
 
+/* Bolita del slider */
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 24px;
     height: 24px;
-    background: #333;
+    background: #111;
     border-radius: 50%;
     cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .budget-labels {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
-    color: #888;
-    font-size: 14px;
+    margin-top: 15px;
+    color: #999;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-/* --- SUGERENCIAS (Más buscados) --- */
-.mas-buscados h3 {
-    text-align: left;
-    margin-bottom: 20px;
+/* --- COLUMNA DERECHA: RESULTADOS / SUGERENCIAS --- */
+.right-panel {
+    width: 400px; /* Ancho fijo */
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden; /* Para que el scroll sea interno */
+}
+
+/* Título pequeño de la columna derecha */
+.right-panel h3, .mas-buscados h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* Listado de Sugerencias */
+.grid-suggestions-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.suggestion-card-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid #f0f0f0;
+}
+
+.suggestion-card-side:hover {
+    transform: translateX(-5px);
+    border-color: #007bff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.suggestion-card-side img {
+    width: 80px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.sug-info p {
+    margin: 0 0 5px 0;
+    font-weight: 700;
+    font-size: 1.1rem;
     color: #333;
 }
 
-.grid-suggestions {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.suggestion-card img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.suggestion-card p {
-    margin-top: 10px;
+.sug-info span {
+    font-size: 0.95rem;
+    color: #007bff;
     font-weight: 600;
 }
-.suggestion-card {
-    transition: transform 0.2s, box-shadow 0.2s;
+
+/* Listado de Resultados (Reemplaza a sugerencias) */
+#resultados-busqueda {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* Scroll vertical solo aquí */
+    padding-right: 10px; /* Espacio para scrollbar */
+}
+
+/* Tarjeta de Resultado */
+.resultado-pack {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #eee;
+    transition: all 0.2s;
+}
+
+.resultado-pack:hover {
+    border-color: #000;
+    transform: translateX(-5px);
+    background-color: #fafafa;
+}
+
+.resultado-pack img {
+    width: 90px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.info-resultado {
+    flex: 1;
+}
+
+.info-resultado h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.meta-resultado {
+    margin: 4px 0 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.precio-resultado {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+/* Mensaje vacío */
+.mensaje-vacio {
+    text-align: center;
+    padding: 60px 20px;
+    color: #888;
+    background: #f9f9f9;
+    border-radius: 12px;
+}
+
+/* RESPONSIVE (MÓVIL) */
+@media (max-width: 900px) {
+    .search-flex-container {
+        flex-direction: column;
+        height: auto; /* Altura automática en móvil */
+    }
+    
+    .search-controls {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+    
+    .right-panel {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Estilo para el título con enlace */
+.titulo-enlace {
+    text-decoration: none; /* Quita el subrayado típico de los links */
+    color: inherit; /* Hereda el color negro/gris del h2, no se pone azul */
     cursor: pointer;
+    transition: color 0.3s ease;
+    display: inline-block; /* Para que la animación funcione bien */
 }
 
-.suggestion-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+.titulo-enlace:hover {
+    color: #007bff; /* Cambia a tu color azul corporativo al pasar el ratón */
+    transform: translateX(5px); /* Se mueve un poquito a la derecha */
 }
 
-
-/* DESTACADOS */
+/*DESTACADOS*/
+/* Contenedor Principal */
 .destacados {
-    padding: 60px 40px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
 }
 
 .destacados h2 {
-    font-size: 28px;
-    text-align: center;
+    font-size: 2.5rem;
     margin-bottom: 40px;
+    color: #111;
 }
 
-.destacados-carousel {
-    display: flex;
-    gap: 30px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding-bottom: 10px;
-}
-
-.destacados-item {
-    min-width: 300px;
-    background-color: #fff;
-    border-radius: 12px;
-    flex-shrink: 0;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
-
-.destacados-item img {
+/* Caja del Carrusel */
+.carousel-container {
+    position: relative;
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 500px; /* Altura fija para que impacte */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-.destacados-text {
-    padding: 15px;
+/* Imagen */
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Rellena sin deformar */
+    transition: transform 0.5s ease;
 }
 
-.destacados-text h3 {
-    font-size: 18px;
-    margin-bottom: 6px;
+/* Efecto Overlay (Degradado negro abajo para leer el texto) */
+.carousel-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+    padding: 60px 40px 40px 40px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
 }
 
-.destacados-text p {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 10px;
+/* Texto y Contenido */
+.carousel-content {
+    max-width: 600px;
+    color: white;
+    /* Animación de entrada suave */
+    animation: slideUp 0.5s ease-out;
 }
 
-.destacados-text .price {
-    font-weight: 600;
-    margin-right: 10px;
+.carousel-content h3 {
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-.btn-vermas {
+.carousel-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.carousel-bottom {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.price-tag {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff; /* Tu azul corporativo */
+    background: rgba(255,255,255,0.9);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+/* Botón estilo Moonloop */
+.btn-vermas-carrousel {
     display: inline-block;
-    padding: 8px 16px;
-    background-color: #000;
-    color: #fff;
-    border-radius: 6px;
+    padding: 12px 30px;
+    background-color: #fff;
+    color: #111;
     text-decoration: none;
-    font-size: 14px;
-    transition: 0.2s ease;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
 }
 
-.btn-vermas:hover {
-    background-color: #333;
+.btn-vermas-carrousel:hover {
+    background-color: #111; /* Negro al pasar el ratón */
+    color: #fff;
+    transform: translateY(-2px);
 }
+
+/* --- ESTILO NUEVO DE FLECHAS --- */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparente por defecto */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px); /* Efecto cristal */
+}
+
+/* Al pasar el ratón se ponen blancas sólidas */
+.carousel-btn:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-50%) scale(1.1); /* Crecen un poquito */
+    border-color: #fff;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* Puntos de navegación */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #fff;
+    transform: scale(1.2);
+}
+
+/* Animación simple */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-container { height: 400px; }
+    .carousel-content h3 { font-size: 1.8rem; }
+}
+
 
 /* PLANIFICA TU RUTA */
 .planifica {

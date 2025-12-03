@@ -91,7 +91,7 @@ const PACKS = [
     },
     {
         id: "AFR004KE",
-        nombre: "La Gran Migración",
+        nombre: "Safari La Gran Migración",
         destinos: "Nairobi, Masai Mara",
         region: "África",
         compania: "grupo",
@@ -817,6 +817,129 @@ const PACKS = [
             { dia: 5, titulo: "Gold Coast", detalle: "Vuelo a Queensland. Llegada al paraíso de los rascacielos frente al mar en Surfers Paradise." },
             { dia: 6, titulo: "Currumbin", detalle: "Visita al santuario de vida salvaje para ver koalas y canguros en entorno natural." },
             { dia: 7, titulo: "Gold Coast", detalle: "Mañana de playa o compras y traslado al aeropuerto de Brisbane o Gold Coast." }
+        ]
+    },
+
+    {
+        id: "LATAM007PA",
+        nombre: "Paraíso entre dos Océanos",
+        destinos: "Ciudad de Panamá, San Blas, Bocas del Toro",
+        region: "Latinoamérica",
+        pais: "Panamá",
+        duracion: "9 días",
+        compania: "pareja",
+        interes: "Relax",
+        precio: 2100,
+        imagen: "../images/pack-panama.jpg",
+        descripcion: "Descubre el secreto mejor guardado de Centroamérica. Navega por el archipiélago de San Blas (Guna Yala), donde hay una isla para cada día del año, explora manglares llenos de vida y contempla la obra de ingeniería del Canal. Un viaje de contrastes entre la selva y el rascacielos.",
+        incluye: [
+            "Alojamiento en cabañas sobre el agua (Overwater)",
+            "Vuelos internos a Bocas del Toro",
+            "Tour privado por el Canal de Panamá y Casco Antiguo",
+            "Pensión completa en islas Guna Yala",
+            "Excursión de avistamiento de delfines"
+        ],
+        itinerario: [
+            { dia: 1, titulo: "Ciudad de Panamá", detalle: "Llegada a la Miami latina. Paseo nocturno por el skyline de la Cinta Costera." },
+            { dia: 2, titulo: "El Canal", detalle: "Visita a las Esclusas de Miraflores para ver pasar los gigantescos buques. Tarde en el Casco Antiguo colonial." },
+            { dia: 3, titulo: "San Blas (Guna Yala)", detalle: "Traslado en 4x4 y lancha al territorio indígena. Noche en una cabaña tradicional en una isla privada." },
+            { dia: 4, titulo: "Islas Vírgenes", detalle: "Día completo de isla en isla: Perro Chico, Pelícano y piscinas naturales llenas de estrellas de mar." },
+            { dia: 5, titulo: "Regreso y Vuelo", detalle: "Vuelta a la ciudad y vuelo directo al archipiélago caribeño de Bocas del Toro." },
+            { dia: 6, titulo: "Bocas del Toro", detalle: "Tour de lancha: Bahía de los Delfines, Cayo Coral (snorkel) y la famosa playa de las Ranas Rojas." },
+            { dia: 7, titulo: "Zapatillas", detalle: "Excursión a los Cayos Zapatillas, playas vírgenes donde se ruedan programas de supervivencia." },
+            { dia: 8, titulo: "Selva y Mar", detalle: "Mañana libre para surf o bicicleta. Vuelo de regreso a Ciudad de Panamá." },
+            { dia: 9, titulo: "Panamá", detalle: "Últimas compras en Albrook Mall y traslado al aeropuerto internacional de Tocumen." }
+        ]
+    },
+    {
+        id: "NA003CA",
+        nombre: "Lagos y Rocosas",
+        destinos: "Banff, Jasper, Vancouver",
+        region: "Norteamérica",
+        pais: "Canadá",
+        duracion: "10 días",
+        compania: "solo",
+        interes: "Aventura",
+        precio: 2800,
+        imagen: "../images/pack-canada.jpg",
+        descripcion: "Respira el aire más puro del planeta. Una ruta escénica a través de las Montañas Rocosas canadienses, visitando lagos de un color turquesa irreal como el Louise y el Moraine, glaciares accesibles y bosques infinitos donde es fácil ver osos y alces.",
+        incluye: [
+            "Alquiler de coche tipo SUV o Camper",
+            "Pase anual 'Discovery Pass' para Parques Nacionales",
+            "Entrada al Banff Gondola",
+            "Excursión en vehículo oruga al Glaciar Athabasca",
+            "Ferry a la isla de Vancouver"
+        ],
+        itinerario: [
+            { dia: 1, titulo: "Calgary", detalle: "Llegada a la puerta de las Rocosas. Recogida del vehículo y noche en la ciudad cowboy." },
+            { dia: 2, titulo: "Banff", detalle: "Entrada al Parque Nacional. Visita al pueblo de Banff y relax en las Upper Hot Springs." },
+            { dia: 3, titulo: "Lago Louise", detalle: "La joya de la corona. Canoa en el Lago Louise y visita al cercano y espectacular Lago Moraine." },
+            { dia: 4, titulo: "Icefields Parkway", detalle: "Conducción por la carretera más bonita del mundo. Parada en el Glaciar Athabasca y cascadas Sunwapta." },
+            { dia: 5, titulo: "Jasper", detalle: "Exploración del Parque Nacional Jasper. Crucero por el lago Maligne hasta Spirit Island." },
+            { dia: 6, titulo: "Kamloops", detalle: "Ruta hacia el oeste atravesando el Monte Robson (el pico más alto) y descenso hacia la Columbia Británica." },
+            { dia: 7, titulo: "Whistler", detalle: "Llegada a la villa olímpica de montaña. Teleférico Peak 2 Peak entre dos cumbres." },
+            { dia: 8, titulo: "Vancouver", detalle: "Carretera 'Sea to Sky' hasta la costa. Tarde en Stanley Park y Gastown." },
+            { dia: 9, titulo: "Isla de Vancouver", detalle: "Ferry a Victoria. Avistamiento de orcas en el estrecho (temporada) o Jardines Butchart." },
+            { dia: 10, titulo: "Vancouver", detalle: "Puente colgante de Capilano y traslado al aeropuerto para el regreso." }
+        ]
+    },
+    {
+        id: "NA004GL",
+        nombre: "Expedición Ártica",
+        destinos: "Ilulissat, Nuuk",
+        region: "Norteamérica",
+        pais: "Groenlandia",
+        duracion: "7 días",
+        compania: "grupo",
+        interes: "Aventura",
+        precio: 3600,
+        imagen: "../images/pack-groenlandia.jpg",
+        descripcion: "El viaje definitivo para los verdaderos exploradores. Navega entre icebergs del tamaño de rascacielos en la Bahía de Disko, camina sobre el casquete polar y conoce la cultura Inuit. Un destino remoto donde el silencio se escucha.",
+        incluye: [
+            "Vuelos desde Copenhague o Reikiavik",
+            "Navegación de medianoche entre icebergs",
+            "Alojamiento en Hotel Ártico con vistas al fiordo",
+            "Excursión al glaciar Eqi",
+            "Ropa térmica de alquiler extremo"
+        ],
+        itinerario: [
+            { dia: 1, titulo: "Ilulissat", detalle: "Llegada al aeropuerto ártico. Primera vista del Fiordo Helado, Patrimonio de la UNESCO." },
+            { dia: 2, titulo: "Sermermiut", detalle: "Caminata por el valle de Sermermiut hasta el mirador de icebergs. Restos arqueológicos Inuit." },
+            { dia: 3, titulo: "Bahía de Disko", detalle: "Crucero nocturno bajo el Sol de Medianoche. Los colores del hielo son indescriptibles." },
+            { dia: 4, titulo: "Glaciar Eqi", detalle: "Navegación hasta el glaciar que pare. Verás caer enormes trozos de hielo al mar con estruendo." },
+            { dia: 5, titulo: "Pueblos Inuit", detalle: "Visita al asentamiento de Oqaatsut. Almuerzo tradicional con carne de ballena o reno (opcional)." },
+            { dia: 6, titulo: "Kayak Polar", detalle: "Experiencia única: remar en kayak entre el hielo flotante (con guía experto y traje seco)." },
+            { dia: 7, titulo: "Ilulissat", detalle: "Visita al museo de Knud Rasmussen y vuelo de regreso." }
+        ]
+    },
+    {
+        id: "LATAM008EC",
+        nombre: "El Laboratorio de Darwin",
+        destinos: "Islas Galápagos",
+        region: "Latinoamérica",
+        pais: "Ecuador",
+        duracion: "8 días",
+        compania: "grupo",
+        interes: "Aventura",
+        precio: 2950,
+        imagen: "../images/pack-galapagos.jpg",
+        descripcion: "Un museo de historia natural vivo. Nada con leones marinos juguetones, camina entre tortugas gigantes centenarias y observa piqueros de patas azules. Las 'Islas Encantadas' te cambiarán la vida.",
+        incluye: [
+            "Vuelos desde Quito/Guayaquil a Galápagos",
+            "Tarjeta de control de tránsito TCT",
+            "Tour navegable a isla deshabitada (Bartolomé o Seymour)",
+            "Equipo de snorkel de alta gama",
+            "Alojamiento en Santa Cruz e Isabela"
+        ],
+        itinerario: [
+            { dia: 1, titulo: "Baltra - Santa Cruz", detalle: "Llegada y cruce del canal de Itabaca. Visita a los cráteres Gemelos y reserva de Tortugas Gigantes." },
+            { dia: 2, titulo: "Tortuga Bay", detalle: "Caminata a una de las playas más bonitas del mundo. Kayak para ver tiburones de arrecife." },
+            { dia: 3, titulo: "Isla Bartolomé", detalle: "Tour de día completo en yate. Subida al mirador icónico y snorkel con pingüinos de Galápagos." },
+            { dia: 4, titulo: "Isabela", detalle: "Lancha rápida a la isla más grande. Visita a la laguna de los flamencos rosados." },
+            { dia: 5, titulo: "Volcán Sierra Negra", detalle: "Trekking al segundo cráter activo más grande del mundo. Paisajes lunares de lava negra." },
+            { dia: 6, titulo: "Los Túneles", detalle: "El mejor snorkel del viaje: caballitos de mar, tortugas marinas y mantarrayas en túneles de lava." },
+            { dia: 7, titulo: "Estación Charles Darwin", detalle: "Regreso a Santa Cruz. Visita al centro de crianza y compras de recuerdos en Puerto Ayora." },
+            { dia: 8, titulo: "Baltra", detalle: "Traslado al aeropuerto. Última vista de las iguanas terrestres en el camino." }
         ]
     }
 ];
