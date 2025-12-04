@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia Moonloop</title>
+    
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/experiencia.css">
+    
+    <!-- Scripts de datos y lógica -->
+    <script src="../js/packs.js" defer></script>
+    <script src="../js/experiencias.js" defer></script>
+    <script src="../js/pag_experiencia.js" defer></script>
+    
+    <link rel="icon" type="image/png" href="../images/luna.png">
+</head>
+<body>
+
+    <header>
+        <div class="logo-section">
+            <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="comunidad.html">Comunidad</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb simple -->
+    <nav class="breadcrumbs-hero">
+        <a href="comunidad.html">Comunidad</a>
+        <span class="separator">›</span>
+        <span class="actual">Experiencia</span>
+    </nav>
+
+    <main class="article-container">
+        
+        <!-- CABECERA DEL ARTÍCULO -->
+        <header class="article-header">
+            <h1 id="exp-titulo">Cargando historia...</h1>
+            <h2 id="exp-subtitulo" class="subtitle"></h2>
+            
+            <div class="article-meta">
+                <span class="author">✍️ Por <span id="exp-autor"></span></span>
+                <span class="date">📅 <span id="exp-fecha"></span></span>
+            </div>
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <article class="article-body">
+            
+            <!-- Imagen Principal (Hero) -->
+            <img id="exp-img1" class="img-fluid hero-img" src="" alt="">
+
+            <p id="exp-p1" class="text-block first-letter"></p>
+            <p id="exp-p2" class="text-block"></p>
+
+            <!-- Segunda Imagen -->
+            <figure>
+                <img id="exp-img2" class="img-fluid" src="" alt="">
+            </figure>
+
+            <p id="exp-p3" class="text-block"></p>
+
+            <!-- Tercera Imagen -->
+            <figure>
+                <img id="exp-img3" class="img-fluid" src="" alt="">
+            </figure>
+
+            <p id="exp-p4" class="text-block"></p>
+
+        </article>
+
+        <!-- SECCIÓN: VIAJE RELACIONADO (Call to Action) -->
+        <section id="related-pack-section" class="related-pack-box" style="display:none;">
+            <h3>¿Te gustaría vivir esto?</h3>
+            <div class="related-card">
+                <img id="rel-img" src="" alt="">
+                <div class="rel-info">
+                    <span class="tag">Pack Recomendado</span>
+                    <h4 id="rel-nombre"></h4>
+                    <p id="rel-desc"></p>
+                    <div class="rel-bottom">
+                        <span id="rel-precio" class="price"></span>
+                        <a id="rel-link" href="#" class="btn-ver">Ver Itinerario Completo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
