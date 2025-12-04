@@ -1,0 +1,262 @@
+:root {
+    --color-cabecera:#F5F0EB;
+    --azul-clarito:#C3CBD6;
+    --color-texto-principal:#333;
+    --color-destacado:#007bff;
+    --fondo-overlay:rgba(255,255,255,0.95);
+}
+
+/* CONTENEDOR GENERAL */
+.compra-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* RESUMEN DEL PACK*/
+
+.compra-pack-resumen h1 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    color: var(--color-texto-principal);
+}
+
+.pack-resumen-box {
+    background: var(--fondo-overlay);
+    border: 1px solid var(--azul-clarito);
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    gap: 25px;
+    box-shadow: 0 5px 16px rgba(0,0,0,0.06);
+    align-items: center;
+}
+
+.pack-resumen-box img {
+    width: 240px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.pack-info h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--color-texto-principal);
+}
+
+.pack-info .precio {
+    margin-top: 8px;
+    font-size: 1.5rem;
+    color: var(--color-texto-principal);
+}
+
+/*FORMULARIO DE COMPRA*/
+
+.compra-formulario {
+    margin-top: 40px;
+    background: var(--fondo-overlay);
+    border: 1px solid var(--azul-clarito);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+.compra-formulario h2 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    color: var(--color-texto-principal);
+}
+
+.compra-formulario label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: 600;
+    color: var(--color-texto-principal);
+}
+
+.compra-formulario input,
+.compra-formulario select,
+.compra-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--azul-clarito);
+    border-radius: 10px;
+    background: #fafafa;
+    outline: none;
+    transition: 0.25s;
+    font-size: 14px;
+}
+
+.compra-formulario textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.compra-formulario input:focus,
+.compra-formulario select:focus,
+.compra-formulario textarea:focus {
+    border-color: var(--color-destacado);
+    box-shadow: 0 0 4px var(--color-destacado);
+}
+
+/* Checkbox */
+.compra-formulario input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+/* Botón principal */
+.btn-finalizar {
+    margin-top: 25px;
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    background: var(--color-destacado);
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn-finalizar:hover {
+    background: #005ad1;
+}
+
+
+
+/*CALENDARIO (ESTILO A – DOS MESES EN CAJA)*/
+
+.calendario-wrapper {
+    background: var(--fondo-overlay);
+    border: 1px solid var(--azul-clarito);
+    padding: 25px;
+    border-radius: 16px;
+    margin-top: 25px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+/* Navegación */
+.calendario-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.cal-btn {
+    background: white;
+    border: 1px solid var(--azul-clarito);
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cal-btn:hover {
+    background: var(--color-destacado);
+    color: white;
+}
+
+/* CONTENEDOR DE DOS MESES */
+.calendarios-dobles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.calendario-mes h4 {
+    margin-bottom: 8px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #222;
+    text-transform: capitalize;
+}
+
+/* Tabla */
+.calendario {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.calendario th {
+    padding: 6px 0;
+    font-weight: 600;
+    color: #555;
+}
+
+.calendario td {
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.calendarios-dobles {
+    border-right: 1px solid #eee;
+}
+
+/* Día normal */
+.calendario td:hover {
+    background: var(--azul-clarito);
+}
+
+/* Día deshabilitado */
+.cal-disabled {
+    color: #bbb;
+    cursor: default;
+}
+
+.cal-disabled:hover {
+    background: none;
+}
+
+/* Selección */
+.fecha-ida,
+.fecha-vuelta {
+    background: var(--color-destacado) !important;
+    color: white !important;
+    font-weight: 700;
+}
+
+/* Rango entre fechas */
+.en-rango {
+    background: linear-gradient(90deg, #dce3ee, #dce3ee);
+}
+
+/* Resultados */
+.resultado-fechas {
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid var(--azul-clarito);
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.resultado-fechas span {
+    font-weight: 700;
+    color: var(--color-destacado);
+}
+
+/* RESPONSIVE*/
+
+@media (max-width: 850px) {
+    .calendarios-dobles {
+        grid-template-columns: 1fr;
+    }
+
+    .pack-resumen-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pack-resumen-box img {
+        width: 100%;
+        height: 220px;
+    }
+}

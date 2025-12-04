@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
+    // Conectar botón "Comprar ya" con compra.html
+    const btnComprar = document.getElementById("btn-comprar");
+    if (btnComprar) {
+        btnComprar.href = `compra.html?id=${pack.id}`;
+    }
+
 
         // --- BREADCRUMB ---
     const breadcrumbEl = document.getElementById("breadcrumb");

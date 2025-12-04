@@ -189,9 +189,9 @@ function addPurchase(product) {
 
 function loadPurchases(user) {
     const container = document.getElementById("purchases-container");
-    if (!container) return; // 👉 igual aquí
+    if (!container) return;
 
-    if (!user.purchases.length) {
+    if (!user.purchases || user.purchases.length === 0) {
         container.innerHTML = "<p>No tienes compras realizadas.</p>";
         return;
     }
@@ -199,15 +199,40 @@ function loadPurchases(user) {
     container.innerHTML = "";
 
     user.purchases.forEach(p => {
+        const fechaIda = new Date(p.fechaIda).toLocaleDateString();
+        const fechaVuelta = new Date(p.fechaVuelta).toLocaleDateString();
+
+        const alergias = p.alergias && p.alergias.trim() !== ""
+            ? p.alergias
+            : "Ninguna";
+
         container.innerHTML += `
-            <div class="card">
-                <h3>${p.id}</h3>
-                <p>Fecha: ${p.date}</p>
-                <p>Precio: ${p.price}€</p>
+            <div class="purchase-card">
+                <img class="purchase-img" src="${p.imagen || '../images/default.jpg'}" alt="${p.packName}">
+                
+                <div class="purchase-info">
+                    <h3>${p.packName}</h3>
+
+                    <p><strong>Destinos:</strong> ${p.destinos}</p>
+                    <p><strong>Fechas:</strong> ${fechaIda} → ${fechaVuelta}</p>
+                    <p><strong>Personas:</strong> ${p.personas}</p>
+
+                    ${p.mascotas ? `<p><strong>Mascotas:</strong> ${p.mascotas.tipo} (${p.mascotas.tamano})</p>` : ""}
+
+                    <p><strong>Alergias:</strong> ${alergias}</p>
+                    <p><strong>Descuento aplicado:</strong> ${p.descuento || 0} €</p>
+                    <p class="purchase-total"><strong>Total pagado:</strong> ${p.price} €</p>
+
+                    <a class="purchase-link" href="pack.html?id=${p.id}">
+                        Ver pack
+                    </a>
+                </div>
             </div>
         `;
     });
 }
+
+
 
 // LOGOUT
 

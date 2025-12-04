@@ -642,6 +642,67 @@ header {
     color: var(--color-texto-principal);
 }
 
+/* Tarjeta */
+.purchase-card {
+    display: flex;
+    gap: 15px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 15px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    transition: 0.2s;
+    align-items: flex-start;
+}
+
+.purchase-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Imagen */
+.purchase-img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+/* Info del viaje */
+.purchase-info {
+    flex: 1;
+}
+
+.purchase-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+/* Precio final */
+.purchase-total {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: var(--color-destacado);
+}
+
+/* Botón enlace */
+.purchase-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: var(--color-destacado);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.purchase-link:hover {
+    background: #004fc7;
+}
+
 
 /* RESPONSIVE */
 

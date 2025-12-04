@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra - Moonloop</title>
+    <!-- Estilos generales -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/compra.css">
+    <!-- Scripts -->
+    <script src="../js/usuario.js" defer></script>
+    <script src="../js/packs.js" defer></script>
+    <script src="../js/compra.js" defer></script>
+
+    <link rel="icon" type="image/png" href="../images/luna.png">
+</head>
+
+<body>
+
+    <!-- HEADER (copiado exactamente de destinos.html) -->
+    <header>
+        <div class="logo-section">
+            <img src="../images/logo.png" class="logo">
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a data-i18n="nav_home" href="home.html">Inicio</a></li>
+                <li><a id="nav_user" href="#">Usuario</a></li>
+                <li><a id="nav_destinations" href="destinos.html">Destinos</a></li>
+                <li><a id="nav_otherplaces" href="otros_rincones.html">Otros rincones</a></li>
+                <li><a id="nav_community" href="comunidad.html">Comunidad</a></li>
+            </ul>
+        </nav>
+
+        <div class="language-section">
+            <select id="language-select">
+                <option value="es">ES</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="compra-container">
+
+        <!-- Resumen del Pack -->
+        <section class="compra-pack-resumen">
+            <h1>Finaliza tu compra</h1>
+
+            <div class="pack-resumen-box">
+                <img id="pack-img" src="" alt="Imagen del pack" class="pack-img">
+                <div class="pack-info">
+                    <h2 id="pack-titulo">Cargando...</h2>
+                    <p class="precio"><span id="pack-precio"></span> €</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario -->
+        <section class="compra-formulario">
+            <h2>Datos del viaje</h2>
+
+            <form id="form-compra">
+
+                <!-- Acompañantes -->
+                <label for="acompanantes">Número de acompañantes:</label>
+                <input type="number" id="acompanantes" min="0" value="0">
+
+                <!-- Mascotas -->
+                <h3>Mascotas</h3>
+                <label>
+                    <input type="checkbox" id="lleva-mascotas">
+                    Viajo con mascota
+                </label>
+
+                <div id="mascotas-info" style="display:none;">
+                    <label for="mascota-tipo">Tipo de mascota:</label>
+                    <select id="mascota-tipo">
+                        <option value="Perro">Perro</option>
+                        <option value="Gato">Gato</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+
+                    <label for="mascota-tamano">Tamaño:</label>
+                    <select id="mascota-tamano">
+                        <option value="Pequeño">Pequeño</option>
+                        <option value="Mediano">Mediano</option>
+                        <option value="Grande">Grande</option>
+                    </select>
+                </div>
+
+                <!-- Alergias -->
+                <h3>Alergias o intolerancias</h3>
+                <textarea id="alergias" placeholder="Ej: gluten, marisco, frutos secos…"></textarea>
+
+                <!-- CALENDARIO DE SELECCIÓN DE FECHAS -->
+                <h3>Selecciona tus fechas</h3>
+
+                <div class="calendario-wrapper">
+
+                    <!-- Controles de navegación -->
+                    <div class="calendario-nav">
+                        <button id="prev-mes" class="cal-btn">←</button>
+                        <span id="calendario-rango-meses"></span>
+                        <button id="next-mes" class="cal-btn">→</button>
+                    </div>
+
+                    <!-- Contenedor doble (dos meses visibles) -->
+                    <div class="calendarios-dobles">
+
+                        <!-- Mes 1 -->
+                        <div class="calendario-mes">
+                            <h4 id="mes1-titulo"></h4>
+                            <table class="calendario" id="calendario1"></table>
+                        </div>
+
+                        <!-- Mes 2 -->
+                        <div class="calendario-mes">
+                            <h4 id="mes2-titulo"></h4>
+                            <table class="calendario" id="calendario2"></table>
+                        </div>
+
+                    </div>
+
+                    <!-- Resultado seleccionado -->
+                    <div class="resultado-fechas">
+                        <p>Ida: <span id="fecha-ida">—</span></p>
+                        <p>Vuelta: <span id="fecha-vuelta">—</span></p>
+                    </div>
+
+                </div>
+
+
+                <!-- Botón -->
+                <button type="submit" class="btn-finalizar">Confirmar compra</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER (idéntico al de destinos.html) -->
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="../images/logo.png" class="footer-logo">
+            <p>Contacto +34 666 722 227</p>
+            <a href="#">Políticas</a>
+            <a href="#">FAQs</a>
+        </div>
+
+        <div class="footer-newsletter">
+            <label>¡No te pierdas nada con nuestra Newsletter!</label>
+            <div class="newsletter-box">
+                <input type="email" placeholder="Introduce tu correo">
+                <button>Enviar</button>
+            </div>
+        </div>
+
+        <div class="footer-icons">
+            <a href="#"><img src="../images/ig.webp"></a>
+            <a href="#"><img src="../images/whatsapp.webp"></a>
+            <a href="#"><img src="../images/x.png"></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
