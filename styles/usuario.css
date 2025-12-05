@@ -487,8 +487,10 @@ header {
 
 .profile-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(3, 1fr);  /* EXACTAMENTE 3 por fila */
     gap: 25px;
+    padding: 20px 40px;
+    justify-items: center;
 }
 
 .profile-card {
@@ -683,7 +685,7 @@ header {
 .purchase-total {
     margin-top: 10px;
     font-size: 1.1rem;
-    color: var(--color-destacado);
+    color: var(--color-texto-principal);
 }
 
 /* Botón enlace */

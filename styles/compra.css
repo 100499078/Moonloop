@@ -243,6 +243,146 @@
     color: var(--color-destacado);
 }
 
+/*CONFIRMACIÓN*/
+body {
+    background: #f4f6fa;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.confirm-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.confirm-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Checkmark */
+.checkmark-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.background {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #4ad468;
+    position: absolute;
+}
+
+.checkmark {
+    border-radius: 5px;
+}
+
+.checkmark.draw:after {
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-name: checkmark;
+    transform: scaleX(-1) rotate(135deg);
+}
+
+.checkmark:after {
+    opacity: 1;
+    height: 60px;
+    width: 30px;
+    transform-origin: left top;
+    border-right: 10px solid #fff;
+    border-top: 10px solid #fff;
+    content: '';
+    left: 32px;
+    top: 55px;
+    position: absolute;
+}
+
+/* Animación del check */
+@keyframes checkmark {
+    0% {
+        height: 0;
+        width: 0;
+        opacity: 1;
+    }
+    20% {
+        height: 0;
+        width: 30px;
+        opacity: 1;
+    }
+    40% {
+        height: 60px;
+        width: 30px;
+        opacity: 1;
+    }
+    100% {
+        height: 60px;
+        width: 30px;
+        opacity: 1;
+    }
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 1.8rem;
+    color: #222;
+}
+
+.mensaje {
+    color: #444;
+    font-size: 1rem;
+    margin: 15px 0 30px;
+}
+
+/* Botones */
+.botones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-principal {
+    background: #1565ff;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-principal:hover {
+    background: #004fd6;
+}
+
+.btn-secundario {
+    background: #eee;
+    color: #333;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-secundario:hover {
+    background: #d8d8d8;
+}
+
+
 /* RESPONSIVE*/
 
 @media (max-width: 850px) {

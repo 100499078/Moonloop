@@ -52,6 +52,7 @@ alergiasEl.textContent = compraTemporal.alergias && compraTemporal.alergias.trim
     ? compraTemporal.alergias
     : "Ninguna";
 
+
 // ------------------------
 // DATOS VIAJERO: AUTOCOMPLETAR SI HAY USUARIO
 // ------------------------
@@ -250,10 +251,9 @@ btnConfirmar.addEventListener("click", () => {
     // Limpiar la compra temporal
     localStorage.removeItem("compraTemporal");
 
-    alert("¡Pago completado! Gracias por viajar con Moonloop 🌙");
 
     if (getCurrentUser()) {
-        window.location.href = "profile.html";
+        window.location.href = "confirm.html";;
     } else {
         window.location.href = "home.html";
     }
