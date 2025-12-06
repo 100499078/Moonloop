@@ -148,7 +148,38 @@ window.seleccionarFecha = function (año, mes, dia) {
 // iniciar el calendario
 renderCalendarios();
 
+const compraTemporalPrev = JSON.parse(localStorage.getItem("compraTemporal"));
 
+if (compraTemporalPrev && compraTemporalPrev.idPack === pack.id) {
+
+    // Acompañantes
+    document.getElementById("acompanantes").value = compraTemporalPrev.acompanantes ?? 0;
+
+    // Alergias
+    document.getElementById("alergias").value = compraTemporalPrev.alergias ?? "";
+
+    // Mascotas
+    if (compraTemporalPrev.mascotas) {
+        checkMascotas.checked = true;
+        mascotasInfo.style.display = "block";
+        document.getElementById("mascota-tipo").value = compraTemporalPrev.mascotas.tipo;
+        document.getElementById("mascota-tamano").value = compraTemporalPrev.mascotas.tamano;
+    }
+
+    // Fechas
+    if (compraTemporalPrev.fechaIda && compraTemporalPrev.fechaVuelta) {
+        fechaIda = new Date(compraTemporalPrev.fechaIda);
+        fechaVuelta = new Date(compraTemporalPrev.fechaVuelta);
+
+        spanIda.textContent = fechaIda.toLocaleDateString();
+        spanVuelta.textContent = fechaVuelta.toLocaleDateString();
+
+        // Mover el calendario al mes de la fecha restaurada
+        fechaActual = new Date(fechaIda.getFullYear(), fechaIda.getMonth(), 1);
+
+        renderCalendarios();
+    }
+}
 
 /*GUARDAR LA COMPRA TEMPORAL Y PASAR A pago.html*/
 

@@ -52,6 +52,13 @@ alergiasEl.textContent = compraTemporal.alergias && compraTemporal.alergias.trim
     ? compraTemporal.alergias
     : "Ninguna";
 
+// --- BOTÓN EDITAR SELECCIÓN ---
+const btnEditar = document.getElementById("btn-editar-seleccion");
+
+btnEditar.addEventListener("click", () => {
+    // Volver a la página de compra conservando los datos del pack seleccionado
+    window.location.href = `compra.html?id=${compraTemporal.idPack}`;
+});
 
 // ------------------------
 // DATOS VIAJERO: AUTOCOMPLETAR SI HAY USUARIO

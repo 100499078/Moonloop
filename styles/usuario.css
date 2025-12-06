@@ -433,7 +433,6 @@ header {
 
 .profile-header h1 {
     font-size: 32px;
-    font-weight: 800;
     text-align: center;
 }
 
@@ -448,6 +447,11 @@ header {
     display: flex;
     gap: 20px;
     justify-content: center;
+}
+.gift-balance {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 600;
 }
 
 /* Espacio arriba del título Configuración*/
