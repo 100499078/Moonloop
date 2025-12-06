@@ -61,9 +61,9 @@ h1#exp-titulo {
     letter-spacing: 1px;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
-    padding: 15px 0;
+    padding: 15px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 30px;
 }
 
