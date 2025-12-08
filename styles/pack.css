@@ -234,6 +234,53 @@ ul#pack-incluye li::before {
     color: #555;
 }
 
+/*Botón añadir a favoritos*/
+
+
+.btn-fav {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.25s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Estado: NO ES FAVORITO */
+.btn-fav.not-favorite {
+    background-color: var(--azul-clarito); /* gris suave */
+    color: #333;
+}
+
+.btn-fav.not-favorite:hover {
+    background-color: #e6e7eb;
+    transform: translateY(-2px);
+}
+
+/* Estado: YA ES FAVORITO */
+.btn-fav.favorite {
+    background-color: var(--azul-oscuro); /* rojo bonito */
+    color: white;
+}
+
+.btn-fav.favorite:hover {
+    background-color: #1b2a45;
+    transform: translateY(-2px);
+}
+
+/* Icono dentro del botón */
+.btn-fav span.icon {
+    font-size: 1.2rem;
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .pack-main-grid {

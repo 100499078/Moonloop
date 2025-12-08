@@ -159,7 +159,7 @@ function removeFavorite(productId) {
 
 function loadFavorites(user) {
     const container = document.getElementById("favorites-container");
-    if (!container) return; // 👉 si no existe, salimos sin hacer nada
+    if (!container) return;
 
     if (!user.favorites.length) {
         container.innerHTML = "<p>No tienes favoritos aún.</p>";
@@ -169,14 +169,30 @@ function loadFavorites(user) {
     container.innerHTML = "";
 
     user.favorites.forEach(id => {
+        const pack = PACKS.find(p => p.id === id);
+        if (!pack) return;
+
         container.innerHTML += `
-            <div class="card">
-                <h3>${id}</h3>
-                <button onclick="removeFavorite('${id}')">Eliminar</button>
+            <div class="card favorite-card">
+                <img src="${pack.imagen}" alt="${pack.nombre}" class="fav-img">
+
+                <div class="fav-info">
+                    <h3>${pack.nombre}</h3>
+                    <p>${pack.pais} — ${pack.duracion}</p>
+                    <p class="price">${pack.precio} €</p>
+
+                    <div class="fav-actions">
+                        <a href="pack.html?id=${pack.id}" class="btn-ver">Ver viaje</a>
+                        <button class="btn-remove" onclick="removeFavorite('${pack.id}'); location.reload();">
+                            Quitar
+                        </button>
+                    </div>
+                </div>
             </div>
         `;
     });
 }
+
 
 // COMPRAS
 function addPurchase(product) {

@@ -73,5 +73,43 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // --- FAVORITOS ---
+    const favBtn = document.getElementById("btn-fav");
+    if (!favBtn) return;
 
+    const user = getCurrentUser();
+    if (!user) {
+        favBtn.textContent = "Inicia sesión para guardar favoritos";
+        favBtn.classList.add("not-favorite");
+        favBtn.disabled = true;
+        return;
+    }
+
+    const isFav = user.favorites.includes(pack.id);
+    updateFavButton(favBtn, isFav);
+
+    favBtn.addEventListener("click", () => {
+        const user = getCurrentUser();
+        const isFav = user.favorites.includes(pack.id);
+
+        if (isFav) {
+            removeFavorite(pack.id);
+            updateFavButton(favBtn, false);
+        } else {
+            addFavorite(pack.id);
+            updateFavButton(favBtn, true);
+        }
+    });
 });
+
+function updateFavButton(button, isFav) {
+    if (isFav) {
+        button.classList.remove("not-favorite");
+        button.classList.add("favorite");
+        button.textContent = "Quitar de favoritos";
+    } else {
+        button.classList.remove("favorite");
+        button.classList.add("not-favorite");
+        button.textContent = "Agregar a favoritos";
+    }
+}

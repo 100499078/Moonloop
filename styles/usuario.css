@@ -491,7 +491,7 @@ header {
 
 .profile-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* EXACTAMENTE 3 por fila */
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     padding: 20px 40px;
     justify-items: center;
@@ -647,7 +647,7 @@ header {
     background: #d1d5dc;
     color: var(--color-texto-principal);
 }
-
+/* MIS COMPRAS */
 /* Tarjeta */
 .purchase-card {
     display: flex;
@@ -707,6 +707,97 @@ header {
 
 .purchase-link:hover {
     background: #004fc7;
+}
+
+/* MIS FAVORITOS */
+/* ===== FAVORITOS ===== */
+
+.favorite-card {
+    display: flex;
+    gap: 15px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    transition: 0.2s;
+    align-items: flex-start;
+}
+
+.favorite-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.fav-img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.fav-info {
+    flex: 1;
+}
+
+.fav-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.fav-info p {
+    margin-top: 5px;
+    color: #555;
+}
+
+.fav-info .price {
+    margin-top: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-destacado);
+}
+
+.fav-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.fav-actions .btn-ver {
+    padding: 7px 12px;
+    background: var(--color-destacado);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.fav-actions .btn-ver:hover {
+    background: #0056c9;
+}
+
+.fav-actions .btn-remove {
+    padding: 7px 12px;
+    background: var(--azul-clarito);
+    color: var(--color-texto-principal);
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.fav-actions .btn-remove:hover {
+    background: #b1bbc9;
+}
+.favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 40px;
 }
 
 
