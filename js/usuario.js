@@ -128,23 +128,18 @@ function loadUserProfile() {
         profileNameEl.textContent = user.name;
     }
 
-    // Solo cargar favoritos/compras si los contenedores existen en la página
-    if (document.getElementById("favorites-container")) {
-        loadFavorites(user);
-    }
-
     if (document.getElementById("purchases-container")) {
         loadPurchases(user);
     }
 }
 
-// FAVORITOS
+// FAVORITOS 
 function addFavorite(productId) {
     const user = getCurrentUser();
     if (!user) return;
-
-    if (!user.favorites.includes(productId)) {
-        user.favorites.push(productId);
+    const productIdStr = String(productId); // Aseguramos string
+    if (!user.favorites.includes(productIdStr)) {
+        user.favorites.push(productIdStr);
         updateUser(user);
     }
 }
@@ -152,47 +147,10 @@ function addFavorite(productId) {
 function removeFavorite(productId) {
     const user = getCurrentUser();
     if (!user) return;
-
-    user.favorites = user.favorites.filter(id => id !== productId);
+    const productIdStr = String(productId); // Aseguramos string
+    user.favorites = user.favorites.filter(id => id !== productIdStr);
     updateUser(user);
 }
-
-function loadFavorites(user) {
-    const container = document.getElementById("favorites-container");
-    if (!container) return;
-
-    if (!user.favorites.length) {
-        container.innerHTML = "<p>No tienes favoritos aún.</p>";
-        return;
-    }
-
-    container.innerHTML = "";
-
-    user.favorites.forEach(id => {
-        const pack = PACKS.find(p => p.id === id);
-        if (!pack) return;
-
-        container.innerHTML += `
-            <div class="card favorite-card">
-                <img src="${pack.imagen}" alt="${pack.nombre}" class="fav-img">
-
-                <div class="fav-info">
-                    <h3>${pack.nombre}</h3>
-                    <p>${pack.pais} — ${pack.duracion}</p>
-                    <p class="price">${pack.precio} €</p>
-
-                    <div class="fav-actions">
-                        <a href="pack.html?id=${pack.id}" class="btn-ver">Ver viaje</a>
-                        <button class="btn-remove" onclick="removeFavorite('${pack.id}'); location.reload();">
-                            Quitar
-                        </button>
-                    </div>
-                </div>
-            </div>
-        `;
-    });
-}
-
 
 // COMPRAS
 function addPurchase(product) {

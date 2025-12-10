@@ -134,6 +134,47 @@ h2 {
     margin-top: auto;
 }
 
+.btn-fav {
+    /* Ajustes generales */
+    width: auto;
+    margin-top: 0;
+    padding: 8px 15px; 
+    font-size: 0.95rem; 
+    font-weight: 600;
+    border-radius: 8px; 
+    cursor: pointer;
+    border: none;
+    transition: all 0.25s ease;
+    
+    /* Configuración para alinear texto e icono */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Estado: NO ES FAVORITO (Color claro) */
+.btn-fav.not-favorite {
+    background-color: var(--azul-clarito, #eef0f3);
+    color: #333;
+}
+
+.btn-fav.not-favorite:hover {
+    background-color: #e6e7eb;
+    transform: translateY(-2px);
+}
+
+/* Estado: YA ES FAVORITO (Color oscuro) */
+.btn-fav.favorite {
+    background-color: var(--azul-oscuro, #213c6b); 
+    color: white;
+}
+
+.btn-fav.favorite:hover {
+    background-color: #1b2a45;
+    transform: translateY(-2px);
+}
+
 /* Otros tipos de compañía */
 .grid-compania {
     display: grid;
