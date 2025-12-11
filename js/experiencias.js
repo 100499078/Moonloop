@@ -182,7 +182,73 @@ const EXPERIENCIAS = [
         parrafo3: "Explorar las callejuelas alrededor de Shibuya nos llevó a descubrir bares diminutos y tiendas de música increíbles. Tokyo nunca duerme y Shibuya es su corazón palpitante.",
         parrafo4: "Es el contraste perfecto con la tranquilidad de los templos. Japón es eso: silencio zen y ruido de neón. Y me encantan las dos caras.",
         likes: 41
+    },
+
+    {
+        id: "EXP013",
+        titulo: "Samba, Tango y contrastes",
+        subtitulo: "Dos ciudades, dos ritmos, un viaje inolvidable",
+        autor: "Valentina y Jorge",
+        fecha_publicacion: "02/03/2024",
+        pack_asociado: "LATAM003BR", 
+        imagen1: "../images/ex-tango.jpg",
+        imagen2: "../images/ex-tango2.jpg",
+        imagen3: "../images/ex-tango3.jpg",
+        parrafo1: "Empezar el viaje en Río de Janeiro es recibir una inyección de vida directa en las venas. La energía de Copacabana no se puede explicar, hay que vivirla. Subir al Pan de Azúcar y ver la ciudad encajada entre la selva y el mar te deja sin aliento.",
+        parrafo2: "El cambio al llegar a Buenos Aires fue fascinante. Pasamos del calor tropical y la caipirinha a la elegancia europea y el vino Malbec. El barrio de San Telmo, con sus calles empedradas y bailarines de tango en las esquinas, tiene una melancolía preciosa.",
+        parrafo3: "Lo que más disfrutamos fue la comida. En Brasil, la feijoada nos dio energía para bailar samba (o intentarlo), mientras que el asado en Argentina superó todas nuestras expectativas. Son dos culturas muy distintas que se complementan a la perfección.",
+        parrafo4: "Es el viaje ideal si quieres ver las dos caras de la moneda sudamericana en poco tiempo. Volvemos con la maleta llena de alfajores y el corazón lleno de música.",
+        likes: 64
+    },
+    {
+        id: "EXP014",
+        titulo: "El caos delicioso de Bangkok",
+        subtitulo: "Perdiéndome entre templos dorados y comida callejera",
+        autor: "Lucas D.",
+        fecha_publicacion: "12/05/2024",
+        pack_asociado: "ASIA005TH",
+        imagen1: "../images/exp-bangkok.jpg",
+        imagen2: "../images/exp-bangkok.jpg",
+        parrafo1: "Bangkok te golpea nada más salir del aeropuerto: el calor, la humedad y el ruido. Pero una vez te dejas llevar, descubres su magia. Moverse en Skytrain es fácil, pero la verdadera aventura fue mi primer viaje en Tuk-tuk negociando el precio con señas.",
+        parrafo2: "La visita a Ayutthaya fue el contrapunto necesario. Caminar entre las ruinas de ladrillo rojo y ver las cabezas de Buda atrapadas en las raíces de los árboles te transporta a otra época. Es impresionante imaginar la grandeza que tuvo este reino.",
+        parrafo3: "Soy un amante de la comida y este viaje fue mi paraíso. Comí el mejor Pad Thai de mi vida en un taburete de plástico en la calle por menos de dos euros. Los sabores son intensos: picante, dulce, ácido y salado, todo a la vez.",
+        parrafo4: "Si vas, no te pierdas el atardecer frente al Wat Arun desde el otro lado del río. Ver cómo se ilumina el templo mientras el cielo se oscurece es una imagen que se te queda grabada para siempre.",
+        likes: 48
+    },
+    {
+        id: "EXP015",
+        titulo: "Guardianes de la arena",
+        subtitulo: "Un viaje al pasado frente a las grandes pirámides",
+        autor: "Sara P.",
+        fecha_publicacion: "28/09/2024",
+        pack_asociado: "AFR005EG",
+        imagen1: "../images/exp-egipto.jpg",
+        imagen2: "../images/exp-egipto.jpg",
+        parrafo1: "Había estudiado el Antiguo Egipto en el colegio, pero tener la Gran Pirámide de Giza frente a ti es una experiencia que te hace sentir minúsculo. La precisión de los bloques y la inmensidad de la estructura desafían toda lógica.",
+        parrafo2: "El Cairo es una ciudad frenética, ruidosa y polvorienta, pero llena de vida. El Museo Egipcio es un laberinto de tesoros; ver la máscara de Tutankamón en persona me puso la piel de gallina. Se respira historia en cada vitrina.",
+        parrafo3: "El momento de paz llegó con el paseo en feluca por el Nilo al atardecer. El contraste entre el bullicio de la ciudad y la calma del río es brutal. El viento en las velas y el sol rojo cayendo sobre el agua fue mi momento favorito.",
+        parrafo4: "Egipto es intenso y a veces agobiante por el calor y los vendedores, pero es un destino obligatorio para entender la historia de la humanidad. Me voy con ganas de bajar hasta Luxor la próxima vez.",
+        likes: 72
+    },
+    {
+        id: "EXP016",
+        titulo: "Invierno bajo la Aurora Boreal",
+        subtitulo: "Una ruta en 4x4 por la Islandia más salvaje",
+        autor: "Grupo 'Los Vikingos'",
+        fecha_publicacion: "15/01/2024",
+        pack_asociado: "EUR002IS",
+        imagen1: "../images/exp-islandia-noche.jpg",
+        imagen2: "../images/exp-islandia-noche.jpg",
+        parrafo1: "Decidimos ir en invierno y fue un acierto total. Conducir el 4x4 por carreteras nevadas fue una aventura en sí misma. El paisaje blanco infinito, roto solo por rocas negras volcánicas, parece sacado de 'Juego de Tronos'.",
+        parrafo2: "La cueva de hielo fue lo más surrealista que hemos visto. Entrar en las entrañas del glaciar y ver ese azul eléctrico sobre nuestras cabezas no parece de este mundo. El guía nos explicó cómo cambian cada año, lo que lo hace aún más especial.",
+        parrafo3: "Tuvimos suerte. La tercera noche, cerca de Vík, el cielo se iluminó. Ver las auroras boreales bailar en verde y violeta sobre la iglesia negra fue el momento cumbre del viaje. Nos quedamos horas mirando al cielo a pesar del frío.",
+        parrafo4: "Islandia es cara, no lo vamos a negar, pero la naturaleza allí es tan pura y brutal que cada euro vale la pena. Bañarse en aguas termales mientras nieva fuera es el broche de oro.",
+        likes: 89
     }
+
+    
+
+
 ];
 
 window.EXPERIENCIAS = EXPERIENCIAS;

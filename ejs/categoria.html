@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría</title>
+
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/categoria.css">
+
+    <script src="../js/packs.js" defer></script>
+    <script src="../js/categoria.js" defer></script>
+    <script src="../js/usuario.js" defer></script>
+
+    <link rel="icon" type="image/png" href="../images/luna.png">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-section">
+            <img src="../images/logo.png" class="logo">
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="#">Usuario</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="otros_rincones.html">Otros rincones</a></li>
+                <li><a href="comunidad.html">Comunidad</a></li>
+            </ul>
+        </nav>
+
+        <div class="language-section">
+            <select id="language-select">
+                <option value="es">ES</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <nav id="breadcrumb-hero" class="breadcrumbs-hero"></nav>
+
+    <!-- HERO -->
+    <section class="categoria-header">
+        <img id="cat-imagen" src="" alt="Imagen categoría">
+        <h1 id="cat-titulo"></h1>
+        <p id="cat-descripcion"></p>
+    </section>
+
+    <!-- DESTACADOS -->
+    <section class="categoria-destacados">
+        <h2>Packs destacados</h2>
+        <div id="destacados-list" class="lista-destacados"></div>
+    </section>
+
+    <!-- GRID -->
+    <section class="categoria-todos">
+        <h2>Todos los packs</h2>
+        <div id="todos-list" class="grid-packs"></div>
+    </section>
+
+    <!-- OTRAS OPCIONES -->
+    <section class="categoria-otros">
+        <h2>Descubre más</h2>
+        <div id="otros-list" class="grid-otros"></div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+:root {
+    --color-cabecera: #F5F0EB;
+    --negro-premium: #1a1a1a;
+    --azul-oscuro: #2c3e50;
+    --texto-gris: #666;
+    --tierra-oscura: #8b5e3b;
+}
+
+/* BODY GENERAL */
+body {
+    background-color: #ffffff;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ================================
+   BREADCRUMB (Igual que categoria.css)
+================================ */
+.breadcrumbs-hero {
+    padding: 20px 5%;
+    background-color: #f9f9f9;
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #eee;
+}
+
+.breadcrumbs-hero a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumbs-hero a:hover {
+    color: #000;
+}
+
+.breadcrumbs-hero .separator {
+    margin: 0 10px;
+    color: #999;
+}
+
+.breadcrumbs-hero .actual {
+    color: #000;
+    font-weight: 700;
+}
+
+/* ================================
+   CONTENEDOR PRINCIPAL
+================================ */
+#listado-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+#listado-titulo {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 3rem;
+    color: var(--negro-premium);
+}
+
+/* ================================
+   SECCIONES DE LISTADO (categorías)
+================================ */
+.categoria-section {
+    margin-bottom: 90px;
+}
+
+/* Cabecera como en categoria.css */
+.categoria-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.categoria-header .icono {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 25px;
+}
+
+.categoria-header .icono img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.categoria-header .texto {
+    flex-grow: 1;
+}
+
+.categoria-header h2 {
+    font-size: 1.8rem;
+    color: var(--negro-premium);
+    margin: 0 0 10px 0;
+}
+
+.categoria-header p {
+    color: var(--texto-gris);
+    margin: 0;
+}
+
+/* Botón estilo categoría */
+.ver-todo-cat {
+    margin-left: auto;
+    text-decoration: none;
+    color: var(--negro-premium);
+    background-color: var(--color-cabecera);
+    border: 2px solid #eee;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.ver-todo-cat:hover {
+    background-color: var(--negro-premium);
+    color: white;
+    border-color: var(--negro-premium);
+}
+
+/* ================================
+   GRID DE PACKS (ESTILO B)
+================================ */
+.packs-categoria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Tarjeta .experiencia (igual que categoria.css) */
+.experiencia {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s;
+}
+
+.experiencia:hover {
+    transform: translateY(-5px);
+}
+
+.experiencia img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.experiencia h3 {
+    font-size: 1.2rem;
+    padding: 15px 10px 5px 10px;
+    text-align: center;
+    color: #333;
+    margin: 0;
+}
+
+.experiencia p {
+    padding: 0 15px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.experiencia .precio {
+    font-weight: bold;
+    color: steelblue;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Botones */
+.acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+.acciones .ver {
+    background: black;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.acciones .ver:hover {
+    background: #4682b4;
+}
+
+.acciones .like {
+    font-size: 1.4rem;
+    color: crimson;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.acciones .like:hover {
+    transform: scale(1.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .categoria-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .categoria-header .icono {
+        margin-right: 0;
+    }
+
+    .ver-todo-cat {
+        margin-left: 0;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .packs-categoria {
+        grid-template-columns: 1fr;
+    }
+}
+

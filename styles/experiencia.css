@@ -1,23 +1,29 @@
-/* VARIABLES */
+/* ----------------------------------------- */
+/*   ESTILO TRAVEL BLOG CÁLIDO — VERSIÓN 2   */
+/* ----------------------------------------- */
+
+/* Colores cálidos basados en negro-premium */
 :root {
-    --color-texto: #333;
-    --color-gris-claro: #f4f4f4;
-    --azul-moonloop: #007bff;
     --negro-premium: #111;
+    --arena-suave: #f3e5d8;
+    --tierra: #c08a5b;
+    --tierra-oscura: #8b5e3b;
+    --texto: #444;
 }
 
+/* FONDO general blanco (como antes) */
 body {
     background-color: #fff;
-    font-family: "Georgia", "Times New Roman", serif; /* Fuente con serifa para lectura tipo blog */
-    color: var(--color-texto);
+    font-family: "Nunito", "Segoe UI", sans-serif;
+    color: var(--texto);
     line-height: 1.8;
 }
 
-/* Breadcrumbs (Estilo coherente) */
+/* BREADCRUMB (lo dejamos EXACTO como lo tenías) */
 .breadcrumbs-hero {
     padding: 20px 5%;
     background-color: #f9f9f9;
-    font-family: "Segoe UI", sans-serif; /* Sans-serif para navegación */
+    font-family: "Segoe UI", sans-serif;
     font-size: 0.9rem;
     color: #666;
     text-transform: uppercase;
@@ -26,189 +32,208 @@ body {
 .breadcrumbs-hero a { text-decoration: none; color: #666; }
 .separator { margin: 0 10px; }
 
-/* CONTENEDOR CENTRAL DEL ARTÍCULO */
+/* CONTENEDOR */
 .article-container {
-    max-width: 800px; /* Ancho ideal de lectura */
+    max-width: 900px;
     margin: 60px auto;
     padding: 0 20px;
 }
 
-/* HEADER ARTÍCULO */
+/* CABECERA FINAL Y CORRECTA */
 .article-header {
-    text-align: center;
-    margin-bottom: 50px;
-    font-family: "Segoe UI", sans-serif;
-}
-
-h1#exp-titulo {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    line-height: 1.2;
-    color: var(--negro-premium);
-}
-
-.subtitle {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.article-meta {
-    font-size: 0.95rem;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    padding: 15px 20px;
+    margin-bottom: 45px;
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    flex-direction: column;
+    align-items: center; /* centra título y subtítulo */
 }
 
-/* CUERPO DEL ARTÍCULO */
-.article-body {
-    font-size: 1.2rem;
-    color: #222;
-}
-
-.text-block {
-    margin-bottom: 30px;
-}
-
-/* Letra capital (Drop cap) para el primer párrafo */
-.first-letter::first-letter {
-    font-size: 3.5rem;
-    float: left;
-    margin-right: 10px;
-    line-height: 0.8;
-    font-weight: bold;
+/* TÍTULO arriba (centrado) */
+h1#exp-titulo {
+    order: 1;
+    font-size: 2.8rem;
+    font-weight: 800;
     color: var(--negro-premium);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* META (autor arriba — fecha abajo, alineados a la izquierda) */
+.article-meta {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* izquierda */
+    font-size: 0.95rem;
+    color: #777;
+    margin-bottom: 15px;
+    padding: 0;
+    border: none;
+    gap: 4px;
+    width: 100%; /* para que el alineamiento izquierdo funcione */
+    max-width: 800px; /* opcional: que no ocupe todo el ancho */
+}
+
+/* SUBTÍTULO centrado */
+.subtitle {
+    order: 3;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--tierra-oscura);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Responsive fix */
+@media (max-width: 600px) {
+    h1#exp-titulo {
+        font-size: 2rem;
+    }
+    .article-meta {
+        gap: 3px;
+        font-size: 0.9rem;
+    }
+    .subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+/* CUERPO */
+.article-body {
+    font-size: 1.15rem;
+    color: var(--texto);
+}
+
+/* Letra capital cálida */
+.first-letter::first-letter {
+    font-size: 3.2rem;
+    float: left;
+    margin-right: 12px;
+    margin-top: 6px;
+    line-height: 0.7;
+    color: var(--tierra);
+    font-weight: 700;
 }
 
 /* IMÁGENES */
 .img-fluid {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 40px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-radius: 14px;
+    margin: 40px 0;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.06);
 }
 
 .hero-img {
-    height: 450px;
+    height: 420px;
     object-fit: cover;
-}
-
-figure {
-    margin: 0;
-}
-
-/* CAJA DE PACK RELACIONADO */
-.related-pack-box {
-    background-color: #f8f9fa;
-    border: 1px solid #eee;
     border-radius: 16px;
-    padding: 40px;
+}
+
+figure { margin: 0; }
+
+/* PACK RELACIONADO */
+.related-pack-box {
+    background: var(--arena-suave);
+    border-radius: 18px;
+    padding: 35px;
     margin-top: 80px;
-    margin-bottom: 60px;
-    font-family: "Segoe UI", sans-serif;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
 
 .related-pack-box h3 {
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 30px;
-    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: var(--negro-premium);
+    font-size: 1.7rem;
 }
 
 .related-card {
-    display: flex;
-    gap: 30px;
-    background: white;
+    background: #fff;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-radius: 14px;
+    display: flex;
+    gap: 25px;
     align-items: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
 }
 
 .related-card img {
-    width: 200px;
-    height: 150px;
+    width: 220px;
+    height: 160px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
-.rel-info {
-    flex: 1;
-}
-
-.rel-info .tag {
-    background: var(--negro-premium);
+.tag {
+    background: var(--tierra-oscura);
     color: white;
+    padding: 5px 9px;
     font-size: 0.75rem;
-    padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: 6px;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .rel-info h4 {
-    margin: 10px 0 5px 0;
-    font-size: 1.4rem;
+    margin: 12px 0 5px 0;
+    color: var(--negro-premium);
+    font-size: 1.3rem;
 }
 
 .rel-info p {
+    margin-bottom: 12px;
+    color: #7a6961;
     font-size: 0.95rem;
-    color: #666;
-    margin-bottom: 15px;
 }
 
 .rel-bottom {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .price {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--azul-moonloop);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--tierra-oscura);
 }
 
 .btn-ver {
-    background-color: var(--negro-premium);
+    background-color: var(--tierra-oscura);
     color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 30px;
+    border-radius: 25px;
+    padding: 10px 22px;
     font-weight: 600;
-    font-size: 0.9rem;
-    transition: background 0.3s;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .btn-ver:hover {
-    background-color: #444;
+    background-color: var(--tierra);
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+    .article-header { text-align: left; }
+
+    .article-meta { 
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+    }
+
     .related-card {
         flex-direction: column;
         text-align: center;
     }
+
     .related-card img {
         width: 100%;
-        height: 200px;
+        height: 220px;
     }
-    .rel-bottom {
-        flex-direction: column;
-        gap: 15px;
-    }
-    h1#exp-titulo {
-        font-size: 2.2rem;
-    }
+
     .hero-img {
-        height: 300px;
+        height: 280px;
     }
 }

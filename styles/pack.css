@@ -9,7 +9,13 @@
     --azul-oscuro:   #233248; 
     --negro-premium: #111111;
     --texto-gris: #444;
+    --arena-suave: #f3e5d8;
+    --tierra: #c08a5b;
+    --tierra-oscura: #8b5e3b;
+    --texto: #444;
 }
+
+
 
 body {
     background-color: #ffffff; /* FONDO BLANCO PURO */
@@ -279,6 +285,159 @@ ul#pack-incluye li::before {
 .btn-fav span.icon {
     font-size: 1.2rem;
 }
+
+
+/* =======================================================
+   EXPERIENCIAS RELACIONADAS — ESTILO WARM EARTH (TU DISEÑO)
+======================================================= */
+
+#exp-rel-section {
+    background: var(--arena-suave);
+    border-radius: 18px;
+    padding: 40px;
+    margin-top: 80px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+#exp-rel-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--negro-premium);
+    margin-bottom: 35px;
+}
+
+/* Layout que TÚ ya tenías: dos columnas */
+.exp-rel-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+}
+
+/* -------------------------------------------
+   TARJETAS (EXPERIENCIAS) — adaptación de tu related-pack
+------------------------------------------- */
+
+.related-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+    transition: 0.3s ease;
+}
+
+.related-card:hover {
+    transform: translateY(-5px);
+}
+
+.related-card img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Título + autor + fecha */
+.rel-info h4 {
+    margin: 0 0 6px 0;
+    color: var(--negro-premium);
+    font-size: 1.25rem;
+}
+
+.rel-info .meta {
+    color: #7a6961;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+/* Botón LEER MÁS – EXACTO a tu estilo */
+.btn-ver {
+    background-color: var(--tierra-oscura);
+    color: white;
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.btn-ver:hover {
+    background-color: var(--tierra);
+}
+
+/* ============================== */
+/*     GALERÍA FOTO DESTACADA     */
+/* ============================== */
+
+.gallery-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-left: 20px; /* separación respecto a las experiencias */
+}
+
+/* Foto grande */
+.gallery-col .big-photo {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+}
+
+/* Contenedor de las dos pequeñas */
+.gallery-col .small-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* Fotos pequeñas */
+.gallery-col .small-photo {
+    width: 100%;
+    height: 150px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+/* Más fotos debajo, alineación bonita */
+.gallery-col .extra-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .gallery-col {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-col {
+        column-count: 1;
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .exp-rel-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 
 
 /* RESPONSIVE */

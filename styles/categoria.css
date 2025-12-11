@@ -1,0 +1,348 @@
+/* ===============================
+    VARIABLES Y RESETEO
+================================== */
+
+:root {
+    --color-cabeceraS: #cec9c9;
+    --color-cabecera:#F5F0EB;
+    --azul-clarito:#C3CBD6;
+    --color-texto-principal:#333;
+    --color-destacado:#007bff;
+    --fondo-overlay:rgba(255,255,255,0.95);
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family:"Segoe UI", Tahoma, sans-serif;
+    background:#fff;
+    color:#333;
+    line-height:1.6;
+    padding:20px;
+}
+
+
+/* ===============================
+   HERO DE CATEGORÍA
+================================== */
+
+.categoria-header {
+    position:relative;
+    width:100%;
+    height:60vh;
+    overflow:hidden;
+    display:flex;
+}
+
+.categoria-header img {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(0.6);
+    z-index:1;
+}
+
+.categoria-header h1,
+.categoria-header p {
+    position:absolute;
+    left:5%;
+    color:white;
+    z-index:2;
+    text-shadow:0 2px 10px rgba(0,0,0,0.5);
+}
+
+.categoria-header h1 {
+    bottom:80px;
+    font-size:3.5rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.categoria-header p {
+    bottom:40px;
+    font-size:1.3rem;
+    max-width:800px;
+    font-weight:300;
+}
+
+@media(max-width:768px){
+    .categoria-header{height:50vh;}
+    .categoria-header h1{font-size:2.5rem;bottom:90px;}
+    .categoria-header p{font-size:1rem;bottom:30px;max-width:90%;}
+}
+
+
+/* ===============================
+   DESTACADOS
+================================== */
+
+.categoria-destacados {
+    padding:40px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.categoria-destacados h2 {
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+}
+
+/* Hereda tu diseño original */
+.destacado-row {
+    display:flex;
+    align-items:center;
+    gap:40px;
+    margin-bottom:60px;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
+.destacado-row:nth-child(even){
+    flex-direction:row-reverse;
+}
+
+.destacado-row img {
+    width:50%;
+    height:350px;
+    object-fit:cover;
+}
+
+.destacado-info {
+    width:50%;
+    padding:30px;
+}
+
+.destacado-info h3 {
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.destacado-precio {
+    font-size:1.5rem;
+    font-weight:bold;
+    color:var(--color-destacado);
+    margin-bottom:20px;
+}
+
+
+/* ===============================
+   GRID DE PACKS
+================================== */
+
+.categoria-todos {
+    padding:40px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.categoria-todos h2 {
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.grid-packs {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+@media(max-width:900px){
+    .grid-packs{grid-template-columns:repeat(2,1fr);}
+    .destacado-row,
+    .destacado-row.invertido{
+        flex-direction:column !important;
+    }
+    .destacado-row img,
+    .destacado-info{width:100%;}
+}
+
+@media(max-width:600px){
+    .grid-packs{grid-template-columns:1fr;}
+}
+
+
+/* Tarjetas */
+.experiencia {
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    transition:transform 0.2s;
+}
+
+.experiencia:hover {
+    transform:translateY(-5px);
+}
+
+.experiencia img {
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.experiencia h3 {
+    padding:15px 10px 5px;
+    text-align:center;
+}
+
+.experiencia p {
+    padding:0 15px;
+    text-align:center;
+    color:#666;
+    font-size:0.9rem;
+}
+
+.acciones {
+    display:flex;
+    justify-content:space-between;
+    padding:15px;
+}
+
+.acciones .ver {
+    background:black;
+    color:white;
+    padding:8px 14px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.acciones .ver:hover {
+    background:#4682b4;
+}
+
+.acciones .like {
+    font-size:1.4rem;
+    color:crimson;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.acciones .like:hover {
+    transform:scale(1.2);
+}
+
+
+/* ===============================
+   SECCIÓN OTRAS OPCIONES
+================================== */
+
+.categoria-otros {
+    padding:60px 40px;
+    max-width:1200px;
+    margin:0 auto;
+    background:#f9f9f9;
+}
+
+.categoria-otros h2 {
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+}
+
+.grid-otros {
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    gap:20px;
+}
+
+.grid-otros a {
+    display:block;
+    position:relative;
+    height:200px;
+    border-radius:12px;
+    overflow:hidden;
+    text-decoration:none;
+    color:white;
+}
+
+.grid-otros img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(0.7);
+    transition:0.3s;
+}
+
+.grid-otros a:hover img {
+    transform:scale(1.05);
+    filter:brightness(0.8);
+}
+
+.grid-otros h3 {
+    position:absolute;
+    bottom:15px;
+    left:15px;
+    font-size:1.5rem;
+    z-index:2;
+    text-shadow:0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Overlay flecha */
+.grid-otros .overlay {
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.3);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transition:0.3s;
+}
+
+.grid-otros a:hover .overlay {
+    opacity:1;
+}
+
+.arrow {
+    font-size:2rem;
+    color:white;
+}
+
+
+/* ===============================
+   BREADCRUMBS
+================================== */
+
+.breadcrumbs-hero {
+    padding:20px 5%;
+    background:#f9f9f9;
+    color:#666;
+    font-size:0.9rem;
+    text-transform:uppercase;
+    border-bottom:1px solid #eee;
+}
+
+.breadcrumbs-hero a {
+    color:#666;
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+}
+
+.breadcrumbs-hero a:hover {
+    color:black;
+    border-bottom:1px solid black;
+}
+
+.breadcrumbs-hero .separator {
+    margin:0 10px;
+    color:#999;
+}
+
+.breadcrumbs-hero .actual {
+    color:black;
+    font-weight:700;
+}
