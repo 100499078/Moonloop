@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nueva experiencia - Moonloop</title>
+
+  <link rel="stylesheet" href="../styles/experiencia.css">
+  <link rel="stylesheet" href="../styles/nueva_experiencia.css">
+  <script src="../js/nueva_experiencia.js" defer></script>
+</head>
+<body>
+  <main class="new-exp-main">
+    <div class="new-exp-inner">
+      <section class="new-exp-header">
+        <h1>Comparte tu experiencia</h1>
+        <p>Inspira a otros mochileros contando tu historia y subiendo hasta 3 fotos.</p>
+      </section>
+
+      <section class="new-exp-form-wrapper">
+        <form id="form-nueva-exp" class="new-exp-form">
+          <div class="form-group">
+            <label for="exp-nombre">Tu nombre</label>
+            <input type="text" id="exp-nombre" name="nombre" required />
+          </div>
+
+          <div class="form-group">
+            <label for="exp-titulo">Título de la experiencia</label>
+            <input type="text" id="exp-titulo" name="titulo" required />
+          </div>
+
+          <div class="form-group">
+            <label for="exp-descripcion">Cuenta tu experiencia</label>
+            <textarea id="exp-descripcion" name="descripcion" rows="6" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Sube hasta 3 fotos</label>
+            <div class="photos-grid">
+              <input type="file" id="foto1" accept="image/*">
+              <input type="file" id="foto2" accept="image/*">
+              <input type="file" id="foto3" accept="image/*">
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit-exp">Publicar experiencia</button>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+

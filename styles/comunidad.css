@@ -242,3 +242,29 @@
 .orden-opcion span {
   display: inline-block; /* asegura que no salte de línea raro */
 }
+
+.sidebar-add-exp {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.btn-add-exp {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background-color: var(--azul-clarito);
+  color: #222;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-add-exp:hover {
+  background-color: #8ac3e8; /* tono un poco más oscuro del azul clarito */
+  transform: translateY(-1px);
+}
+

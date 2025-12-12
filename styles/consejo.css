@@ -1,0 +1,71 @@
+/* consejo.css */
+
+/* Reutiliza variables y tipografía declaradas en experiencia.css (mismo link en el HTML). */
+
+.consejo-container {
+  max-width: 800px;
+  margin: 50px auto 80px auto;
+  padding: 0 20px;
+}
+
+.consejo-container .article-header {
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.consejo-container h1#consejo-titulo {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--negro-premium);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.consejo-container .article-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 12px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.consejo-container .subtitle {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--tierra-oscura);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.consejo-container .article-body {
+  font-size: 1.05rem;
+  color: var(--texto);
+}
+
+/* Letra capital como en experiencias */
+.consejo-container .first-letter::first-letter {
+  font-size: 3rem;
+  float: left;
+  margin-right: 10px;
+  margin-top: 6px;
+  line-height: 0.7;
+  color: var(--tierra);
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .consejo-container h1#consejo-titulo {
+    font-size: 2rem;
+  }
+
+  .consejo-container .subtitle {
+    font-size: 1.05rem;
+  }
+}
