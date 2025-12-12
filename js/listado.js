@@ -96,7 +96,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <div class="acciones">
                     <a href="pack.html?id=${p.id}&from=${type}&value=${encodeURIComponent(nombre)}" class="ver">Ver</a>
-                    <a class="like">♥</a>
+                    <button type="button" class="like btn-fav not-favorite" data-pack-id="${p.id}">
+                        <span class="heart">♥</span>
+                        <span class="fav-text">Añadir a favoritos</span>
+                    </button>
                 </div>
             </div>
         `).join("");
@@ -126,5 +129,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
             </section>
         `;
+        requestAnimationFrame(() => {
+        document.querySelectorAll(".btn-fav").forEach(btn => {
+            const packId = btn.dataset.packId;
+
+            // Pintar estado correcto
+            syncFavButton(btn, packId);
+
+            // Interceptar SOLO si no hay usuario
+            btn.addEventListener("click", (e) => {
+            const user = getCurrentUser();
+             // SI NO hay usuario → modo informativo
+            if (!user) {
+                btn.classList.add("disabled");
+                const text = btn.querySelector(".fav-text");
+                if (text) {
+                text.textContent = "Inicia sesión para guardar";
+                }
+
+                btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Guardar a dónde volver
+                const currentUrl = window.location.pathname + window.location.search;
+                localStorage.setItem("redirectAfterLogin", currentUrl);
+
+                // AHORA sí redirigimos (solo al hacer click)
+                window.location.href = "acceso_user.html";
+                });
+
+                return; 
+            }
+            
+            });
+        });
+        });
     });
 });

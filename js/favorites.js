@@ -1,25 +1,38 @@
-// Contenido completo para favorites.js
 
-// LÓGICA DE BOTONES (usando tus clases CSS .btn-fav, .favorite, .not-favorite)
+// LÓGICA DE BOTONES
 function toggleFavorite(buttonElement, packId) {
-    // Estas funciones necesitan getCurrentUser, addFavorite, removeFavorite (de usuario.js)
-    const user = getCurrentUser();
-    if (!user) { alert("Debes iniciar sesión para guardar packs como favoritos."); return; }
-    const packIdStr = String(packId); 
+    const packIdStr = String(packId);
+
+    const email = localStorage.getItem("currentUser");
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const userIndex = users.findIndex(u => u.email === email);
+    if (userIndex === -1) return;
+
+    const user = users[userIndex];
     const isFavorite = user.favorites.includes(packIdStr);
 
     if (isFavorite) {
-        removeFavorite(packIdStr); 
-        buttonElement.innerHTML = '<span class="icon">♥</span> Añadir a favorito';
-        buttonElement.classList.remove('favorite');
-        buttonElement.classList.add('not-favorite');
+        user.favorites = user.favorites.filter(id => id !== packIdStr);
     } else {
-        addFavorite(packIdStr); 
-        buttonElement.innerHTML = '<span class="icon">♥</span> Quitar favorito';
-        buttonElement.classList.remove('not-favorite');
-        buttonElement.classList.add('favorite');
+        user.favorites.push(packIdStr);
+    }
+
+    // GUARDAMOS
+    localStorage.setItem("users", JSON.stringify(users));
+
+    // ACTUALIZAMOS UI
+    buttonElement.classList.toggle("favorite", !isFavorite);
+    buttonElement.classList.toggle("not-favorite", isFavorite);
+
+    const textEl = buttonElement.querySelector(".fav-text");
+    if (textEl) {
+        textEl.textContent = isFavorite
+            ? "Añadir a favoritos"
+            : "Quitar de favoritos";
     }
 }
+
 
 function updateFavoriteButtons() {
     const user = getCurrentUser();
@@ -30,13 +43,13 @@ function updateFavoriteButtons() {
         const packId = button.getAttribute('data-pack-id');
 
         if (favoriteIds.includes(packId)) {
-            button.innerHTML = '<span class="icon">♥</span> Quitar favorito';
-            button.classList.remove('not-favorite');
-            button.classList.add('favorite');
+        button.classList.add("favorite");
+        button.classList.remove("not-favorite");
+        button.querySelector(".fav-text").textContent = "Quitar de favoritos";
         } else {
-            button.innerHTML = '<span class="icon">♥</span> Añadir a favorito';
-            button.classList.remove('favorite');
-            button.classList.add('not-favorite');
+        button.classList.add("not-favorite");
+        button.classList.remove("favorite");
+        button.querySelector(".fav-text").textContent = "Añadir a favoritos";
         }
     });
 }
@@ -59,17 +72,43 @@ function loadFavorites(user) {
         if (!pack) return;
 
         container.innerHTML += `
-            <div class="card favorite-card">
-                <img src="${pack.imagen}" alt="${pack.nombre}" class="fav-img">
-                <div class="fav-actions">
-                    <a href="pack.html?id=${pack.id}" class="btn-ver">Ver viaje</a>
-                    <button class="btn-remove" onclick="removeFavorite('${pack.id}'); location.reload();">
-                        Quitar
-                    </button>
+            <div class="favorite-card">
+                <img src="${pack.imagen}" alt="${pack.nombre}" class="favorite-img">
+
+                <div class="favorite-info">
+                <h3 class="favorite-title">${pack.nombre}</h3>
+                <p class="favorite-meta">
+                    ${pack.pais} · ${pack.duracion}
+                </p>
+                </div>
+
+                <div class="favorite-actions">
+                <a href="pack.html?id=${pack.id}" class="btn-primary">
+                    Ver viaje
+                </a>
+                <button
+                    class="btn-secondary btn-remove"
+                    onclick="removeFavorite('${pack.id}'); location.reload();">
+                    Quitar
+                </button>
                 </div>
             </div>
-        `;
+            `;
     });
+}
+
+// Función para sincronizar el estado del botón de favorito
+function syncFavButton(btn, packId) {
+  const user = getCurrentUser();
+  const packIdStr = String(packId);
+
+  const isFav = !!(user && Array.isArray(user.favorites) && user.favorites.map(String).includes(packIdStr));
+
+  btn.classList.toggle("favorite", isFav);
+  btn.classList.toggle("not-favorite", !isFav);
+
+  const textEl = btn.querySelector(".fav-text");
+  if (textEl) textEl.textContent = isFav ? "Quitar de favoritos" : "Añadir a favoritos";
 }
 
 // CÓDIGO DE INICIO (DOMContentLoaded)
@@ -86,4 +125,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // La función updateFavoriteButtons() se llama al final de tipo_compania.js
     // para asegurar que se ejecuta después de que el HTML de los packs se ha creado.
+});
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn-fav");
+    if (!btn) return;
+    e.preventDefault();
+
+    const packId = btn.dataset.packId;
+    toggleFavorite(btn, packId);
 });

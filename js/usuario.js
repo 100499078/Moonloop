@@ -110,7 +110,16 @@ function handleLogin() {
     }
 
     setCurrentUser(email);
-    window.location.href = "profile.html";
+
+    // REDIRECCIÓN INTELIGENTE
+    const redirect = localStorage.getItem("redirectAfterLogin");
+
+    if (redirect) {
+        localStorage.removeItem("redirectAfterLogin");
+        window.location.href = redirect;
+    } else {
+        window.location.href = "profile.html";
+    }
 }
 
 // Cargar el perfil del usuario logueado

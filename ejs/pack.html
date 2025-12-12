@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="../styles/pack.css">
     
     <!-- Scripts -->
+    <script src="../js/usuario.js" defer></script>
     <script src="../js/packs.js" defer></script>
+    <script src="../js/favorites.js"></script>
     <script src="../js/experiencias.js" defer></script>
     <script src="../js/pag_packs.js" defer></script>
-    <script src="../js/usuario.js" defer></script>
     <link rel="icon" type="image/png" href="../images/luna.png">
 </head>
 
@@ -84,8 +85,11 @@
                 <!-- Botón colocado manualmente donde queda bien -->
                 <a id="btn-comprar" class="boton-comprar-manual">Comprar ya</a>
 
-                <!--Botón añadir a favoritos-->
-                <button id="btn-fav" class="btn-fav">Agregar a favoritos</button>
+                <!--Añadir a favoritos-->
+                <button id="btn-fav" class="btn-fav not-favorite">
+                <span class="heart">♥</span>
+                <span class="fav-text">Añadir a favoritos</span>
+                </button>
 
             </div>
 

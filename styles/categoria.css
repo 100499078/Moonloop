@@ -224,15 +224,43 @@ body {
     background:#4682b4;
 }
 
-.acciones .like {
-    font-size:1.4rem;
-    color:crimson;
-    cursor:pointer;
-    transition:0.2s;
+.like {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  font-size: 14px;
+  color: #666;
 }
 
-.acciones .like:hover {
-    transform:scale(1.2);
+.like .heart {
+  font-size: 18px;
+  color: #999;
+  transition: color 0.2s;
+}
+
+.like.favorite .heart {
+  color: #e63946;
+}
+
+.like.favorite .fav-text {
+  color: #e63946;
+}
+
+.like:hover {
+  opacity: 0.85;
+}
+.btn-fav.disabled {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.btn-fav.disabled .heart {
+  color: #aaa;
 }
 
 

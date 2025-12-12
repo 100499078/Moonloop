@@ -710,94 +710,150 @@ header {
 }
 
 /* MIS FAVORITOS */
-/* ===== FAVORITOS ===== */
+.favorites-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px 40px;
+}
+
+/* ===============================
+   TARJETA FAVORITO
+================================ */
 
 .favorite-card {
-    display: flex;
-    gap: 15px;
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 15px;
-    width: 100%;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-    transition: 0.2s;
-    align-items: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px 22px;
+  width: 100%;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .favorite-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
 }
 
-.fav-img {
-    width: 120px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 10px;
-    flex-shrink: 0;
+/* ===============================
+   IMAGEN
+================================ */
+
+.favorite-img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
 }
 
-.fav-info {
-    flex: 1;
+/* ===============================
+   INFO DEL VIAJE
+================================ */
+
+.favorite-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.fav-info h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #222;
+.favorite-title {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #222;
 }
 
-.fav-info p {
-    margin-top: 5px;
-    color: #555;
+.favorite-meta {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666;
 }
 
-.fav-info .price {
-    margin-top: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--color-destacado);
+
+.favorite-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: auto;
 }
 
-.fav-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 12px;
+/* Botón ver viaje */
+.btn-primary {
+  padding: 8px 14px;
+  background: var(--color-destacado);
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.2s ease;
 }
 
-.fav-actions .btn-ver {
-    padding: 7px 12px;
-    background: var(--color-destacado);
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.2s;
+.btn-primary:hover {
+  background: #0056c9;
 }
 
-.fav-actions .btn-ver:hover {
-    background: #0056c9;
+/* Botón quitar */
+.btn-secondary {
+  padding: 8px 14px;
+  background: var(--azul-clarito);
+  color: var(--color-texto-principal);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-.fav-actions .btn-remove {
-    padding: 7px 12px;
-    background: var(--azul-clarito);
-    color: var(--color-texto-principal);
-    border-radius: 8px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s ease;
+.btn-secondary:hover {
+  background: #b1bbc9;
 }
 
-.fav-actions .btn-remove:hover {
-    background: #b1bbc9;
+/* ESTADO VACÍO*/
+
+.favorites-list p {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  margin-top: 40px;
 }
-.favorites-list {
-    display: flex;
+
+/* RESPONSIVE FAVORITOS*/
+
+@media (max-width: 768px) {
+  .favorites-list {
+    padding: 20px;
+  }
+
+  .favorite-card {
     flex-direction: column;
-    gap: 25px;
-    padding: 20px 40px;
+    align-items: flex-start;
+  }
+
+  .favorite-img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .favorite-actions {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 48%;
+  }
 }
 
 

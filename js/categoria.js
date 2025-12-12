@@ -153,11 +153,50 @@ document.addEventListener("DOMContentLoaded", () => {
                 <span class="destacado-precio">${p.precio}€</span>
                 <div class="acciones">
                     <a class="ver" href="pack.html?id=${p.id}&from=${type}&value=${encodeURIComponent(value)}">Ver</a>
-                    <a class="like">♥</a>
+                    <button type="button" class="like btn-fav not-favorite" data-pack-id="${p.id}">
+                        <span class="heart">♥</span>
+                        <span class="fav-text">Añadir a favoritos</span>
+                    </button>
                 </div>
             </div>
         </div>
     `).join("");
+    requestAnimationFrame(() => {
+        document.querySelectorAll(".btn-fav").forEach(btn => {
+            const packId = btn.dataset.packId;
+
+            // Pintar estado correcto
+            syncFavButton(btn, packId);
+
+            // Interceptar SOLO si no hay usuario
+            btn.addEventListener("click", (e) => {
+            const user = getCurrentUser();
+             // SI NO hay usuario → modo informativo
+            if (!user) {
+                btn.classList.add("disabled");
+                const text = btn.querySelector(".fav-text");
+                if (text) {
+                text.textContent = "Inicia sesión para guardar";
+                }
+
+                btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Guardar a dónde volver
+                const currentUrl = window.location.pathname + window.location.search;
+                localStorage.setItem("redirectAfterLogin", currentUrl);
+
+                // AHORA sí redirigimos (solo al hacer click)
+                window.location.href = "acceso_user.html";
+                });
+
+                return;
+            }
+            
+            });
+        });
+        });
 
     // ======================================================
     // 7. GRID CON TODOS LOS PACKS
@@ -173,10 +212,15 @@ document.addEventListener("DOMContentLoaded", () => {
             <p><strong style="color:steelblue">${p.precio}€</strong></p>
             <div class="acciones">
                 <a class="ver" href="pack.html?id=${p.id}&from=${type}">Ver</a>
-                <a class="like">♥</a>
+                <button type="button" class="like btn-fav not-favorite" data-pack-id="${p.id}">
+                    <span class="heart">♥</span>
+                    <span class="fav-text">Añadir a favoritos</span>
+                </button>
             </div>
         </div>
-    `).join("");
+    `
+    )
+    .join("");
 
     // ======================================================
     // 8. OTRAS OPCIONES (excluyendo la actual)
@@ -198,3 +242,4 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     }).join("");
 });
+
