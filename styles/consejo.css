@@ -6,37 +6,42 @@
   max-width: 800px;
   margin: 50px auto 80px auto;
   padding: 0 20px;
+ 
 }
 
 .consejo-container .article-header {
-  margin-bottom: 35px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #F5F0EB;
+  margin-bottom: 10px;
+  padding: 25px 20px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  position: relative;  
+  margin-bottom: 30px;
 }
 
 .consejo-container h1#consejo-titulo {
   font-size: 2.4rem;
-  font-weight: 800;
+  font-weight: 775;
   color: var(--negro-premium);
   margin-bottom: 10px;
   text-align: center;
 }
 
 .consejo-container .article-meta {
+  position: absolute;
+  right: 40px;
+  bottom: 25px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 3px;
+  align-items: flex-end;
+  gap: 4px;
   font-size: 0.95rem;
   color: #777;
-  margin-bottom: 12px;
-  width: 100%;
-  max-width: 700px;
 }
 
 .consejo-container .subtitle {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 400;
   color: var(--tierra-oscura);
   margin-bottom: 20px;

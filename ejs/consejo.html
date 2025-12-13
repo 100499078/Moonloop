@@ -1,41 +1,88 @@
-<!-- consejo.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Consejo Moonloop</title>
-  <link rel="stylesheet" href="../styles/experiencia.css">
-  <link rel="stylesheet" href="../styles/consejo.css">
-  <script src="../js/consejos.js" defer></script>
-  <script src="../js/detalle_consejo.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consejo Moonloop</title>
+    
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/consejo.css">
+    <link rel="stylesheet" href="../styles/experiencia.css">
+    <!-- Scripts de datos y lógica -->
+    <script src="../js/consejos.js" defer></script>
+    <script src="../js/detalle_consejo.js" defer></script>
+    
+    <link rel="icon" type="image/png" href="../images/luna.png">
 </head>
 <body>
-  <header class="breadcrumbs-hero">
-    <a href="index.html">Inicio</a>
-    <span class="separator">/</span>
-    <a href="consejos.html">Consejos</a>
-    <span class="separator">/</span>
-    <span id="breadcrumb-titulo">Consejo</span>
-  </header>
 
-  <main class="article-container consejo-container">
-    <section class="article-header">
-      <h1 id="consejo-titulo"></h1>
+    <header>
+        <div class="logo-section">
+            <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="comunidad.html">Comunidad</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <div class="article-meta">
-        <span id="consejo-autor"></span>
-        <span id="consejo-fecha"></span>
-      </div>
+    <!-- Breadcrumb simple -->
+    <nav class="breadcrumbs-hero">
+        <a href="comunidad.html">Comunidad</a>
+        <span class="separator">›</span>
+        <span class="actual">Consejo</span>
+    </nav>
 
-      <p class="subtitle" id="consejo-subtitulo"></p>
-    </section>
 
-    <section class="article-body">
-      <p class="first-letter" id="consejo-parrafo1"></p>
-      <p id="consejo-parrafo2"></p>
-      <p id="consejo-parrafo3"></p>
-    </section>
-  </main>
+    <main class="article-container consejo-container">
+      <section class="article-header">
+        <h1 id="consejo-titulo"></h1>
+
+        <div class="article-meta">
+          <span id="consejo-autor"></span>
+          <span id="consejo-fecha"></span>
+        </div>
+
+        <p class="subtitle" id="consejo-subtitulo"></p>
+      </section>
+
+      <section class="article-body">
+        <p class="first-letter" id="consejo-parrafo1"></p>
+        <p id="consejo-parrafo2"></p>
+        <p id="consejo-parrafo3"></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-left">
+            <img src="../images/logo.png" alt="Moonloop logo" class="footer-logo">
+            <p>Contacto +34 666 722 227</p>
+            <a href="#" data-i18n="footer_policies">Políticas</a>
+            <a href="#" data-i18n="footer_faqs">FAQs</a>
+        </div>
+
+        <div class="footer-newsletter">
+            <label for="email-input" data-i18n="newsletter_title">¡No te pierdas nada con nuestra Newsletter!</label>
+            <div class="newsletter-box">
+                <input type="email" id="email-input" placeholder="Introduce tu correo" data-i18n-placeholder="newsletter_placeholder">
+                <button id="subscribe-btn" data-i18n="newsletter_button">Enviar</button>
+            </div>
+            <p class="newsletter-msg"></p>
+        </div>
+
+        <div class="footer-icons">
+            <a href="#"><img src="../images/ig.webp" alt="Instagram"></a>
+            <a href="#"><img src="../images/whatsapp.webp" alt="LinkedIn"></a>
+            <a href="#"><img src="../images/x.png" alt="X"></a>
+        </div>
+
+    </footer>
+
+
 </body>
 </html>
 

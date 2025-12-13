@@ -1,6 +1,14 @@
-/* Fondo general gris claro */
+:root {
+    --negro-premium: #111;
+    --arena-suave: #f3e5d8;
+    --tierra: #c08a5b;
+    --tierra-oscura: #8b5e3b;
+    --texto: #444;
+
+
+/* Fondo general blanco */
 body {
-  background-color: #f5f5f5;
+  background-color:white;
 }
 
 /* Contenedor principal similar a comunidad */
@@ -40,7 +48,7 @@ body {
 
 /* Tarjeta blanca del formulario, mismo ancho que el header por .new-exp-inner */
 .new-exp-form-wrapper {
-  background-color:var(--color-cabecera);
+  background-color:#f9f9f9;
   border-radius: 12px;
   padding: 20px 24px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.04);
@@ -126,4 +134,50 @@ body {
   }
 }
 
+/* Caja arena única */
+.new-exp-hero {
+  display: block;
+  background-color: #F5F0EB;
+  border-radius: 12px;
+  padding: 24px 32px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+}
 
+/* Título y subtítulo como ya tienes */
+.new-exp-hero .new-exp-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--negro-premium);
+  margin-bottom: 8px;
+  max-width: none;
+  display: block;
+}
+
+.new-exp-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Tercer párrafo dentro de la misma caja */
+.new-exp-intro {
+  font-size: 14px;
+  color: #555;
+}
+
+
+.breadcrumbs-hero {
+    padding: 20px 5%;
+    background-color: #f9f9f9;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.breadcrumbs-hero a { text-decoration: none; color: #666; }
+.separator { margin: 0 10px; }
+
+}

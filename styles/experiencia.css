@@ -41,48 +41,43 @@ body {
 
 /* CABECERA FINAL Y CORRECTA */
 .article-header {
-    margin-bottom: 45px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* centra título y subtítulo */
+  margin-bottom: 10px;
+  padding: 35px 30px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  position: relative;           /* para posicionar la meta */
 }
 
 /* TÍTULO arriba (centrado) */
 h1#exp-titulo {
-    order: 1;
-    font-size: 2.8rem;
-    font-weight: 800;
-    color: var(--negro-premium);
-    margin-bottom: 12px;
-    text-align: center;
+  font-size: 2.7rem;
+  font-weight: 790;
+  color: var(--negro-premium);
+  margin-bottom: 10px;
+  text-align: center;
 }
-
 /* META (autor arriba — fecha abajo, alineados a la izquierda) */
 .article-meta {
-    order: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* izquierda */
-    font-size: 0.95rem;
-    color: #777;
-    margin-bottom: 15px;
-    padding: 0;
-    border: none;
-    gap: 4px;
-    width: 100%; /* para que el alineamiento izquierdo funcione */
-    max-width: 800px; /* opcional: que no ocupe todo el ancho */
+  position: absolute;
+  right: 40px;
+  bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  font-size: 0.95rem;
+  color: #777;
 }
 
 /* SUBTÍTULO centrado */
 .subtitle {
-    order: 3;
     font-size: 1.25rem;
     font-weight: 400;
     color: var(--tierra-oscura);
     margin-bottom: 25px;
     text-align: center;
 }
-
 /* Responsive fix */
 @media (max-width: 600px) {
     h1#exp-titulo {
@@ -120,7 +115,7 @@ h1#exp-titulo {
 .img-fluid {
     width: 100%;
     border-radius: 14px;
-    margin: 40px 0;
+    margin: 30px 0;
     box-shadow: 0 6px 25px rgba(0,0,0,0.06);
 }
 

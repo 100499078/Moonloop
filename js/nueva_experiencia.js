@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const nombre = document.getElementById('exp-nombre').value.trim();
     const titulo = document.getElementById('exp-titulo').value.trim();
+    const resumen = document.getElementById('exp-resumen').value.trim();
     const descripcion = document.getElementById('exp-descripcion').value.trim();
-
+    
     if (!nombre || !titulo || !descripcion) {
       alert('Por favor, rellena todos los campos de texto.');
       return;
@@ -20,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
       id: Date.now(),
       nombre,
       titulo,
+      resumen,
       descripcion
-      // Aquí podrías añadir URLs de fotos cuando las subas realmente
     };
 
     const guardadas = JSON.parse(localStorage.getItem('experiencias_usuario') || '[]');

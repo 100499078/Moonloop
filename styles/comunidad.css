@@ -100,10 +100,6 @@
   background-position: center;
 }
 
-/* Si quieres, aquí puedes poner imágenes concretas con nth-child */
-/*
-#tab-experiencias .exp-card:nth-child(1) .exp-img { background-image: url('../images/colombia.jpg'); }
-*/
 
 .exp-content {
   padding: 14px 16px 12px;
@@ -147,12 +143,15 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-top: 48px;
+  height: 600px;
 }
 
 .search-box label {
   display: block;
-  font-size: 14px;
-  margin-bottom: 4px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .search-box input {
@@ -163,6 +162,14 @@
   font-size: 14px;
 }
 
+/* Bloque de 'Ordenar por' con línea arriba */
+.sidebar-filtros {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0; /* la línea separadora */
+}
+
+
 .sidebar-filtros h4 {
   font-size: 18px;
   margin-bottom: 6px;
@@ -170,7 +177,7 @@
 
 .sidebar-filtros label {
   display: block;
-  font-size: 14px;
+  font-size: 14.5px;
   margin-bottom: 4px;
 }
 
@@ -233,6 +240,7 @@
   align-items: center;
   gap: 6px;              /* espacio entre el círculo y el texto */
   font-size: 14px;
+  margin-left: 12px;
 }
 
 .orden-opcion input[type="radio"] {
@@ -244,12 +252,15 @@
 }
 
 .sidebar-add-exp {
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 13px;
   padding-top: 10px;
   border-top: 1px solid #e0e0e0;
 }
 
 .btn-add-exp {
+  margin-top: 11px;
+  margin-bottom: 11px;
   display: inline-block;
   width: 100%;
   text-align: center;
@@ -268,3 +279,38 @@
   transform: translateY(-1px);
 }
 
+.sidebar-exp-text {
+  margin-top: 13px;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0; /* misma línea suave que arriba */
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+
+.sidebar-exp-text {
+  margin-top: 10px;
+  font-size: 14.7px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Ajuste de alineación en la pestaña Foro / Consejos */
+#tab-foro .cards-grid {
+  margin-top: 20px;  /* prueba con 20px, súbelo o bájalo según lo que veas */
+}
+
+
+body.modo-foro .comunidad-sidebar {
+  margin-top: 20px;  /* valor solo para Foro/Consejos; ajusta a tu gusto */
+}
+
+
+.like-btn.liked {
+  color: #e25555;        /* rojo suave */
+}
+
+.like-btn.liked .like-count {
+  color: #e25555;
+}

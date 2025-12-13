@@ -1,31 +1,74 @@
-<!DOCTYPE html>
-<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Nueva experiencia - Moonloop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia Moonloop</title>
+    
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/nueva_experiencia.css">
+    <link rel="stylesheet" href="../styles/experiencia.css">
+    
 
-  <link rel="stylesheet" href="../styles/experiencia.css">
-  <link rel="stylesheet" href="../styles/nueva_experiencia.css">
-  <script src="../js/nueva_experiencia.js" defer></script>
+    <!-- Scripts de datos y lógica -->
+    <script src="../js/nueva_experiencia.js" defer></script>
+    <link rel="icon" type="image/png" href="../images/luna.png">
 </head>
 <body>
+
+    <header>
+        <div class="logo-section">
+            <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="comunidad.html">Comunidad</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- BREADCRUMB igual que experiencia -->
+  <nav class="breadcrumbs-hero">
+    <a href="comunidad.html">Comunidad</a>
+    <span class="separator">›</span>
+    <span class="actual">Nueva experiencia</span>
+  </nav>
+
   <main class="new-exp-main">
     <div class="new-exp-inner">
-      <section class="new-exp-header">
-        <h1>Comparte tu experiencia</h1>
-        <p>Inspira a otros mochileros contando tu historia y subiendo hasta 3 fotos.</p>
-      </section>
 
+      <!-- HERO de página, similar al de experiencia -->
+      <header class="new-exp-hero">
+        <h1 class="new-exp-title">Comparte tu experiencia</h1>
+        <p class="new-exp-subtitle">
+          Comparte una historia de viaje que pueda inspirar a otros mochileros.
+        </p>
+      
+
+        <!-- Rectángulo arena introductorio -->
+        <p class="new-exp-intro>">
+          
+            Cuéntanos un momento concreto de tu viaje, añade algunos detalles y sube hasta 3 fotos
+            para que la comunidad pueda ponerse en tu lugar.
+          </p>
+      </header>
+
+      <!-- Formulario -->
       <section class="new-exp-form-wrapper">
         <form id="form-nueva-exp" class="new-exp-form">
           <div class="form-group">
-            <label for="exp-nombre">Tu nombre</label>
+            <label for="exp-nombre">Nombre</label>
             <input type="text" id="exp-nombre" name="nombre" required />
           </div>
 
           <div class="form-group">
             <label for="exp-titulo">Título de la experiencia</label>
             <input type="text" id="exp-titulo" name="titulo" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="exp-resumen">Frase resumen</label>
+            <input type="text" id="exp-resumen" name="resumen" maxlength="120" />
           </div>
 
           <div class="form-group">
@@ -34,11 +77,10 @@
           </div>
 
           <div class="form-group">
-            <label>Sube hasta 3 fotos</label>
+            <label>Sube hasta 2 fotos</label>
             <div class="photos-grid">
               <input type="file" id="foto1" accept="image/*">
               <input type="file" id="foto2" accept="image/*">
-              <input type="file" id="foto3" accept="image/*">
             </div>
           </div>
 
@@ -47,6 +89,31 @@
       </section>
     </div>
   </main>
+  <!-- FOOTER -->
+        <footer class="footer">
+
+          <div class="footer-left">
+              <img src="../images/logo.png" alt="Moonloop logo" class="footer-logo">
+              <p>Contacto +34 666 722 227</p>
+              <a href="#" data-i18n="footer_policies">Políticas</a>
+              <a href="#" data-i18n="footer_faqs">FAQs</a>
+          </div>
+
+          <div class="footer-newsletter">
+              <label for="email-input" data-i18n="newsletter_title">¡No te pierdas nada con nuestra Newsletter!</label>
+              <div class="newsletter-box">
+                  <input type="email" id="email-input" placeholder="Introduce tu correo" data-i18n-placeholder="newsletter_placeholder">
+                  <button id="subscribe-btn" data-i18n="newsletter_button">Enviar</button>
+              </div>
+              <p class="newsletter-msg"></p>
+          </div>
+
+          <div class="footer-icons">
+              <a href="#"><img src="../images/ig.webp" alt="Instagram"></a>
+              <a href="#"><img src="../images/whatsapp.webp" alt="LinkedIn"></a>
+              <a href="#"><img src="../images/x.png" alt="X"></a>
+          </div>
+
+      </footer>
 </body>
 </html>
-

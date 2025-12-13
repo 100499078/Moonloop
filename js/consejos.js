@@ -15,7 +15,7 @@ const CONSEJOS = [
   },
   {
     id: "CON002",
-    titulo: "Qué meter (y qué no) en una mochila de 40L",
+    titulo: "Qué meter en una mochila de 40L",
     subtitulo: "Minimalismo real para viajes de meses",
     autor: "Nicolás, mochilero",
     fecha_publicacion: "22/04/2024",

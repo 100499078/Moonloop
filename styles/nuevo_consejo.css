@@ -1,0 +1,145 @@
+:root {
+  --negro-premium: #111;
+  --arena-suave: #f3e5d8;
+  --tierra: #c08a5b;
+  --tierra-oscura: #8b5e3b;
+  --texto: #444;
+}
+
+/* Fondo general casi blanco */
+body {
+  background-color: white;
+}
+
+/* Contenedor principal (igual que nueva_experiencia) */
+.new-exp-main {
+  max-width: 1200px;
+  margin: 60px auto 80px;
+  padding: 0 40px;
+  font-family: "Nunito", "Segoe UI", sans-serif;
+}
+
+/* Contenedor central */
+.new-exp-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* BREADCRUMB (misma línea visual que en nueva_experiencia) */
+.breadcrumbs-hero {
+  padding: 20px 5%;
+  background-color: #f5f5f5; /* franja gris claro */
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.breadcrumbs-hero a {
+  text-decoration: none;
+  color: #666;
+}
+
+.separator {
+  margin: 0 10px;
+}
+
+/* HERO arena: título + subtítulo + intro en una sola caja */
+.new-exp-hero {
+  display: block;
+  background-color: #F5F0EB;
+  border-radius: 12px;
+  padding: 24px 32px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+}
+
+.new-exp-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--negro-premium);
+  margin-bottom: 8px;
+}
+
+.new-exp-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.new-exp-intro {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Caja del formulario (gris claro, misma anchura) */
+.new-exp-form-wrapper {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  margin: 0;
+}
+
+/* Grupos de campos */
+.new-exp-form .form-group {
+  margin-bottom: 16px;
+}
+
+.new-exp-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+/* Inputs y textarea */
+.new-exp-form input[type="text"],
+.new-exp-form textarea {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.new-exp-form textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* Botón reutilizando estilo de nueva experiencia */
+.btn-submit-exp {
+  margin-top: 10px;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 22px;
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-submit-exp:hover {
+  background-color: #8ac3e8;
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .new-exp-main {
+    padding: 0 20px;
+  }
+
+  .new-exp-inner {
+    max-width: 100%;
+  }
+}

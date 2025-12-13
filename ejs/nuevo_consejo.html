@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nuevo consejo - Moonloop</title>
+
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/nuevo_consejo.css">
+  <link rel="stylesheet" href="../styles/consejo.css">
+
+  <script src="../js/nuevo_consejo.js" defer></script>
+</head>
+<body>
+  <header>
+        <div class="logo-section">
+            <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="comunidad.html">Comunidad</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <nav class="breadcrumbs-hero">
+    <a href="comunidad.html">Comunidad</a>
+    <span class="separator">›</span>
+    <span class="actual">Nuevo consejo</span>
+  </nav>
+
+  <main class="new-exp-main">
+    <div class="new-exp-inner">
+
+      <!-- Caja arena única -->
+      <header class="new-exp-hero">
+        <h1 class="new-exp-title">Comparte un consejo</h1>
+        <p class="new-exp-subtitle">
+          Ayuda a otros mochileros con tu experiencia y tus mejores trucos de viaje.
+        </p>
+        <p class="new-exp-intro">
+          Escribe un consejo práctico (transporte, alojamiento, seguridad, presupuesto, etc.)
+          que te hubiera gustado saber antes de tu viaje.
+        </p>
+      </header>
+
+      <section class="new-exp-form-wrapper">
+        <form id="form-nuevo-consejo" class="new-exp-form">
+          <div class="form-group">
+            <label for="cons-nombre">Tu nombre</label>
+            <input type="text" id="cons-nombre" name="nombre" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cons-titulo">Título del consejo</label>
+            <input type="text" id="cons-titulo" name="titulo" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cons-resumen">Frase resumen</label>
+            <input type="text" id="cons-resumen" name="resumen" maxlength="120" />
+          </div>
+
+          <div class="form-group">
+            <label for="cons-texto">Describe tu consejo</label>
+            <textarea id="cons-texto" name="texto" rows="6" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit-exp">Publicar consejo</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-left">
+            <img src="../images/logo.png" alt="Moonloop logo" class="footer-logo">
+            <p>Contacto +34 666 722 227</p>
+            <a href="#" data-i18n="footer_policies">Políticas</a>
+            <a href="#" data-i18n="footer_faqs">FAQs</a>
+        </div>
+
+        <div class="footer-newsletter">
+            <label for="email-input" data-i18n="newsletter_title">¡No te pierdas nada con nuestra Newsletter!</label>
+            <div class="newsletter-box">
+                <input type="email" id="email-input" placeholder="Introduce tu correo" data-i18n-placeholder="newsletter_placeholder">
+                <button id="subscribe-btn" data-i18n="newsletter_button">Enviar</button>
+            </div>
+            <p class="newsletter-msg"></p>
+        </div>
+
+        <div class="footer-icons">
+            <a href="#"><img src="../images/ig.webp" alt="Instagram"></a>
+            <a href="#"><img src="../images/whatsapp.webp" alt="LinkedIn"></a>
+            <a href="#"><img src="../images/x.png" alt="X"></a>
+        </div>
+
+    </footer>
+
+</body>
+</html>
