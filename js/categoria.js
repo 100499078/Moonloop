@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // ======================================================
-    // 6. DESTACADOS (primeros 2)
+    // 6. DESTACADOS 
     // ======================================================
     const destacadosContainer = document.getElementById("destacados-list");
 
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="${p.imagen}">
             <h3>${p.nombre}</h3>
             <p>${type === "region" ? p.destinos : p.region || p.tipo}</p>
-            <p><strong style="color:steelblue">${p.precio}€</strong></p>
+            <p class= destacado-precio>${p.precio}€</p>
             <div class="acciones">
                 <a class="ver" href="pack.html?id=${p.id}&from=${type}">Ver</a>
                 <button type="button" class="like btn-fav not-favorite" data-pack-id="${p.id}">

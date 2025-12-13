@@ -1,8 +1,5 @@
-/* ----------------------------------------- */
-/*   ESTILO TRAVEL BLOG CÁLIDO — VERSIÓN 2   */
-/* ----------------------------------------- */
 
-/* Colores cálidos basados en negro-premium */
+
 :root {
     --negro-premium: #111;
     --arena-suave: #f3e5d8;
@@ -11,7 +8,7 @@
     --texto: #444;
 }
 
-/* FONDO general blanco (como antes) */
+/* FONDO general blanco */
 body {
     background-color: #fff;
     font-family: "Nunito", "Segoe UI", sans-serif;
@@ -19,7 +16,7 @@ body {
     line-height: 1.8;
 }
 
-/* BREADCRUMB (lo dejamos EXACTO como lo tenías) */
+/* BREADCRUMB */
 .breadcrumbs-hero {
     padding: 20px 5%;
     background-color: #f9f9f9;
@@ -39,17 +36,17 @@ body {
     padding: 0 20px;
 }
 
-/* CABECERA FINAL Y CORRECTA */
+/* CABECERA  */
 .article-header {
   margin-bottom: 10px;
   padding: 35px 30px;
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr;
-  position: relative;           /* para posicionar la meta */
+  position: relative;          
 }
 
-/* TÍTULO arriba (centrado) */
+/* TÍTULO arriba  */
 h1#exp-titulo {
   font-size: 2.7rem;
   font-weight: 790;
@@ -57,7 +54,7 @@ h1#exp-titulo {
   margin-bottom: 10px;
   text-align: center;
 }
-/* META (autor arriba — fecha abajo, alineados a la izquierda) */
+/*  autor arriba y fecha abajo, alineados a la izquierda */
 .article-meta {
   position: absolute;
   right: 40px;

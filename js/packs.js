@@ -482,6 +482,38 @@ const PACKS = [
             { dia: 5, titulo: "Tirana", detalle: "Regreso al aeropuerto de Tirana para el vuelo de vuelta." }
         ]
     },
+
+    {
+        id:"EUR004TQ",
+        nombre: "Turquía Esencial",
+        destinos: "Estambul, Capadocia y Pamukkale",
+        region: "Europa", 
+        pais: "Turquía",
+        duracion: "8 días",
+        compania: "grupo",
+        interes: "Aventura",
+        precio: 1300,
+        imagen: "../images/pack-turquia.jpg",
+        descripcion: "Explora la encrucijada de culturas entre Europa y Asia. Desde los bazares y mezquitas de Estambul hasta los paisajes lunares de Capadocia y las piscinas termales de Pamukkale. Un viaje lleno de historia, aventura y sabores exóticos.",
+        incluye: [
+            "Vuelos internos Estambul - Capadocia - Denizli - Estambul",
+            "Alojamiento en hoteles boutique y cueva en Capadocia",
+            "Paseo en globo aerostático al amanecer (opcional)",
+            "Entradas a sitios históricos y museos",
+            "Guía local de habla hispana en Estambul y Capadocia"
+        ],  
+        itinerario: [
+            { dia: 1, titulo: "Estambul", detalle: "Llegada a Estambul. Visita a la Mezquita Azul y la Basílica de Santa Sofía." },
+            { dia: 2, titulo: "Estambul", detalle: "Recorrido por el Palacio Topkapi y el Gran Bazar. Paseo en barco por el Bósforo al atardecer." },
+            { dia: 3, titulo: "Estambul - Capadocia", detalle: "Vuelo a Capadocia. Visita al Museo al Aire Libre de Göreme y las chimeneas de hadas." },
+            { dia: 4, titulo: "Capadocia", detalle: "Paseo en globo aerostático al amanecer (opcional). Exploración de las ciudades subterráneas y valles." },
+            { dia: 5, titulo: "Capadocia - Pamukkale", detalle: "Traslado a Pamukkale. Visita a las terrazas de travertino y las ruinas de Hierápolis." },
+            { dia: 6, titulo: "Pamukkale - Estambul", detalle: "Vuelo de regreso a Estambul. Tarde libre para compras o explorar más de la ciudad." },
+            { dia: 7, titulo: "Estambul", detalle: "Día libre para visitar barrios como Beyoğlu o Üsküdar en la parte asiática." },
+            { dia: 8, titulo: "Estambul", detalle: "Traslado al aeropuerto para el vuelo de regreso." }
+        ]
+
+    },
     {
         id: "LATAM001CO",
         nombre: "La Ruta del Café",

@@ -11,17 +11,27 @@
   <script src="../js/nuevo_consejo.js" defer></script>
 </head>
 <body>
-  <header>
+   <header>
         <div class="logo-section">
-            <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
+            <img src="../images/logo.png" class="logo">
         </div>
+
         <nav class="nav-menu">
             <ul>
-                <li><a href="home.html">Inicio</a></li>
-                <li><a href="comunidad.html">Comunidad</a></li>
-                <li><a href="destinos.html">Destinos</a></li>
+                <li><a data-i18n="nav_home" href="home.html">Inicio</a></li>
+                <li><a id="nav_user" href="usuario.html">Usuario</a></li>
+                <li><a id="nav_destinations" href="destinos.html">Destinos</a></li>
+                <li><a id="nav_otherplaces" href="otros_rincones.html">Otros rincones</a></li>
+                <li><a id="nav_community" href="comunidad.html">Comunidad</a></li>
             </ul>
         </nav>
+
+        <div class="language-section">
+            <select id="language-select">
+                <option value="es">ES</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
     </header>
 
   <nav class="breadcrumbs-hero">

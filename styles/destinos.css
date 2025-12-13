@@ -175,22 +175,22 @@ body {
     margin-bottom: 30px;
 }
 
-/* La barra bonita redondeada (Trigger) */
+/* La barra redondeada  */
 .search-trigger {
     background: white;
     width: 600px;
     max-width: 90%;
     padding: 15px 25px;
-    border-radius: 50px; /* Forma de píldora */
+    border-radius: 50px; 
     display: flex;
     align-items: center;
-    cursor: text; /* El cursor parece de texto */
+    cursor: text; 
     margin: 0 auto;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     transition: transform 0.2s;
     position: relative; 
     z-index: 50;
-    cursor: pointer; /* Fuerza el icono de la manita */
+    cursor: pointer; 
 }
 
 .search-trigger:hover {
@@ -223,6 +223,8 @@ body {
     justify-content: center;
     align-items: flex-start; /* Alineado arriba */
     padding-top: 60px; /* Espacio desde el techo */
+    overflow-y: auto;   
+    -webkit-overflow-scrolling: touch;
     
     /* Efecto de aparición suave */
     opacity: 0;
@@ -871,6 +873,90 @@ input[type=range]::-webkit-slider-thumb {
     }
 }
 
+/* ===============================
+   SEARCH BAR RESPONSIVE (MÓVIL)
+================================ */
 
+@media (max-width: 768px) {
+
+    .search-trigger {
+        width: 90%;
+        padding: 12px 18px;
+        border-radius: 30px;
+    }
+
+    .search-icon {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+
+    .placeholder-text {
+        font-size: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .search-flex-container {
+        flex-direction: column;
+        gap: 40px;
+        height: auto;
+    }
+
+    .search-controls {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 25px;
+        padding-right: 0;
+    }
+
+    .right-panel {
+        width: 100%;
+        height: auto;
+        max-height: 40vh;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .real-search-box {
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .real-search-box input {
+        font-size: 1.3rem;
+    }
+
+    .search-btn-action {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 768px) {
+
+    .budget-filter-container {
+        padding: 20px;
+    }
+
+    .budget-filter-container label {
+        font-size: 1rem;
+    }
+
+    #budget-value {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 768px) {
+
+    .close-btn {
+        top: 15px;
+        right: 20px;
+        font-size: 2.2rem;
+    }
+}
 
 

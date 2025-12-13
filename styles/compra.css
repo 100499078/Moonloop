@@ -2,7 +2,8 @@
     --color-cabecera:#F5F0EB;
     --azul-clarito:#C3CBD6;
     --color-texto-principal:#333;
-    --color-destacado:#007bff;
+    --azul:#007bff;
+    --color-destacado: #8b5e3b;
     --fondo-overlay:rgba(255,255,255,0.95);
 }
 /* CONTENEDOR GENERAL */
@@ -121,7 +122,7 @@
 }
 
 .btn-finalizar:hover {
-    background: #005ad1;
+    background: #8c6446;
 }
 
 
@@ -358,7 +359,7 @@ h1 {
 }
 
 .btn-principal:hover {
-    background: #004fd6;
+    background: #8c6446;
 }
 
 .btn-secundario {

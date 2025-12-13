@@ -5,8 +5,9 @@
     --color-cabecera:#F5F0EB;
     --azul-clarito:   #C3CBD6;  /* Azul muy suave para fondos */    
     --color-texto-principal: #333;  /* Gris oscuro para textos */
-    --color-destacado: #007bff;     /* Azul eléctrico para precios o botones */
+    /*--color-destacado: #007bff;      Azul eléctrico para precios o botones */
     --fondo-overlay: rgba(255, 255, 255, 0.95); /* Blanco casi opaco */
+    --color-destacado: #8b5e3b;
 }
 * {
     margin: 0;
@@ -174,7 +175,7 @@ header {
 }
 
 .btn-primary:hover {
-    background: #0056c9;
+    background: #8c6446;
 }
 
 .btn-secondary {
@@ -706,7 +707,7 @@ header {
 }
 
 .purchase-link:hover {
-    background: #004fc7;
+    background: #8c6446;
 }
 
 /* MIS FAVORITOS */
@@ -797,7 +798,7 @@ header {
 }
 
 .btn-primary:hover {
-  background: #0056c9;
+  background: #8c6446;
 }
 
 /* Botón quitar */

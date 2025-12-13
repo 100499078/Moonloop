@@ -2,7 +2,8 @@
     --color-cabecera:#F5F0EB;
     --azul-clarito:#C3CBD6;
     --color-texto-principal:#333;
-    --color-destacado:#007bff;
+    --azul:#007bff;
+    --color-destacado: #8b5e3b;
     --fondo-overlay:rgba(255,255,255,0.95);
 }
 

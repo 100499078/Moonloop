@@ -5,7 +5,8 @@
     --color-cabecera:#F5F0EB;
     --azul-clarito:   #C3CBD6;  /* Azul muy suave para fondos */    
     --color-texto-principal: #333;  /* Gris oscuro para textos */
-    --color-destacado: #007bff;     /* Azul eléctrico para precios o botones */
+    --azul: #007bff;     /* Azul eléctrico para precios o botones */
+    --color-destacado: #8b5e3b;
     --fondo-overlay: rgba(255, 255, 255, 0.95); /* Blanco casi opaco */
 }
 * {
