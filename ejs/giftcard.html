@@ -1,58 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home Page</title>
-        <link rel="stylesheet" href="../styles/main.css">
-        <link rel="stylesheet" href="../styles/giftcard.css">
-        <script src="../js/main.js" defer></script>
-        <script src="../js/carousel.js" defer></script>
-        <script src="../js/translation.js" defer></script>
-        <script src="../js/giftcard.js" defer></script>
-        <script src="../js/usuario.js" defer></script>
-        <link rel="icon" type="image/png" href="../images/luna.png">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/giftcard.css">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/carousel.js" defer></script>
+    <script src="../js/translation.js" defer></script>
+    <script src="../js/giftcard.js" defer></script>
+    <script src="../js/usuario.js" defer></script>
+    <link rel="icon" type="image/png" href="../images/luna.png">
+</head>
 
 <body>
-        <!-- HEADER -->
+    <!-- HEADER -->
     <header>
+        <!-- Sección izquierda: logo -->
+        <div class="logo-section">
+            <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
+        </div>
 
-            <!-- Sección izquierda: logo -->
-             <div class="logo-section">
-                <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
-             </div>
-
-             <!-- Sección central: índice -->
-              <nav class="nav-menu">
-                <ul>
+        <!-- Sección central: índice -->
+        <nav class="nav-menu">
+            <ul>
                 <li><a id="nav_home" href="home.html">Inicio</a></li>
                 <li><a id="nav_user" href="#usuario">Usuario</a></li>
                 <li><a id="nav_destinations" href="destinos.html">Destinos</a></li>
                 <li><a id="nav_otherplaces" href="otros_rincones.html">Otros rincones</a></li>
                 <li><a id="nav_community" href="comunidad.html">Comunidad</a></li>
-                </ul>
-              </nav>
-            <!-- Sección derecha: idiomas -->
-             <div class="language-section">
-                <select name="language" id="language-select">
-                    <option value="es">ES</option>
-                    <option value="en">EN</option>
-                </select>
-             </div>
+            </ul>
+        </nav>
+        <!-- Sección derecha: idiomas -->
+        <div class="language-section">
+            <select name="language" id="language-select">
+                <option value="es">ES</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
     </header>
 
-
-
-    <!-- MAIN CONTENT -->
-    
     <main>
-
-    <!--Meter un banner que diga ¡REGALA EXPERIENCIAS! CON FOTITO DETRAS-->
         <div class="contenedorGitfCard">
             <section class="contIzquierdoGiftCard">
                 <h3>¡COMPRA TU TARJETA REGALO!</h3>
-                <form class="contenedorInferiorGitfCard">
+                <form id="giftcard-form" class="contenedorInferiorGitfCard">
                     <label for="amount">Importe a regalar:</label>
                     <select id="amount" name="amount" required>
                         <option value="" disabled selected>Selecciona el importe de la tarjeta</option>
@@ -63,42 +56,50 @@
                     </select>
                     <h4>Datos de la persona a la que regalas</h4>
                     <label for="recipient-name">Nombre del destinatario:</label>
-                    <input type="text" id="recipient-name" name="recipient-name" required>
+                    <input type="text" id="recipient-name" placeholder="Nombre de la persona a la que regalas" required>
 
                     <label for="recipient-email">Email del destinatario:</label>
-                    <input type="email" id="recipient-email" name="recipient-email" required>
+                    <input type="email" id="recipient-email" placeholder="example@mail.com" required>
 
                     <h4>Tus datos para realizar la compra</h4>
-                    <label for="Nombre-comprador">Tu nombre completo:</label>
-                    <input type="text" id="Nombre-comprador" name="Nombre-comprador" required>
-            
-                    <label for="email-comprador">Tu email:</label>
-                    <input type="email" id="email-comprador" name="email-comprador" required>
+                    <label for="comprador-name">Tu nombre:</label>
+                    <input id="comprador-name" type="text" placeholder="Tu nombre" required>
 
-                    <select>
+                    <label for="comprador-surname">Tus apellidos</label>
+                    <input id="comprador-surname" type="text" placeholder="Tus apellidos" required>
+
+                    <label for="email-comprador">Tu email:</label>
+                    <input id="email-comprador" type="email" placeholder="example@mail.com" required>
+
+                    <h4>Método de pago</h4>
+                    <select id="metodo-pago" name="metodo-pago" required>
                         <option value="">Selecciona el método de pago</option>
                         <option value="tarjeta">Tarjeta de crédito/débito</option>
                         <option value="paypal">PayPal</option>  
-                        <option value AmericanExpress>American Express</option>
-                        <option value="VISA">VISA</option>
+                        <option value="amex">American Express</option>
+                        <option value="visa">VISA</option>
+                        <option value="applepay">Apple Pay</option>
                     </select>
 
-                    <laber for ="card-number">Número de tarjeta:</laber>
-                    <input type="text" id="card-number" name="card-number" required>
+                    <!-- Contenedor para campos de tarjeta (solo visible cuando se necesita) -->
+                    <div id="campos-tarjeta">
+                        <label for="card-number">Número de tarjeta:</label>
+                        <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
 
-                    <label for ="card-holder">Nombre del titular:</label>
-                    <input type="text" id="card-holder" name="card-holder" required>
+                        <label for="card-holder">Nombre del titular:</label>
+                        <input type="text" id="card-holder" name="card-holder" placeholder="Nombre del titular">
 
-                    <label for ="cvv">CVV:</label>
-                    <input type="text" id="cvv" name="cvv" required>
-                    
-                    <div class ="fecha-caducidad">
-                        <label for ="expiry-date">Fecha de caducidad:</label>
-                        <input type="text" id="expiry-date" name="expiry-date" required>
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="123">
+                        
+                        <div class="fecha-caducidad">
+                            <label for="expiry-date">Fecha de caducidad:</label>
+                            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA">
+                        </div>
                     </div>
 
                     <button type="submit" class="botonComprarGiftCard">Comprar Tarjeta Regalo</button>
-
+                </form>
             </section>
             <section class="contDerechoGiftCard">
                 <div class="bannerGiftCard">
@@ -121,32 +122,29 @@
         </div>
     </main>
 
-            <!-- FOOTER -->
-             <footer class="footer">
-    
-                <div class="footer-left">
-                    <img src="../images/logo.png" alt="Moonloop logo" class="footer-logo">
-                    <p>Contacto +34 666 722 227</p>
-                    <a href="#" data-i18n="footer_policies">Políticas</a>
-                    <a href="#" data-i18n="footer_faqs">FAQs</a>
-                </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="../images/logo.png" alt="Moonloop logo" class="footer-logo">
+            <p>Contacto +34 666 722 227</p>
+            <a href="#" data-i18n="footer_policies">Políticas</a>
+            <a href="#" data-i18n="footer_faqs">FAQs</a>
+        </div>
 
-                <div class="footer-newsletter">
-                    <label for="email-input" data-i18n="newsletter_title">¡No te pierdas nada con nuestra Newsletter!</label>
-                    <div class="newsletter-box">
-                        <input type="email" id="email-input" placeholder="Introduce tu correo" data-i18n-placeholder="newsletter_placeholder">
-                        <button id="subscribe-btn" data-i18n="newsletter_button">Enviar</button>
-                    </div>
-                    <p class="newsletter-msg"></p>
-                </div>
+        <div class="footer-newsletter">
+            <label for="email-input" data-i18n="newsletter_title">¡No te pierdas nada con nuestra Newsletter!</label>
+            <div class="newsletter-box">
+                <input type="email" id="email-input" placeholder="Introduce tu correo" data-i18n-placeholder="newsletter_placeholder">
+                <button id="subscribe-btn" data-i18n="newsletter_button">Enviar</button>
+            </div>
+            <p class="newsletter-msg"></p>
+        </div>
 
-                <div class="footer-icons">
-                    <a href="#"><img src="../images/ig.webp" alt="Instagram"></a>
-                    <a href="#"><img src="../images/whatsapp.webp" alt="LinkedIn"></a>
-                    <a href="#"><img src="../images/x.png" alt="X"></a>
-                </div>
-
-            </footer>
-
-        
-    </body>
+        <div class="footer-icons">
+            <a href="#"><img src="../images/ig.webp" alt="Instagram"></a>
+            <a href="#"><img src="../images/whatsapp.webp" alt="LinkedIn"></a>
+            <a href="#"><img src="../images/x.png" alt="X"></a>
+        </div>
+    </footer>
+</body>
+</html>

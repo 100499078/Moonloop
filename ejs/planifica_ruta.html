@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planifica tu Ruta | Moonloop</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/planifica_ruta.css">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/translation.js" defer></script>
+    <script src="../js/usuario.js" defer></script>
+    <script src="../js/planifica_ruta.js" defer></script>
+    <link rel="icon" type="image/png" href="../images/luna.png">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo-section">
+            <img src="../images/logo.png" alt="Logo de Moonloop" class="logo">
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a id="nav_home" href="home.html">Inicio</a></li>
+                <li><a id="nav_user" href="acceso_user.html">Usuario</a></li>
+                <li><a id="nav_destinations" href="destinos.html">Destinos</a></li>
+                <li><a id="nav_otherplaces" href="otros_rincones.html">Otros rincones</a></li>
+                <li><a id="nav_community" href="comunidad.html">Comunidad</a></li>
+            </ul>
+        </nav>
+        
+        <div class="language-section">
+            <select name="language" id="language-select">
+                <option value="es">ES</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="planificar-main">
+        <!-- Título principal -->
+        <section class="titulo-planificar">
+            <h1>¿No has encontrado ningún pack perfecto para ti?</h1>
+            <h2>No te preocupes, dinos EXACTAMENTE qué quieres y nosotros lo haremos realidad</h2>
+        </section>
+
+        <!-- Contenedor principal del formulario -->
+        <div class="contenedor-central">
+            <section class="formulario-completo">
+                <h3>Planifica tu viaje ideal</h3>
+                
+                <!-- 1. Idea de viaje -->
+                <div class="campo-formulario">
+                    <label for="idea-viaje">¿Cuál es tu idea de viaje?</label>
+                    <textarea id="idea-viaje" placeholder="Describe tu viaje soñado... ¿Aventura? ¿Relax? ¿Cultura? ¿Naturaleza? Cuéntanos todo lo que imaginas" rows="4"></textarea>
+                </div>
+
+                <!-- 2. Continentes - CON BOCADILLO DE SELECCIÓN -->
+                <div class="campo-formulario">
+                    <label for="continente-select">¿A qué continente(s) te gustaría viajar?</label>
+                    <div class="bocadillo-seleccion">
+                        <div class="bocadillo-caja">
+                            <div class="bocadillo-texto" id="bocadillo-texto">Selecciona continente(s)</div>
+                            <button type="button" class="bocadillo-flecha" id="toggle-continente">▼</button>
+                        </div>
+                        <div class="bocadillo-opciones" id="continente-opciones">
+                            <div class="opcion-continente">
+                                <input type="checkbox" id="continente-europa" value="europa">
+                                <label for="continente-europa">Europa</label>
+                            </div>
+                            <div class="opcion-continente">
+                                <input type="checkbox" id="continente-america" value="america">
+                                <label for="continente-america">América</label>
+                            </div>
+                            <div class="opcion-continente">
+                                <input type="checkbox" id="continente-asia" value="asia">
+                                <label for="continente-asia">Asia</label>
+                            </div>
+                            <div class="opcion-continente">
+                                <input type="checkbox" id="continente-africa" value="africa">
+                                <label for="continente-africa">África</label>
+                            </div>
+                            <div class="opcion-continente">
+                                <input type="checkbox" id="continente-oceania" value="oceania">
+                                <label for="continente-oceania">Oceanía</label>
+                            </div>
+                            <div class="opcion-continente">
+                                <input type="checkbox" id="continente-antartida" value="antartida">
+                                <label for="continente-antartida">Antártida</label>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" id="continentes-seleccionados">
+                </div>
+
+                <!-- 3. Cómo viajas - CON CHECKBOXES -->
+                <div class="campo-formulario">
+                    <label>¿Cómo viajas?</label>
+                    <div class="checkbox-grupo">
+                        <div class="checkbox-opcion">
+                            <input type="radio" id="viajar-solo" name="compania" value="solo">
+                            <label for="viajar-solo" class="checkbox-label">
+                                <span class="checkbox-texto">Solo</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-opcion">
+                            <input type="radio" id="viajar-pareja" name="compania" value="pareja">
+                            <label for="viajar-pareja" class="checkbox-label">
+                                <span class="checkbox-texto">Pareja</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-opcion">
+                            <input type="radio" id="viajar-amigos" name="compania" value="amigos">
+                            <label for="viajar-amigos" class="checkbox-label">
+                                <span class="checkbox-texto">Amigos</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-opcion">
+                            <input type="radio" id="viajar-familia" name="compania" value="familia">
+                            <label for="viajar-familia" class="checkbox-label">
+                                <span class="checkbox-texto">Familia</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Fechas -->
+                <div class="campo-formulario">
+                    <label for="fechas">¿Qué fechas quieres viajar?</label>
+                    <div class="selector-fechas">
+                        <input type="text" id="fechas" placeholder="Selecciona fechas" readonly>
+                        <button type="button" id="abrir-calendario" class="btn-calendario">📅</button>
+                    </div>
+                    
+                    <!-- Opción fechas flexibles -->
+                    <div class="fechas-flexibles">
+                        <input type="checkbox" id="fechas-flex">
+                        <label for="fechas-flex">Tengo fechas flexibles</label>
+                    </div>
+                </div>
+
+                <!-- 5. Presupuesto -->
+                <div class="campo-formulario">
+                    <label for="presupuesto">¿Cuál es el presupuesto que tienes?</label>
+                    
+                    <!-- Contenedor del slider de presupuesto -->
+                    <div class="budget-filter-container">
+                        <label>
+                            Presupuesto máximo: 
+                            <span id="budget-value">5000€</span>
+                        </label>
+                        
+                        <!-- Slider único -->
+                        <input type="range" 
+                            id="presupuesto-slider" 
+                            min="500" 
+                            max="5000" 
+                            value="5000" 
+                            step="100">
+                 
+                    </div>
+                    
+                    <p class="mensaje-presupuesto">Haremos lo posible por ajustarnos a tu presupuesto</p>
+                </div>
+
+        <!-- Formulario de contacto -->
+        <section class="formulario-contacto">
+            <div class="encabezado-contacto">
+                <h3>Haremos una búsqueda y contactaremos contigo lo antes posible para hacer realidad tu viaje soñado</h3>
+                <p>Déjanos tus datos y nos pondremos en contacto contigo en menos de 24h</p>
+            </div>
+            
+            <form id="form-contacto-ruta" class="form-datos-contacto">
+                <div class="grid-datos">
+                    <div class="campo-datos">
+                        <label for="nombre-contacto">Nombre completo *</label>
+                        <input type="text" id="nombre-contacto" placeholder="Tu nombre" required>
+                    </div>
+                    
+                    <div class="campo-datos">
+                        <label for="email-contacto">Email *</label>
+                        <input type="email" id="email-contacto" placeholder="tu@email.com" required>
+                    </div>
+                    
+                    <div class="campo-datos">
+                        <label for="telefono-contacto">Teléfono *</label>
+                        <input type="tel" id="telefono-contacto" placeholder="+34 600 000 000" required>
+                    </div>
+                    
+                    <div class="campo-datos">
+                        <label for="personas-contacto">Número de personas</label>
+                        <select id="personas-contacto">
+                            <option value="1">1 persona</option>
+                            <option value="2" selected>2 personas</option>
+                            <option value="3">3 personas</option>
+                            <option value="4">4 personas</option>
+                            <option value="5+">5 o más personas</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="campo-datos-full">
+                    <label for="observaciones-contacto">Observaciones adicionales</label>
+                    <textarea id="observaciones-contacto" placeholder="¿Alergias? ¿Dietas especiales? ¿Necesidades específicas?" rows="3"></textarea>
+                </div>
+                
+                <div class="aceptacion-privacidad">
+                    <input type="checkbox" id="privacidad" required>
+                    <label for="privacidad">Acepto la política de privacidad y recibir información sobre mi viaje</label>
+                </div>
+                
+                <button type="submit" class="btn-enviar-solicitud">Enviar solicitud de viaje</button>
+            </form>
+        </section>
+        
+        <!-- Modal de calendario -->
+        <div id="modal-calendario" class="modal-calendario">
+            <div class="modal-contenido">
+                <div class="modal-header">
+                    <h4>Selecciona tus fechas</h4>
+                    <button id="cerrar-modal" class="btn-cerrar">×</button>
+                </div>
+                
+                <div class="calendario-wrapper-modal">
+                    <div class="calendario-nav">
+                        <button type="button" id="prev-mes" class="cal-btn">←</button>
+                        <span id="calendario-rango-meses">Selecciona fecha de ida y vuelta</span>
+                        <button type="button" id="next-mes" class="cal-btn">→</button>
+                    </div>
+                    
+                    <div class="calendarios-dobles">
+                        <!-- Mes 1 -->
+                        <div class="calendario-mes">
+                            <h4 id="mes1-titulo"></h4>
+                            <table class="calendario" id="calendario1"></table>
+                        </div>
+                        
+                        <!-- Mes 2 -->
+                        <div class="calendario-mes">
+                            <h4 id="mes2-titulo"></h4>
+                            <table class="calendario" id="calendario2"></table>
+                        </div>
+                    </div>
+                    
+                    <div class="resultado-fechas">
+                        <p>Ida: <span id="fecha-ida">—</span></p>
+                        <p>Vuelta: <span id="fecha-vuelta">—</span></p>
+                    </div>
+                </div>
+                
+                <div class="modal-acciones">
+                    <button id="aplicar-fechas" class="btn-aplicar">Aplicar fechas seleccionadas</button>
+                    <button id="cancelar-fechas" class="btn-cancelar">Cancelar</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal de éxito -->
+        <div id="modal-exito" class="modal-exito">
+            <div class="modal-contenido-exito">
+                <div class="icono-exito">✈️</div>
+                <h3>¡Solicitud enviada con éxito!</h3>
+                <p>Hemos recibido tu solicitud de viaje personalizado. Nuestro equipo se pondrá en contacto contigo en menos de 24 horas para empezar a planificar tu aventura.</p>
+                <p>Revisa tu email para confirmar la recepción.</p>
+                <button id="cerrar-exito" class="btn-exito">Aceptar</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="../images/logo.png" alt="Moonloop logo" class="footer-logo">
+            <p>Contacto +34 666 722 227</p>
+            <a href="#" data-i18n="footer_policies">Políticas</a>
+            <a href="#" data-i18n="footer_faqs">FAQs</a>
+        </div>
+
+        <div class="footer-newsletter">
+            <label for="email-input" data-i18n="newsletter_title">¡No te pierdas nada con nuestra Newsletter!</label>
+            <div class="newsletter-box">
+                <input type="email" id="email-input" placeholder="Introduce tu correo" data-i18n-placeholder="newsletter_placeholder">
+                <button id="subscribe-btn" data-i18n="newsletter_button">Enviar</button>
+            </div>
+            <p class="newsletter-msg"></p>
+        </div>
+
+        <div class="footer-icons">
+            <a href="#"><img src="../images/ig.webp" alt="Instagram"></a>
+            <a href="#"><img src="../images/whatsapp.webp" alt="LinkedIn"></a>
+            <a href="#"><img src="../images/x.png" alt="X"></a>
+        </div>
+    </footer>
+</body>
+</html>
