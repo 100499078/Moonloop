@@ -217,11 +217,11 @@ body {
 }
 
 .like.favorite .heart {
-  color: #e63946;
+  color: rgb(183, 28, 28);
 }
 
 .like.favorite .fav-text {
-  color: #e63946;
+  color: rgb(183, 28, 28);
 }
 
 .like:hover {
