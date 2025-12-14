@@ -205,7 +205,7 @@ function seleccionarFecha(año, mes, dia) {
 document.getElementById('prev-mes').addEventListener('click', () => cambiarMes(-1));
 document.getElementById('next-mes').addEventListener('click', () => cambiarMes(1));
 
-// 3. SLIDER DE PRESUPUESTO (Versión simple de tu compañera)
+// 3. SLIDER DE PRESUPUESTO
 const presupuestoSlider = document.getElementById('presupuesto-slider');
 const budgetValueSpan = document.getElementById('budget-value');
 
@@ -222,19 +222,14 @@ presupuestoSlider.addEventListener('input', actualizarPresupuesto);
 // 4. ENVÍO DEL FORMULARIO (modifica esta parte también)
 document.getElementById('form-contacto-ruta').addEventListener('submit', function(e) {
     e.preventDefault();
-    
-    // ... tus otras validaciones ...
-    
-    // En la parte de datos, cambia a:
+
     const presupuestoMaximo = parseInt(presupuestoSlider.value);
     
     console.log('Datos del viaje:', {
-        // ... tus otros datos ...
+
         presupuestoMaximo: presupuestoMaximo,
-        // ... resto de datos ...
     });
     
-    // ... resto del código de envío ...
 });
 
 // 4. ENVÍO DEL FORMULARIO
@@ -283,7 +278,6 @@ document.getElementById('form-contacto-ruta').addEventListener('submit', functio
         return;
     }
     
-    // Simular envío (en un caso real, aquí iría una petición AJAX)
     console.log('Datos del viaje:', {
         ideaViaje,
         continentes,
@@ -305,10 +299,6 @@ document.getElementById('form-contacto-ruta').addEventListener('submit', functio
     // Mostrar modal de éxito
     modalExito.classList.add('mostrar');
     
-    // Limpiar formulario (opcional)
-    // this.reset();
-    // actualizarContinentesSeleccionados();
-    // inputFechas.value = '';
 });
 
 btnCerrarExito.addEventListener('click', () => {

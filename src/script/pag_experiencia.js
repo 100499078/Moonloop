@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("exp-autor").textContent = exp.autor;
     document.getElementById("exp-fecha").textContent = exp.fecha_publicacion;
 
-    // Imágenes (con placeholder por si fallan)
+    // Imágenes 
     const setImg = (id, src) => {
         const el = document.getElementById(id);
         if(el) {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("exp-p3").textContent = exp.parrafo3;
     document.getElementById("exp-p4").textContent = exp.parrafo4;
 
-    // 4. Cargar PACK ASOCIADO (Cross-selling)
+    // 4. Cargar PACK ASOCIADO 
     if (exp.pack_asociado && typeof PACKS !== 'undefined') {
         const pack = PACKS.find(p => p.id === exp.pack_asociado);
 

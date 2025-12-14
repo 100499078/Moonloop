@@ -150,7 +150,7 @@ body {
 
 
 
-/* --- ESTILOS DEL HERO (La portada) --- */
+/* HERO */
 .hero-section {
     position: relative;
     height: 80vh; /* Altura de la pantalla */
@@ -208,9 +208,7 @@ body {
     font-size: 18px;
 }
 
-/* =========================================
-   1. MECÁNICA DEL POP-UP (NO BORRAR)
-========================================= */
+/* MECÁNICA DEL POP-UP */
 .search-overlay {
     position: fixed;
     top: 0;
@@ -233,7 +231,7 @@ body {
     backdrop-filter: blur(5px); /* Efecto borroso detrás */
 }
 
-/* Clase que añade JS para mostrarlo */
+
 .search-overlay.active {
     opacity: 1;
     visibility: visible;
@@ -258,9 +256,7 @@ body {
     color: #000;
 }
 
-/* =========================================
-   2. LAYOUT DE 2 COLUMNAS (NUEVO)
-========================================= */
+
 .overlay-content {
     width: 100%;
     max-width: 1200px;
@@ -749,14 +745,15 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .planifica-btn {
+    display: inline-block;
     background-color: #000;
     color: #fff;
-    padding: 12px 26px;
-    border-radius: 6px;
+    padding: 12px 28px;
+    border-radius: 8px;
     font-size: 15px;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s ease;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.25s ease;
 }
 
 .planifica-btn:hover {
@@ -791,7 +788,7 @@ input[type=range]::-webkit-slider-thumb {
     gap: 20px;
 }
 
-/* --- TARJETAS (Items) --- */
+/* --- TARJETAS  --- */
 .region-item,
 .compania-item,
 .tematica-item {
@@ -865,7 +862,7 @@ input[type=range]::-webkit-slider-thumb {
     color: #fff;
 }
 
-/* --- RESPONSIVE (Opcional: Para móviles) --- */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .grid-region,
     .grid-compania,
@@ -874,9 +871,6 @@ input[type=range]::-webkit-slider-thumb {
     }
 }
 
-/* ===============================
-   SEARCH BAR RESPONSIVE (MÓVIL)
-================================ */
 
 @media (max-width: 768px) {
 

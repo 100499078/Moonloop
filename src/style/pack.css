@@ -1,4 +1,4 @@
-/* VARIABLES Y RESET */
+
 :root {
     /* Aquí inventas los nombres. Deben empezar con dos guiones -- */
     --color-cabecera:#F5F0EB;
@@ -37,7 +37,6 @@ body {
 
 
 .breadcrumb{
-    /* Quitamos position: absolute porque ahora es una barra normal */
     padding: 20px 5%; /* Espaciado lateral alineado con el texto del header */
     background-color: #f9f9f9; /* Fondo gris muy suave */
     color: #666; /* Texto gris oscuro */
@@ -71,7 +70,7 @@ body {
 }
 
 
-/* --- CABECERA --- */
+/* CABECERA */
 .pack-header {
     margin-bottom: 40px;
     border-bottom: 1px solid #f0f0f0;
@@ -167,7 +166,7 @@ ul#pack-incluye li::before {
     font-weight: bold;
 }
 
-/* BOTÓN DE COMPRA (El manual) */
+/* BOTÓN DE COMPRA */
 .boton-comprar-manual {
     display: block;
     width: 100%;
@@ -268,9 +267,7 @@ ul#pack-incluye li::before {
   cursor: pointer;
 }
 
-/* =======================================================
-   EXPERIENCIAS RELACIONADAS — ESTILO WARM EARTH (TU DISEÑO)
-======================================================= */
+/* EXPERIENCIAS RELACIONADAS */
 
 #exp-rel-section {
     background: var(--arena-suave);
@@ -294,9 +291,7 @@ ul#pack-incluye li::before {
     gap: 40px;
 }
 
-/* -------------------------------------------
-   TARJETAS (EXPERIENCIAS) — adaptación de tu related-pack
-------------------------------------------- */
+/* TARJETAS (EXPERIENCIAS) */
 
 .related-card {
     background: #fff;
@@ -351,9 +346,7 @@ ul#pack-incluye li::before {
     background-color: var(--tierra);
 }
 
-/* ============================== */
-/*     GALERÍA FOTO DESTACADA     */
-/* ============================== */
+/* GALERÍA FOTO DESTACADA */
 
 .gallery-col {
     display: grid;

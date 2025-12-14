@@ -314,14 +314,14 @@ header {
     opacity: 1;
 }
 
-/* ===== PÁGINA DE REGISTRO ===== */
+/* PÁGINA DE REGISTRO */
 
 /* CONTENEDOR PRINCIPAL */
 .register-wrapper {
     display: flex;
     flex-direction: row;
-    min-height: 90vh;          /* ambos hijos se adaptan */
-    align-items: stretch;      /* ✨ hace que ambos tengan la MISMA altura */
+    min-height: 90vh;          
+    align-items: stretch;      
     justify-content: center;
     gap: 40px;
     padding: 40px;
@@ -332,13 +332,13 @@ header {
 
 /* IMAGEN (columna izquierda) */
 .register-image-container {
-    flex: 1;                   /* ❗ mismo tamaño que el form */
+    flex: 1;                   
     display: flex;
 }
 
 .register-image {
     width: 100%;
-    height: 100%;              /* ✨ misma altura que el form */
+    height: 100%;            
     object-fit: cover;
     border-radius: 22px;
     box-shadow: 0 10px 26px rgba(0,0,0,0.15);
@@ -346,7 +346,7 @@ header {
 
 /* FORMULARIO (columna derecha) */
 .register-form-container {
-    flex: 1;                   /* tamaño igual al de la imagen */
+    flex: 1;                   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -363,7 +363,7 @@ header {
     flex-direction: column;
     gap: 15px;
 
-    height: 100%;              /* ✨ ocupa toda la altura de la columna */
+    height: 100%;              
     box-sizing: border-box;
 }
 
@@ -718,9 +718,7 @@ header {
   padding: 20px 40px;
 }
 
-/* ===============================
-   TARJETA FAVORITO
-================================ */
+/* TARJETA FAVORITO*/
 
 .favorite-card {
   display: flex;
@@ -741,9 +739,7 @@ header {
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
 }
 
-/* ===============================
-   IMAGEN
-================================ */
+/* IMAGEN*/
 
 .favorite-img {
   width: 140px;
@@ -753,9 +749,7 @@ header {
   flex-shrink: 0;
 }
 
-/* ===============================
-   INFO DEL VIAJE
-================================ */
+/* INFO DEL VIAJE*/
 
 .favorite-info {
   display: flex;

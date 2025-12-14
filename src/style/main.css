@@ -399,14 +399,15 @@ header {
 
 /* BOTÓN */
 .gift-btn {
+    display: inline-block;
     background-color: #000;
     color: #fff;
-    border: none;
-    padding: 12px 26px;
-    border-radius: 6px;
+    padding: 12px 28px;
+    border-radius: 8px;
     font-size: 15px;
-    cursor: pointer;
-    transition: 0.2s ease;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.25s ease;
 }
 
 .gift-btn:hover {
@@ -472,14 +473,15 @@ header {
 }
 
 .comunidad-btn {
+    display: inline-block;
     background-color: #000;
     color: #fff;
-    border: none;
-    padding: 12px 26px;
-    border-radius: 6px;
+    padding: 12px 28px;
+    border-radius: 8px;
     font-size: 15px;
-    cursor: pointer;
-    transition: 0.2s ease;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.25s ease;
 }
 
 .comunidad-btn:hover {

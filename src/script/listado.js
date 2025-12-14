@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Interceptar SOLO si no hay usuario
             btn.addEventListener("click", (e) => {
             const user = getCurrentUser();
-             // SI NO hay usuario → modo informativo
+             // SI NO hay usuario
             if (!user) {
                 btn.classList.add("disabled");
                 const text = btn.querySelector(".fav-text");

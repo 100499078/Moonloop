@@ -33,7 +33,7 @@
 
 .titulo-planificar h2 {
     font-size: 1.2rem;
-    color: var(--color-destacado);
+    color: #666;
     font-weight: normal;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .formulario-completo h3 {
-    color: var(--color-destacado);
+    color: var(--color-texto-principal);
     margin-bottom: 25px;
     font-size: 1.5rem;
     text-align: center;
@@ -405,7 +405,7 @@
 }
 
 .encabezado-contacto h3 {
-    color: var(--color-destacado);
+    color: var(--color-texto-principal);
     margin-bottom: 10px;
 }
 
@@ -491,7 +491,7 @@
     background-color: var(--color-secundario);
 }
 
-/* MODAL CALENDARIO (Inspirado en compra.css) */
+/* MODAL CALENDARIO*/
 .modal-calendario {
     display: none;
     position: fixed;
@@ -550,7 +550,6 @@
     padding: 20px;
 }
 
-/* Calendario (estilos inspirados en compra.css) */
 .calendario-nav {
     display: flex;
     justify-content: space-between;

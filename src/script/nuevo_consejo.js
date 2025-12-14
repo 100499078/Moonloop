@@ -1,5 +1,3 @@
-// nuevo_consejo.js
-
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('form-nuevo-consejo');
 

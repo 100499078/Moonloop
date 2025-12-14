@@ -1,5 +1,3 @@
-// pago.js
-
 // --- Recuperar la info temporal de la compra ---
 const compraTemporalRaw = localStorage.getItem("compraTemporal");
 if (!compraTemporalRaw) {
@@ -16,9 +14,7 @@ if (!packPago) {
     window.location.href = "destinos.html";
 }
 
-// ------------------------
 // RELLENAR RESUMEN DEL VIAJE
-// ------------------------
 
 const imgPackEl = document.getElementById("pago-pack-img");
 const nombrePackEl = document.getElementById("pago-pack-nombre");
@@ -60,9 +56,7 @@ btnEditar.addEventListener("click", () => {
     window.location.href = `compra.html?id=${compraTemporal.idPack}`;
 });
 
-// ------------------------
 // DATOS VIAJERO: AUTOCOMPLETAR SI HAY USUARIO
-// ------------------------
 
 const inputNombre = document.getElementById("viajero-nombre");
 const inputApellidos = document.getElementById("viajero-apellidos");
@@ -79,9 +73,7 @@ if (currentUser) {
     checkGuardarDatos.checked = true; // ya tiene cuenta
 }
 
-// ------------------------
 // RESUMEN DE PRECIO
-// ------------------------
 
 const IVA_PORCENTAJE = 0.21;
 let descuentoAplicado = 0;
@@ -120,15 +112,13 @@ function calcularYMostrarPrecio() {
 // Mostrar precio inicial
 calcularYMostrarPrecio();
 
-// ------------------------
 // TARJETA REGALO (CÓDIGOS)
-// ------------------------
 
 const giftInput = document.getElementById("gift-code");
 const giftBtn = document.getElementById("btn-aplicar-gift");
 const giftMsg = document.getElementById("gift-msg");
 
-// Ejemplos de códigos: MOON50 → 50€, MOON100 → 100€
+
 const CODIGOS_REGALO = {
     "MOON50": 50,
     "MOON100": 100
@@ -157,9 +147,7 @@ giftBtn.addEventListener("click", () => {
     calcularYMostrarPrecio();
 });
 
-// ------------------------
 // CONFIRMAR PAGO
-// ------------------------
 
 const btnConfirmar = document.getElementById("btn-confirmar-pago");
 

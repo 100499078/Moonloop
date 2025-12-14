@@ -1,5 +1,3 @@
-// nueva_experiencia.js
-
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('form-nueva-exp');
 

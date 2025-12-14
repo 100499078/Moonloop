@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ======================================================
+
     // 1. LEER PARÁMETROS: type = region / compania / interes
     //                     value = nombre de la categoría
-    // ======================================================
     const params = new URLSearchParams(window.location.search);
     const type = params.get("type");     // region, compania, interes
     const value = params.get("value");   // África, solo, Aventura…
@@ -13,10 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // ======================================================
     // 2. DEFINICIÓN DE CATEGORÍAS (nombre, descripción, imagen)
-    // ======================================================
-
     const REGIONES = {
         "África": {
             descripcion: "Explora la cuna de la humanidad: safaris, desiertos y culturas vibrantes.",
@@ -91,18 +87,14 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // ======================================================
     // 3. CARGAR EL HERO
-    // ======================================================
 
     document.getElementById("cat-imagen").src = data.imagen;
     document.getElementById("cat-titulo").textContent =
         data.nombre || value;
     document.getElementById("cat-descripcion").textContent = data.descripcion;
 
-    // ======================================================
     // 4. CREAR BREADCRUMB
-    // ======================================================
 
     const bread = document.getElementById("breadcrumb-hero");
     bread.innerHTML = `
@@ -114,10 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <span class="separator">›</span>
         <span class="actual">${data.nombre || value}</span>
     `;
-
-    // ======================================================
-    // 5. FILTRAR PACKS SEGÚN TIPO
-    // ======================================================
 
     // 5. FILTRAR PACKS SEGÚN TIPO
     let packsFiltrados = [];
@@ -139,9 +127,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // ======================================================
+
     // 6. DESTACADOS 
-    // ======================================================
     const destacadosContainer = document.getElementById("destacados-list");
 
     destacadosContainer.innerHTML = packsFiltrados.slice(0, 2).map((p, index) => `
@@ -198,9 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         });
 
-    // ======================================================
     // 7. GRID CON TODOS LOS PACKS
-    // ======================================================
 
     const grid = document.getElementById("todos-list");
 
@@ -222,9 +207,8 @@ document.addEventListener("DOMContentLoaded", () => {
     )
     .join("");
 
-    // ======================================================
+
     // 8. OTRAS OPCIONES (excluyendo la actual)
-    // ======================================================
 
     const otros = Object.keys(dictionary).filter(k => k !== value);
 

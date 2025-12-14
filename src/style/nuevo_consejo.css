@@ -11,7 +11,7 @@ body {
   background-color: white;
 }
 
-/* Contenedor principal (igual que nueva_experiencia) */
+/* Contenedor principal*/
 .new-exp-main {
   max-width: 1200px;
   margin: 60px auto 80px;
@@ -25,7 +25,7 @@ body {
   margin: 0 auto;
 }
 
-/* BREADCRUMB (misma línea visual que en nueva_experiencia) */
+/* BREADCRUMB*/
 .breadcrumbs-hero {
   padding: 20px 5%;
   background-color: #f5f5f5; /* franja gris claro */
@@ -74,7 +74,7 @@ body {
   color: #555;
 }
 
-/* Caja del formulario (gris claro, misma anchura) */
+/* Caja del formulario*/
 .new-exp-form-wrapper {
   background-color: #f9f9f9;
   border-radius: 12px;
@@ -114,7 +114,7 @@ body {
   min-height: 130px;
 }
 
-/* Botón reutilizando estilo de nueva experiencia */
+
 .btn-submit-exp {
   margin-top: 10px;
   border: none;

@@ -21,9 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // ======================================
     // BREADCRUMB SEGÚN DESDE DÓNDE VIENE
-    // ======================================
     const from  = params.get("from");   // region / compania / interes
     const value = params.get("value");  // África / grupo / Relax...
 
@@ -77,10 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         breadcrumbEl.innerHTML = html;
     }
 
-    // ======================================
     // DATOS BÁSICOS DEL PACK
-    // ======================================
-
     document.getElementById("pack-nombre").textContent   = pack.nombre;
     document.getElementById("pack-destinos").textContent = "Destinos: " + (pack.destinos || "");
     document.getElementById("pack-pais").textContent     = "País: " + (pack.pais || "");
@@ -99,9 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btnComprar.href = `compra.html?id=${pack.id}`;
     }
 
-    // ======================================
     // LISTA "INCLUYE"
-    // ======================================
     const ulIncluye = document.getElementById("pack-incluye");
     ulIncluye.innerHTML = "";
 
@@ -113,9 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ======================================
     // ITINERARIO
-    // ======================================
     const itCont = document.getElementById("pack-itinerario");
     itCont.innerHTML = "";
 
@@ -131,9 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // =====================================================
     //  EXPERIENCIAS RELACIONADAS (Pack → Experiencias)
-    // =====================================================
 
     let relacionadas = [];
 
@@ -161,9 +150,9 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `).join("");
 
-        // ============================
+
         // GALERÍA — SÍ se muestra
-        // ============================
+
 
         let fotos = relacionadas.flatMap(exp => [
             exp.imagen1,
@@ -197,9 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     } else {
 
-        // ================================================
-        // NO HAY EXPERIENCIAS → SOLO MOSTRAR UN MENSAJE
-        // ================================================
+        // NO HAY EXPERIENCIAS - SOLO MOSTRAR UN MENSAJE
 
         section.style.display = "block"; // mostramos sección
         gallery.style.display = "none";  // ocultamos galería
@@ -214,9 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    // ======================================
     // FAVORITOS
-    // ======================================
 
     const favBtn = document.getElementById("btn-fav");
     const user = getCurrentUser();
@@ -227,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Pintar estado correcto
     syncFavButton(favBtn, pack.id);
 
-    // SI NO hay usuario → mismo comportamiento que quieres
+    // SI NO hay usuario 
     if (!user) {
         favBtn.classList.add("disabled");
 

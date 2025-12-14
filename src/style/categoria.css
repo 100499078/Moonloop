@@ -1,6 +1,4 @@
-/* ===============================
-    VARIABLES 
-================================== */
+/*VARIABLES */
 
 :root {
     --color-cabeceraS: #cec9c9;
@@ -27,9 +25,7 @@ body {
 }
 
 
-/* ===============================
-   HERO DE CATEGORÍA
-================================== */
+/*HERO DE CATEGORÍA*/
 
 .categoria-header {
     position:relative;
@@ -80,9 +76,7 @@ body {
 }
 
 
-/* ===============================
-   DESTACADOS
-================================== */
+/*DESTACADOS*/
 
 .categoria-destacados {
     padding:40px;
@@ -136,9 +130,7 @@ body {
 }
 
 
-/* ===============================
-   GRID DE PACKS
-================================== */
+/*GRID DE PACKS*/
 
 .categoria-todos {
     padding:40px;
@@ -265,9 +257,7 @@ body {
 }
 
 
-/* ===============================
-   SECCIÓN OTRAS OPCIONES
-================================== */
+/* SECCIÓN OTRAS OPCIONES*/
 
 .categoria-otros {
     padding:60px 40px;
@@ -343,9 +333,7 @@ body {
 }
 
 
-/* ===============================
-   BREADCRUMBS
-================================== */
+/* BREADCRUMBS*/
 
 .breadcrumbs-hero {
     padding:20px 5%;

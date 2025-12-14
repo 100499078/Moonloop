@@ -10,9 +10,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ==========================================
     // 1. SELECCIÓN DE ELEMENTOS DEL DOM (HTML)
-    // ==========================================
+
     const trigger = document.getElementById('trigger-buscador'); // La barra falsa del menú
     const closeBtn = document.getElementById('btn-cerrar');      // Botón X para cerrar
     const overlay = document.getElementById('search-overlay');   // El fondo blanco completo
@@ -28,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const containerSugerencias = document.querySelector(".mas-buscados");       // Columna derecha (sugerencias iniciales)
 
     
-    // ==========================================
+  
     // 2. FUNCIÓN PARA CARGAR DESTACADOS DINÁMICOS
-    // ==========================================
+    
     // Esto busca 3 packs específicos en tu base de datos y los pone como sugerencia inicial
     // al abrir el buscador. Si cambias los precios en packs.js, se actualizan aquí solos.
     function cargarDestacados() {
@@ -50,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             packsDestacados = PACKS.slice(0, 3);
         }
 
-        // Generamos el HTML. Usamos <a> para que sean clicables.
+        // Generamos el HTML. 
         gridSugerencias.innerHTML = packsDestacados.map(pack => `
             <a href="pack.html?id=${pack.id}" class="suggestion-card-side" style="text-decoration: none; color: inherit;">
                 <img src="${pack.imagen}" alt="${pack.nombre}">
@@ -66,9 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
     cargarDestacados();
 
 
-    // ==========================================
+
     // 3. LÓGICA DE APERTURA Y CIERRE
-    // ==========================================
+
     
     // Abrir al hacer clic en la lupa
     if (trigger) {
@@ -85,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function cerrarBuscador() {
         overlay.classList.remove('active');
         
-        // OPCIONAL: Limpiar el buscador al cerrar para que la próxima vez esté "fresco"
         if (inputSearch) inputSearch.value = "";
         if (containerResultados) containerResultados.innerHTML = "";
         if (containerSugerencias) containerSugerencias.style.display = "block"; // Volver a mostrar sugerencias
@@ -100,9 +98,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // ==========================================
+    
     // 4. SLIDER DE PRESUPUESTO (REACTIVO)
-    // ==========================================
+    
     if (budgetRange && budgetValue) {
         // Poner el valor inicial
         budgetValue.textContent = budgetRange.value + '€';
@@ -117,9 +115,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // ==========================================
+    
     // 5. HELPER: NORMALIZAR TEXTO (QUITAR TILDES)
-    // ==========================================
+  
     // Convierte "Japón" -> "japon", "África" -> "africa" para que la búsqueda sea flexible.
     function normalizar(texto) {
         if (!texto) return "";
@@ -131,9 +129,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // ==========================================
+
     // 6. FUNCIÓN PRINCIPAL DE BÚSQUEDA
-    // ==========================================
+  
     function ejecutarBusqueda() {
         // Seguridad: Si PACKS no existe, salimos para no dar error
         if (typeof PACKS === 'undefined') return;
@@ -181,9 +179,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // ==========================================
+
     // 7. EVENTOS DE BÚSQUEDA (ACTIVADORES)
-    // ==========================================
+
     
     // Clic en el botón negro "Buscar"
     if (btnBuscar) btnBuscar.addEventListener("click", ejecutarBusqueda);
@@ -192,9 +190,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (inputSearch) inputSearch.addEventListener("input", ejecutarBusqueda);
 
 
-    // ==========================================
+
     // 8. RENDERIZADO (PINTAR EN HTML)
-    // ==========================================
+
     function pintarResultados(lista) {
         if (!containerResultados) return;
 

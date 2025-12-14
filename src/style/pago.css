@@ -138,7 +138,7 @@
     width: auto;
 }
 
-/* RESUMEN PRECIO (ESTILO C: TOTAL MUY DESTACADO) */
+/* RESUMEN PRECIO */
 
 .resumen-precio-box .linea-precio {
     display: flex;
@@ -165,7 +165,6 @@
     color: #000;
 }
 
-/* COLOR EN DESCUENTO */
 
 .descuento-linea span:last-child {
     color: #c0392b;

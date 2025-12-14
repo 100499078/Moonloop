@@ -1,4 +1,3 @@
-
 // LÓGICA DE BOTONES
 function toggleFavorite(buttonElement, packId) {
     const packIdStr = String(packId);
@@ -54,12 +53,11 @@ function updateFavoriteButtons() {
     });
 }
 
-// LÓGICA DE CARGA EN PÁGINA DE PERFIL (Mueve esta función de usuario.js aquí)
+// LÓGICA DE CARGA EN PÁGINA DE PERFIL 
 function loadFavorites(user) {
     const container = document.getElementById("favorites-container");
     if (!container) return;
     
-    // !!! Aquí debes pegar el código completo de loadFavorites que estaba en usuario.js !!!
     if (!user.favorites.length) {
         container.innerHTML = "<p>No tienes favoritos aún.</p>";
         return;
@@ -68,7 +66,7 @@ function loadFavorites(user) {
     container.innerHTML = "";
 
     user.favorites.forEach(id => {
-        const pack = PACKS.find(p => p.id === id); // Asume que PACKS está disponible
+        const pack = PACKS.find(p => p.id === id); 
         if (!pack) return;
 
         container.innerHTML += `

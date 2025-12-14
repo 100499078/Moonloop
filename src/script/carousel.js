@@ -1,4 +1,4 @@
-//CARROUSEL MAIN (main.html)
+//CARROUSEL MAIN (home.html)
 const carousel = document.querySelector(".carousel");
 let autoScroll;
 
@@ -37,7 +37,7 @@ setInterval(showNextPack, 2000);
 // CARROUSEL DESTINOS (destinos.html)
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. CONFIGURACIÓN: Aquí definimos los 5 packs exactos para el carrusel
+    // 1. CONFIGURACIÓN: 5 packs exactos para el carrusel
     const idsDestacados = [
         "AFR004KE",  // 1. KENIA
         "LATAM004CR",   // 2. CR
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let indiceActual = 0;
     let intervaloAuto;
 
-    // --- GENERAR PUNTOS (DOTS) ---
+    
     // Creamos un punto por cada slide para que el usuario vea que son 5
     if (dotsContainer) {
         dotsContainer.innerHTML = slides.map((_, i) => 

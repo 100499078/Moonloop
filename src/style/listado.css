@@ -15,9 +15,7 @@ body {
     margin: 0;
 }
 
-/* ================================
-   BREADCRUMB 
-================================ */
+/* BREADCRUMB  */
 .breadcrumbs-hero {
     padding: 20px 5%;
     background-color: #f9f9f9;
@@ -49,9 +47,7 @@ body {
     font-weight: 700;
 }
 
-/* ================================
-   CONTENEDOR PRINCIPAL
-================================ */
+/* CONTENEDOR PRINCIPAL*/
 #listado-container {
     max-width: 1200px;
     margin: 60px auto;
@@ -65,14 +61,11 @@ body {
     color: var(--negro-premium);
 }
 
-/* ================================
-   SECCIONES DE LISTADO (categorías)
-================================ */
+/* SECCIONES DE LISTADO (categorías)*/
 .categoria-section {
     margin-bottom: 90px;
 }
 
-/* Cabecera como en categoria.css */
 .categoria-header {
     display: flex;
     align-items: center;
@@ -110,7 +103,7 @@ body {
     margin: 0;
 }
 
-/* Botón estilo categoría */
+
 .ver-todo-cat {
     margin-left: auto;
     text-decoration: none;
@@ -131,16 +124,14 @@ body {
     border-color: var(--negro-premium);
 }
 
-/* ================================
-   GRID DE PACKS (ESTILO B)
-================================ */
+/* GRID DE PACKS */
 .packs-categoria {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
 }
 
-/* Tarjeta .experiencia (igual que categoria.css) */
+
 .experiencia {
     background: white;
     border-radius: 10px;
