@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     destacadosContainer.innerHTML = packsFiltrados.slice(0, 2).map((p, index) => `
         <div class="destacado-row ${index % 2 === 1 ? "invertido" : ""}">
-            <img src="${p.imagen}">
+            <img src="${p.imagen}"alt="Viaje a ${p.pais}">
             <div class="destacado-info">
                 <h3>${p.nombre}</h3>
                 <p>${p.descripcion || "Descubre una experiencia inolvidable."}</p>
@@ -206,9 +206,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     grid.innerHTML = packsFiltrados.map(p => `
         <div class="experiencia">
-            <img src="${p.imagen}">
+            <img src="${p.imagen}"alt="Viaje a ${p.pais}">
             <h3>${p.nombre}</h3>
-            <p>${type === "region" ? p.destinos : p.region || p.tipo}</p>
+            <p class=texto>${type === "region" ? p.destinos : p.region || p.tipo}</p>
             <p class= destacado-precio>${p.precio}€</p>
             <div class="acciones">
                 <a class="ver" href="pack.html?id=${p.id}&from=${type}">Ver</a>
@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return `
             <a class="otros-item" 
                href="categoria.html?type=${type}&value=${encodeURIComponent(k)}">
-                <img src="${d.imagen}">
+                <img src="${d.imagen}"alt="ViajeExplora a ${d.nombre}>
                 <div class="overlay"><span class="arrow">→</span></div>
                 <h3>${d.nombre || k}</h3>
             </a>

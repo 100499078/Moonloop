@@ -132,7 +132,7 @@ const EXPERIENCIAS = [
         subtitulo: "Amanecer sobre un cuento de hadas",
         autor: "Daniel y Clara",
         fecha_publicacion: "30/09/2024",
-        pack_asociado: "", // No tenemos pack de Turquía aún, dejamos vacío o creamos uno futuro
+        pack_asociado: "EUR004TQ", 
         imagen1: "images/ex-turquia.jpg",
         imagen2: "images/ex-turquia1.jpg",
         parrafo1: "Levantarse a las 4 de la mañana nunca había tenido tanto sentido. Ver cómo inflan los enormes globos en la oscuridad es el preludio de algo inolvidable. Cuando la cesta se despega del suelo, todo es silencio.",
@@ -255,7 +255,7 @@ const EXPERIENCIAS = [
         subtitulo: "Selva, volcanes y playas paradisíacas",
         autor: "Mónica F.",
         fecha_publicacion: "08/06/2024",
-        pack_asociado: "LATAM005CR",
+        pack_asociado: "LATAM004CR",
         imagen1: "images/ex-costarica.jpg",
         imagen2: "images/ex-costarica1.jpg",
         imagen3: "images/ex-costarica2.jpg",

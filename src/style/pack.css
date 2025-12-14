@@ -40,7 +40,7 @@ body {
     /* Quitamos position: absolute porque ahora es una barra normal */
     padding: 20px 5%; /* Espaciado lateral alineado con el texto del header */
     background-color: #f9f9f9; /* Fondo gris muy suave */
-    color: #666; /* Texto gris oscuro */
+    color: black; 
     font-size: 0.9rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -49,20 +49,20 @@ body {
 }
 
 .breadcrumb a {
-    color: #666; /* Enlaces en gris */
+    color: black; 
     text-decoration: none;
     transition: color 0.3s;
     border-bottom: 1px solid transparent;
 }
 
 .breadcrumb a:hover {
-    color: #000; /* Negro al pasar el ratón */
+    color: #000; 
     border-bottom: 1px solid #000;
 }
 
 .breadcrumb .separator {
     margin: 0 10px;
-    color: #999; /* Separador más clarito */
+    color: black; /* Separador más clarito */
 }
 
 .breadcrumb .actual {

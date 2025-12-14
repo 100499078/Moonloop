@@ -37,7 +37,7 @@
   align-items: flex-end;
   gap: 4px;
   font-size: 0.95rem;
-  color: #777;
+  color: var(--tierra-oscura);
 }
 
 .consejo-container .subtitle {
