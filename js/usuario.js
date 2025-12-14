@@ -84,9 +84,13 @@ function handleRegister() {
 
     users.push(newUser);
     saveUsers(users);
+    alert("Registro exitoso. ¡Bienvenido a Moonloop!");
 
-    alert("Registro completado. Ahora puedes iniciar sesión.");
-    window.location.href = "acceso_user.html";
+    // LOGUEAR AUTOMÁTICAMENTE
+    setCurrentUser(email);
+
+    // REDIRIGIR AL PERFIL
+    window.location.href = "profile.html";
 }
 
 // INICIO DE SESIÓN
@@ -95,7 +99,7 @@ function handleLogin() {
     const password = document.getElementById("password").value;
 
     const users = getUsers();
-    const user = users.find(u => u.email === email && u.password === password);
+    const user = users.find(u => u.email === email);
 
     // Caso 1: No existe el correo
     if (!user) {
