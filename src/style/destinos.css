@@ -4,7 +4,8 @@
     --color-cabecera: #F5F0EB;
     --azul-clarito:   #C3CBD6;  /* Azul muy suave para fondos */    
     --color-texto-principal: #333;  /* Gris oscuro para textos */
-    --color-destacado: #007bff;     /* Azul eléctrico para precios o botones */
+    --azul: #007bff;     /* Azul eléctrico para precios o botones */
+    --color-destacado: #8b5e3b;
     --fondo-overlay: #F6F4F2; /* Blanco casi opaco */
 }
 body {
@@ -352,7 +353,7 @@ body {
 }
 
 #budget-value {
-    color: #007bff;
+    color: var(--color-destacado);
     font-size: 1.3rem;
 }
 
@@ -391,7 +392,7 @@ input[type=range]::-webkit-slider-thumb {
 
 /* --- COLUMNA DERECHA: RESULTADOS / SUGERENCIAS --- */
 .right-panel {
-    width: 400px; /* Ancho fijo */
+    width: 400px; 
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -431,7 +432,7 @@ input[type=range]::-webkit-slider-thumb {
 
 .suggestion-card-side:hover {
     transform: translateX(-5px);
-    border-color: #007bff;
+    border-color: var(--color-destacado);
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
@@ -451,7 +452,7 @@ input[type=range]::-webkit-slider-thumb {
 
 .sug-info span {
     font-size: 0.95rem;
-    color: #007bff;
+    color: var(--color-destacado);
     font-weight: 600;
 }
 
@@ -509,7 +510,7 @@ input[type=range]::-webkit-slider-thumb {
 
 .precio-resultado {
     font-weight: bold;
-    color: #007bff;
+    color: var(--color-destacado);
     font-size: 1.2rem;
     margin-right: 15px;
 }
@@ -546,7 +547,7 @@ input[type=range]::-webkit-slider-thumb {
 
 /* Estilo para el título con enlace */
 .titulo-enlace {
-    text-decoration: none; /* Quita el subrayado típico de los links */
+    text-decoration: none; 
     color: inherit; /* Hereda el color negro/gris del h2, no se pone azul */
     cursor: pointer;
     transition: color 0.3s ease;
@@ -554,7 +555,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .titulo-enlace:hover {
-    color: #007bff; /* Cambia a tu color azul corporativo al pasar el ratón */
+    color: var(--color-destacado); 
     transform: translateX(5px); /* Se mueve un poquito a la derecha */
 }
 
@@ -633,7 +634,7 @@ input[type=range]::-webkit-slider-thumb {
 .price-tag {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #007bff; /* Tu azul corporativo */
+    color: var(--color-destacado); 
     background: rgba(255,255,255,0.9);
     padding: 5px 15px;
     border-radius: 20px;
@@ -713,6 +714,90 @@ input[type=range]::-webkit-slider-thumb {
     transform: scale(1.2);
 }
 
+/* =============================================
+   CORRECCIÓN RESPONSIVE PARA MÓVIL (PEGAR AL FINAL)
+   ============================================= */
+
+@media (max-width: 768px) {
+
+    /* 1. CONTENEDOR: Altura equilibrada */
+    .carousel-container {
+        /* En móvil usamos 70% de la altura de pantalla. 
+           Si ponemos px fijos (ej. 500px) puede ser mucho para móviles pequeños */
+        height: 70vh; 
+        min-height: 450px; /* Asegura que no sea demasiado bajito */
+    }
+
+    /* 2. IMAGEN: Encuadre inteligente */
+    .carousel-slide img {
+        /* 'cover' es obligatorio para no deformar. 
+           Si la foto se ve mal, prueba cambiando 'center' por 'center top' (si son paisajes) */
+        object-fit: cover; 
+        object-position: center; 
+    }
+
+    /* 3. OVERLAY: Más espacio para el texto */
+    .carousel-overlay {
+       
+        padding: 20px 25px 40px 25px; 
+        
+        /* Degradado más oscuro en móvil para asegurar que el texto blanco se lea */
+        background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
+        
+        /* Alineamos todo abajo */
+        align-items: flex-end; 
+    }
+
+    /* 4. TEXTOS: Reducción de tamaños */
+    .carousel-content {
+        width: 100%;
+        max-width: 100%; /* Aprovechar todo el ancho */
+    }
+
+    .carousel-content h3 {
+        font-size: 1.8rem; /* Mucho más pequeño que los 2.5rem de PC */
+        margin-bottom: 8px;
+        line-height: 1.2; /* Separación entre líneas del título */
+    }
+
+    .carousel-content p {
+        font-size: 0.95rem; /* Texto de descripción legible */
+        line-height: 1.4;
+        margin-bottom: 15px;
+        
+        /* TRUCO: Cortar el texto si es muy largo para que no tape los botones */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* 5. BOTONES Y PRECIO: En una sola fila */
+    .carousel-bottom {
+        flex-direction: row; /* Forzamos fila horizontal */
+        justify-content: space-between; /* Uno a cada lado */
+        width: 100%;
+        gap: 10px;
+    }
+
+    .price-tag {
+        font-size: 1.1rem;
+        padding: 8px 15px;
+        white-space: nowrap; /* Evita que el precio se parta */
+    }
+
+    .btn-vermas-carrousel {
+        padding: 10px 0; /* Menos relleno lateral */
+        width: 100%; /* Que ocupe el espacio restante */
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    
+    /* Ocultamos las flechas laterales en móvil porque molestan sobre el texto, 
+       es mejor usar solo los puntos o deslizar (si tienes JS de swipe) */
+    .carousel-btn {
+        display: none;
+    }
+}
 /* Animación simple */
 @keyframes slideUp {
     from { opacity: 0; transform: translateY(20px); }

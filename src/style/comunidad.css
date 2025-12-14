@@ -37,8 +37,8 @@
 }
 
 .tab-btn.active {
-  background-color: var(--azul-clarito);
-  color: #222;
+  background-color: var(--color-destacado);
+  color: white;
 }
 
 /* Layout 2 columnas */
@@ -112,7 +112,7 @@
 
 .exp-content p {
   font-size: 14px;
-  color: #555;
+  color: black;
   margin-bottom: 10px;
 }
 
@@ -124,7 +124,7 @@
 }
 
 .exp-pais {
-  color: #777;
+  color: var(--color-destacado);
 }
 
 .like-btn {
