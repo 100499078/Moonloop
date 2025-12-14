@@ -21,7 +21,7 @@ body {
 .breadcrumbs-hero {
     padding: 20px 5%;
     background-color: #f9f9f9;
-    color: #666;
+    color: #555;
     font-size: 0.9rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -41,7 +41,7 @@ body {
 
 .breadcrumbs-hero .separator {
     margin: 0 10px;
-    color: #999;
+    color: #555;
 }
 
 .breadcrumbs-hero .actual {
@@ -217,12 +217,12 @@ body {
   cursor: pointer;
 
   font-size: 14px;
-  color: #666;
+  color: #555;
 }
 
 .like .heart {
   font-size: 18px;
-  color: #999;
+  color: #555;
   transition: color 0.2s;
 }
 

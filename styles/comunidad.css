@@ -166,7 +166,7 @@
 .sidebar-filtros {
   margin-top: 12px;
   padding-top: 10px;
-  border-top: 1px solid #e0e0e0; /* la línea separadora */
+  border-top: 1px solid #e0e0e0; 
 }
 
 
@@ -255,7 +255,7 @@
   margin-top: 15px;
   margin-bottom: 13px;
   padding-top: 10px;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--color-destacado);
 }
 
 .btn-add-exp {
@@ -266,8 +266,8 @@
   text-align: center;
   padding: 10px 14px;
   border-radius: 999px;
-  background-color: var(--azul-clarito);
-  color: #222;
+  background-color: var(--color-destacado);
+  color: white;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
@@ -275,14 +275,14 @@
 }
 
 .btn-add-exp:hover {
-  background-color: #8ac3e8; /* tono un poco más oscuro del azul clarito */
+  background-color: #c08a5b; 
   transform: translateY(-1px);
 }
 
 .sidebar-exp-text {
   margin-top: 13px;
   padding-top: 10px;
-  border-top: 1px solid #e0e0e0; /* misma línea suave que arriba */
+  border-top: 1px solid var(--color-destacado); 
   font-size: 13px;
   color: #555;
   line-height: 1.4;

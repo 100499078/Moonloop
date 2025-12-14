@@ -235,12 +235,12 @@ body {
   cursor: pointer;
 
   font-size: 14px;
-  color: #666;
+  color: #555;
 }
 
 .like .heart {
   font-size: 18px;
-  color: #999;
+  color: #555;
   transition: color 0.2s;
 }
 
@@ -304,6 +304,7 @@ body {
     object-fit:cover;
     filter:brightness(0.7);
     transition:0.3s;
+    background-color: #333;
 }
 
 .grid-otros a:hover img {
@@ -349,7 +350,7 @@ body {
 .breadcrumbs-hero {
     padding:20px 5%;
     background:#f9f9f9;
-    color:#666;
+    color:#555;
     font-size:0.9rem;
     text-transform:uppercase;
     border-bottom:1px solid #eee;
@@ -368,7 +369,7 @@ body {
 
 .breadcrumbs-hero .separator {
     margin:0 10px;
-    color:#999;
+    color:#555;
 }
 
 .breadcrumbs-hero .actual {

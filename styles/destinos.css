@@ -204,7 +204,7 @@ body {
 }
 
 .placeholder-text {
-    color: #888;
+    color: #555;
     font-size: 18px;
 }
 
@@ -318,7 +318,7 @@ body {
 }
 
 .real-search-box input::placeholder {
-    color: #ccc;
+    color: #666;
     font-weight: 300;
 }
 
@@ -801,7 +801,8 @@ input[type=range]::-webkit-slider-thumb {
     cursor: pointer;
     text-decoration: none;
     color: #fff;
-    display: block; /* Asegura que ocupen el espacio de la celda */
+    display: block; 
+    background-color: #000
 }
 
 /* --- IMÁGENES --- */
