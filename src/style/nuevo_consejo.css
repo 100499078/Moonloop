@@ -135,11 +135,93 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .new-exp-main {
-    padding: 0 20px;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 14px;
   }
 
-  .new-exp-inner {
-    max-width: 100%;
+  .logo-section {
+    margin-bottom: 6px;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-menu ul li a {
+    font-size: 16px;
+  }
+
+  .language-section {
+    margin-top: 8px;
+  }
+  .breadcrumbs-hero {
+    padding: 12px 20px;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* BREADCRUMBS */
+  .breadcrumbs-hero {
+    padding: 10px 14px;
+    font-size: 0.75rem;
+  }
+
+  /* MAIN */
+  .new-exp-main {
+    margin: 20px auto 40px;
+    padding: 0 14px;
+  }
+
+  /* HERO */
+  .new-exp-hero {
+    padding: 18px 16px;
+    border-radius: 10px;
+  }
+
+  .new-exp-title {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .new-exp-subtitle {
+    font-size: 14px;
+  }
+
+  .new-exp-intro {
+    font-size: 13px;
+  }
+
+  /* FORMULARIO */
+  .new-exp-form-wrapper {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .new-exp-form label {
+    font-size: 13px;
+  }
+
+  .new-exp-form input[type="text"],
+  .new-exp-form textarea {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  /* BOTÓN */
+  .btn-submit-exp {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
   }
 }

@@ -158,8 +158,77 @@ body {
 
 
 @media (max-width: 768px) {
+
+    .otrosrincones-section {
+        padding: 60px 25px;
+    }
+
+    .otrosrincones-section h2 {
+        font-size: 26px;
+    }
+
+    .otrosrincones-section p {
+        font-size: 15px;
+    }
+
     #world-map {
         height: 380px;
     }
+
+    #continent-filters {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
 }
 
+
+
+@media (max-width: 480px) {
+
+    .otrosrincones-section {
+        padding: 40px 16px;
+        border-radius: 0; /* sensación full-width en móvil */
+    }
+
+    .otrosrincones-section h2 {
+        font-size: 22px;
+    }
+
+    .otrosrincones-section p {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    /* MAPA */
+    #world-map {
+        height: 300px;
+        border-radius: 12px;
+    }
+
+    /* FILTROS */
+    #continent-filters {
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    #continent-filters button {
+        font-size: 14px;
+    }
+
+    /* POPUPS */
+    .popup-card {
+        width: 200px;
+    }
+
+    .popup-title {
+        font-size: 16px;
+    }
+
+    .popup-subtitle {
+        font-size: 13px;
+    }
+
+    .popup-description {
+        font-size: 12px;
+    }
+}

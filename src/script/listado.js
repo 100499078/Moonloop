@@ -11,22 +11,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const MAPS = {
         region: {
-            "África": "../images/africa.jpg",
-            "Asia": "../images/ASIA.jpg",
-            "Europa": "../images/europa.jpg",
-            "Latinoamérica": "../images/latam.jpg",
-            "Norteamérica": "../images/usa.jpg",
-            "Pacífico": "../images/pacifico.jpg"
+            "África": "images/africa.jpg",
+            "Asia": "images/ASIA.jpg",
+            "Europa": "images/europa.jpg",
+            "Latinoamérica": "images/latam.jpg",
+            "Norteamérica": "images/usa.jpg",
+            "Pacífico": "images/pacifico.jpg"
         },
         compania: {
-            "solo": "../images/solo.jpg",
-            "pareja": "../images/couple.jpg",
-            "grupo": "../images/group.jpg"
+            "solo": "images/solo.jpg",
+            "pareja": "images/couple.jpg",
+            "grupo": "images/group.jpg"
         },
         interes: {
-            "Aventura": "../images/aventura.jpg",
-            "Cosmopolita": "../images/cosmopolita.jpg",
-            "Relax": "../images/relax.jpg"
+            "Aventura": "images/aventura.jpg",
+            "Cosmopolita": "images/cosmopolita.jpg",
+            "Relax": "images/relax.jpg"
         }
     };
 

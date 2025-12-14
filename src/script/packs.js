@@ -9,7 +9,7 @@ const PACKS = [
         compania: "pareja",
         interes: "Relax",
         precio: 4500,
-        imagen: "../images/pack-sabana.jpg",
+        imagen: "images/pack-sabana.jpg",
         descripcion: "Experimenta la majestuosidad de la sabana africana con alojamiento en lodges de lujo y safaris exclusivos. Disfruta de Tanzania como no la has visto nunca antes, con la comodidad y el estilo que mereces.",
         incluye: [
             "Alojamiento en lodges de lujo",
@@ -41,7 +41,7 @@ const PACKS = [
         duracion: "7 días",
         interes: "Aventura",
         precio: 1080,
-        imagen: "../images/pack-sudafrica.jpg",
+        imagen: "images/pack-sudafrica.jpg",
         descripcion: "Descubre la majestuosidad de las Cataratas Victoria y la vida salvaje de Zimbawe en este emocionante paquete de 7 días. Desde increíbles safaris hasta vistas impresionantes, esta aventura africana te dejará sin aliento.",
         incluye: [
             "Alojamiento en hoteles seleccionados",
@@ -71,7 +71,7 @@ const PACKS = [
         duracion: "5 días",
         interes: "Cosmopolita",
         precio: 950,
-        imagen: "../images/pack-marrakech.jpg",
+        imagen: "images/pack-marrakech.jpg",
         descripcion: "Sumérgete en la vibrante cultura de Marrakech con nuestro paquete de 5 días. Explora los zocos, palacios y jardines de esta ciudad mágica, y descubre la rica historia y tradiciones de Marruecos.",
         incluye: [
             "Alojamiento en riads tradicionales",
@@ -99,7 +99,7 @@ const PACKS = [
         duracion: "9 días",
         interes: "Aventura",
         precio: 2900,
-        imagen: "../images/pack-migracion.jpg",
+        imagen: "images/pack-migracion.jpg",
         descripcion: "Vive la experiencia única de la Gran Migración en Kenia con nuestro paquete de 9 días. Observa de cerca a millones de animales en su viaje anual a través de la sabana africana, acompañado por guías expertos y alojándote en campamentos en una ubicación increíble.",
         incluye: [
             "Alojamiento en campamentos de safari",
@@ -131,7 +131,7 @@ const PACKS = [
         duracion: "6 días",
         interes: "Aventura",
         precio: 480,
-        imagen: "../images/pack-nilo.jpg",
+        imagen: "images/pack-nilo.jpg",
         descripcion: "Explora los antiguos misterios de Egipto con nuestro paquete de 6 días. Desde las majestuosas pirámides de Giza hasta los tesoros del Museo Egipcio, este viaje te llevará a través de la rica historia y cultura del Nilo.",
         incluye: [
             "Alojamiento en hoteles de 4 estrellas",
@@ -162,7 +162,7 @@ const PACKS = [
         compania: "grupo",
         interes: "Cosmopolita",
         precio: 1850,
-        imagen: "../images/pack-japon.jpg",
+        imagen: "images/pack-japon.jpg",
         descripcion: "Descubre la fascinante mezcla de tradición y modernidad en Japón con nuestro paquete de 10 días. Sumérgete en un viaje de contrastes donde el neón de Tokyo se funde con la paz de los jardines Zen de Kyoto. Una experiencia sensorial única para los amantes de la cultura y la tecnología.",
         incluye: [
             "Alojamiento seleccionado en zonas céntricas (3-4 estrellas)",
@@ -195,7 +195,7 @@ const PACKS = [
         compania: "pareja",
         interes: "Cosmopolita",
         precio: 1850,
-        imagen: "../images/pack-seoul.jpg",
+        imagen: "images/pack-seoul.jpg",
         descripcion: "Explora la vibrante cultura y tecnología de Corea del Sur. Desde los palacios reales de la bulliciosa Seúl hasta las hermosas playas de Busan, pasando por la naturaleza del monte Seorak. Un viaje lleno de K-Pop, historia y barbacoas coreanas.",
         incluye: [
             "Hoteles 4 estrellas céntricos",
@@ -225,7 +225,7 @@ const PACKS = [
         compania: "pareja",
         interes: "Relax",
         precio: 2400,
-        imagen: "../images/pack-bali.jpg",
+        imagen: "images/pack-bali.jpg",
         descripcion: "Desconecta del mundo en la isla de los dioses. Un equilibrio perfecto entre la selva espiritual de Ubud y los atardeceres de lujo en la costa. Yoga, masajes balineses y templos sobre acantilados te esperan.",
         incluye: [
             "Villas privadas con piscina en Ubud",
@@ -256,7 +256,7 @@ const PACKS = [
         compania: "solo",
         interes: "Aventura",
         precio: 1450,
-        imagen: "../images/pack-nepal.jpg",
+        imagen: "images/pack-nepal.jpg",
         descripcion: "Toca el cielo en la cordillera más alta del mundo. Nepal ofrece una espiritualidad que se respira en cada rincón, desde el caos místico de Katmandú hasta la paz absoluta de los lagos de Pokhara a los pies del Annapurna.",
         incluye: [
             "Vuelos escénicos internos",
@@ -287,7 +287,7 @@ const PACKS = [
         compania: "solo",
         interes: "Cosmopolita",
         precio: 550,
-        imagen: "../images/pack-bangkok.jpg",
+        imagen: "images/pack-bangkok.jpg",
         descripcion: "Una inmersión rápida e intensa en el corazón del sudeste asiático. Descubre el caos organizado de Bangkok, sus templos dorados, sus mercados flotantes y las ruinas antiguas de la capital histórica de Siam.",
         incluye: [
             "Hoteles céntricos cerca del Skytrain",
@@ -315,7 +315,7 @@ const PACKS = [
         compania: "grupo",
         interes: "Cosmopolita",
         precio: 1700,
-        imagen: "../images/pack-vietnam.jpg",
+        imagen: "images/pack-vietnam.jpg",
         descripcion: "Vietnam es un estallido de sensaciones. Navega por las aguas esmeralda de Ha Long Bay, pasea bajo los farolillos de seda de Hoi An y sumérgete en el bullicio de las motos y el café de huevo en Hanoi.",
         incluye: [
             "Crucero nocturno en Ha Long Bay (Pensión completa)",
@@ -345,7 +345,7 @@ const PACKS = [
         compania: "pareja",
         interes: "Relax",
         precio: 2500,
-        imagen: "../images/pack-filipinas.jpg",
+        imagen: "images/pack-filipinas.jpg",
         descripcion: "El paraíso existe y está en Palawan. Olvídate del reloj saltando de isla en isla (Island Hopping), nadando en lagunas de color turquesa imposible y disfrutando de atardeceres que parecen pintados a mano.",
         incluye: [
             "Vuelos internos Manila - El Nido - Coron",
@@ -376,7 +376,7 @@ const PACKS = [
         compania: "grupo",
         interes: "Aventura",
         precio: 450,
-        imagen: "../images/pack-india.jpg",
+        imagen: "images/pack-india.jpg",
         descripcion: "Un viaje intenso a la India más monumental. El caos hipnótico de Delhi, la belleza eterna del Taj Mahal al amanecer y el color rosa de los palacios de los Marajás en Jaipur.",
         incluye: [
             "Conductor privado y vehículo con A/C",
@@ -405,7 +405,7 @@ const PACKS = [
         compania: "grupo",
         interes: "Cosmopolita",
         precio: 1500,
-        imagen: "../images/pack-eurotrip.jpg",
+        imagen: "images/pack-eurotrip.jpg",
         descripcion: "Sumérgete en la historia y la fiesta de Centroeuropa. Tres capitales imperiales unidas por tren: el vanguardismo de Berlín, la magia medieval de Praga y la elegancia nocturna de Budapest. El viaje definitivo para espíritus jóvenes.",
         incluye: [
             "Pase de tren Interrail (o billetes individuales)",
@@ -437,7 +437,7 @@ const PACKS = [
         compania: "solo",
         interes: "Aventura",
         precio: 2200,
-        imagen: "../images/pack-islandia.jpg",
+        imagen: "images/pack-islandia.jpg",
         descripcion: "Una expedición a la tierra de hielo y fuego. Conduce a través de campos de lava, camina detrás de cascadas rugientes y busca auroras boreales bailando sobre glaciares milenarios. Naturaleza en su estado más puro y salvaje.",
         incluye: [
             "Alquiler de coche 4x4 con seguro a todo riesgo",
@@ -465,7 +465,7 @@ const PACKS = [
         compania: "solo",
         interes: "Relax",
         precio: 400,
-        imagen: "../images/pack-albania.jpg",
+        imagen: "images/pack-albania.jpg",
         descripcion: "Descubre la última frontera de Europa. Albania combina playas que rivalizan con las Maldivas, ruinas griegas sin multitudes y una hospitalidad que te hará sentir en casa. Un destino auténtico y económico que no permanecerá secreto mucho tiempo.",
         incluye: [
             "Hoteles boutique con desayuno",
@@ -493,7 +493,7 @@ const PACKS = [
         compania: "grupo",
         interes: "Aventura",
         precio: 1300,
-        imagen: "../images/pack-turquia.jpg",
+        imagen: "images/pack-turquia.jpg",
         descripcion: "Explora la encrucijada de culturas entre Europa y Asia. Desde los bazares y mezquitas de Estambul hasta los paisajes lunares de Capadocia y las piscinas termales de Pamukkale. Un viaje lleno de historia, aventura y sabores exóticos.",
         incluye: [
             "Vuelos internos Estambul - Capadocia - Denizli - Estambul",
@@ -524,7 +524,7 @@ const PACKS = [
         compania: "grupo",
         interes: "Relax",
         precio: 1250,
-        imagen: "../images/pack-cafe.jpg",
+        imagen: "images/pack-cafe.jpg",
         descripcion: "Despierta tus sentidos con el aroma del mejor café del mundo. Recorre las verdes colinas del Eje Cafetero, descubre palmas de cera gigantes y vive la transformación urbana de Medellín. Un viaje de sabores, naturaleza y pura calidez humana.",
         incluye: [
             "Cata de café premium en hacienda tradicional",
@@ -556,7 +556,7 @@ const PACKS = [
         compania: "grupo",
         interes: "Aventura",
         precio: 2100,
-        imagen: "../images/pack-maya.jpg",
+        imagen: "images/pack-maya.jpg",
         descripcion: "Sigue los pasos de una civilización perdida a través de dos países. Adéntrate en la selva para descubrir las pirámides de Tikal y Palenque, y termina relajándote en las aguas turquesas del Caribe mexicano. Arqueología y paraíso en un solo viaje.",
         incluye: [
             "Transporte privado con cruce de fronteras",
@@ -588,7 +588,7 @@ const PACKS = [
         compania: "grupo",
         interes: "Cosmopolita",
         precio: 1950,
-        imagen: "../images/pack-rio.jpg",
+        imagen: "images/pack-rio.jpg",
         descripcion: "Siente el pulso de Sudamérica en sus dos ciudades más icónicas. De la samba y las playas de Río al tango y la elegancia europea de Buenos Aires. Un viaje de contrastes, pasión, fútbol y gastronomía de primer nivel.",
         incluye: [
             "Vuelo internacional Río - Buenos Aires",
@@ -619,7 +619,7 @@ const PACKS = [
         compania: "pareja",
         interes: "Relax",
         precio: 2300,
-        imagen: "../images/pack-costarica.jpg",
+        imagen: "images/pack-costarica.jpg",
         descripcion: "Desconecta del estrés y reconecta con la naturaleza más pura. Navega por los canales amazónicos de Tortuguero, camina entre las nubes en Monteverde y relájate bajo el volcán Arenal. El destino perfecto para parejas amantes de lo verde.",
         incluye: [
             "Alojamiento en Eco-Lodges sostenibles",
@@ -649,7 +649,7 @@ const PACKS = [
         compania: "pareja",
         interes: "Aventura",
         precio: 3400,
-        imagen: "../images/pack-patagonia.jpg",
+        imagen: "images/pack-patagonia.jpg",
         descripcion: "Un viaje de extremos: del hielo del sur al fuego del norte. Enfréntate a los vientos de la Patagonia en Torres del Paine y contempla los cielos más limpios del planeta en el desierto de Atacama. Contrastes que te dejarán sin aliento.",
         incluye: [
             "Vuelos internos Santiago - Punta Arenas - Calama",
@@ -680,7 +680,7 @@ const PACKS = [
         compania: "grupo",
         interes: "Aventura",
         precio: 2150,
-        imagen: "../images/pack-peru.jpg",
+        imagen: "images/pack-peru.jpg",
         descripcion: "Descubre el legado de una de las mayores civilizaciones de la historia. Desde la gastronomía de clase mundial en Lima hasta la magia de Machu Picchu perdida entre las nubes de los Andes. Historia viva en cada piedra.",
         incluye: [
             "Tren Vistadome (panorámico) a Machu Picchu",
@@ -709,7 +709,7 @@ const PACKS = [
         compania: "pareja",
         interes: "Cosmopolita",
         precio: 3200,
-        imagen: "../images/pack-luces.jpg",
+        imagen: "images/pack-luces.jpg",
         descripcion: "Un viaje urbano por las metrópolis que definieron el siglo XX. Rascacielos infinitos en Manhattan, historia fundacional en Boston y arquitectura de vanguardia en la ventosa Chicago. Cultura, jazz y estilo en la Costa Este y Medio Oeste.",
         incluye: [
             "CityPASS (Entradas a Empire State, museos, etc.)",
@@ -738,7 +738,7 @@ const PACKS = [
         compania: "grupo",
         interes: "Aventura",
         precio: 3500,
-        imagen: "../images/pack-ruta66.jpg",
+        imagen: "images/pack-ruta66.jpg",
         descripcion: "Más que un viaje, un mito americano. Recorre los tramos más icónicos del oeste, desde los neones del desierto en Las Vegas hasta el muelle de Santa Mónica, pasando por la inmensidad del Gran Cañón. Roadtrip puro.",
         incluye: [
             "Alquiler de coche/minivan o autobús de lujo",
@@ -770,7 +770,7 @@ const PACKS = [
         compania: "solo",
         interes: "Relax",
         precio: 2900,
-        imagen: "../images/pack-fiji.jpg",
+        imagen: "images/pack-fiji.jpg",
         descripcion: "Entra en el 'Fiji Time', donde las prisas no existen. Un refugio tropical en el Pacífico Sur con aguas turquesas, ceremonias tradicionales de Kava y la hospitalidad más cálida del mundo. El lugar perfecto para desconectar de todo.",
         incluye: [
             "Traslados en catamarán a las islas",
@@ -800,7 +800,7 @@ const PACKS = [
         compania: "grupo",
         interes: "Aventura",
         precio: 2900,
-        imagen: "../images/pack-maori.jpg",
+        imagen: "images/pack-maori.jpg",
         descripcion: "Un viaje a la Tierra Media y al corazón de la cultura geotérmica. Camina por los escenarios de 'El Señor de los Anillos', maravíllate con géiseres activos y sumérgete en las tradiciones ancestrales del pueblo Maorí.",
         incluye: [
             "Entrada al set de rodaje de Hobbiton",
@@ -832,7 +832,7 @@ const PACKS = [
         compania: "pareja",
         interes: "Cosmopolita",
         precio: 3100,
-        imagen: "../images/pack-sidney.jpg",
+        imagen: "images/pack-sidney.jpg",
         descripcion: "El estilo de vida 'Aussie' en su máxima expresión. Combina la sofisticación icónica de la Ópera de Sídney con el ambiente surfero relajado de Bondi y la diversión sin fin de Gold Coast. Un viaje de contrastes costeros.",
         incluye: [
             "Visita guiada por dentro de la Ópera de Sídney",
@@ -862,7 +862,7 @@ const PACKS = [
         compania: "pareja",
         interes: "Relax",
         precio: 2100,
-        imagen: "../images/pack-panama.jpg",
+        imagen: "images/pack-panama.jpg",
         descripcion: "Descubre el secreto mejor guardado de Centroamérica. Navega por el archipiélago de San Blas (Guna Yala), donde hay una isla para cada día del año, explora manglares llenos de vida y contempla la obra de ingeniería del Canal. Un viaje de contrastes entre la selva y el rascacielos.",
         incluye: [
             "Alojamiento en cabañas sobre el agua (Overwater)",
@@ -893,7 +893,7 @@ const PACKS = [
         compania: "solo",
         interes: "Aventura",
         precio: 2800,
-        imagen: "../images/pack-canada.jpg",
+        imagen: "images/pack-canada.jpg",
         descripcion: "Respira el aire más puro del planeta. Una ruta escénica a través de las Montañas Rocosas canadienses, visitando lagos de un color turquesa irreal como el Louise y el Moraine, glaciares accesibles y bosques infinitos donde es fácil ver osos y alces.",
         incluye: [
             "Alquiler de coche tipo SUV o Camper",
@@ -925,7 +925,7 @@ const PACKS = [
         compania: "grupo",
         interes: "Aventura",
         precio: 3600,
-        imagen: "../images/pack-groenlandia.jpg",
+        imagen: "images/pack-groenlandia.jpg",
         descripcion: "El viaje definitivo para los verdaderos exploradores. Navega entre icebergs del tamaño de rascacielos en la Bahía de Disko, camina sobre el casquete polar y conoce la cultura Inuit. Un destino remoto donde el silencio se escucha.",
         incluye: [
             "Vuelos desde Copenhague o Reikiavik",
@@ -954,7 +954,7 @@ const PACKS = [
         compania: "grupo",
         interes: "Aventura",
         precio: 2950,
-        imagen: "../images/pack-galapagos.jpg",
+        imagen: "images/pack-galapagos.jpg",
         descripcion: "Un museo de historia natural vivo. Nada con leones marinos juguetones, camina entre tortugas gigantes centenarias y observa piqueros de patas azules. Las 'Islas Encantadas' te cambiarán la vida.",
         incluye: [
             "Vuelos desde Quito/Guayaquil a Galápagos",

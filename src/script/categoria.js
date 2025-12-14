@@ -20,27 +20,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const REGIONES = {
         "África": {
             descripcion: "Explora la cuna de la humanidad: safaris, desiertos y culturas vibrantes.",
-            imagen: "../images/africa.jpg"
+            imagen: "images/africa.jpg"
         },
         "Asia": {
             descripcion: "Templos milenarios, megaciudades futuristas y paraísos tropicales.",
-            imagen: "../images/ASIA.jpg"
+            imagen: "images/ASIA.jpg"
         },
         "Europa": {
             descripcion: "Historia, arte y ciudades icónicas.",
-            imagen: "../images/europa.jpg"
+            imagen: "images/europa.jpg"
         },
         "Latinoamérica": {
             descripcion: "Selvas, montañas y culturas ancestrales.",
-            imagen: "../images/latam.jpg"
+            imagen: "images/latam.jpg"
         },
         "Norteamérica": {
             descripcion: "Rascacielos, rutas míticas y naturaleza salvaje.",
-            imagen: "../images/usa.jpg"
+            imagen: "images/usa.jpg"
         },
         "Pacífico": {
             descripcion: "Islas paradisíacas y culturas polinesias.",
-            imagen: "../images/pacifico.jpg"
+            imagen: "images/pacifico.jpg"
         }
     };
 
@@ -48,32 +48,32 @@ document.addEventListener("DOMContentLoaded", () => {
         "solo": {
             nombre: "Viajar Solo",
             descripcion: "Libertad total y experiencias para el autodescubrimiento.",
-            imagen: "../images/compania_solo.webp"
+            imagen: "images/compania_solo.webp"
         },
         "pareja": {
             nombre: "Viajar en Pareja",
             descripcion: "Escapadas románticas y momentos inolvidables.",
-            imagen: "../images/compania_pareja.jpg"
+            imagen: "images/compania_pareja.jpg"
         },
         "grupo": {
             nombre: "Viajar en Grupo",
             descripcion: "Diversión y experiencias compartidas.",
-            imagen: "../images/compania_grupo.avif"
+            imagen: "images/compania_grupo.avif"
         }
     };
 
     const INTERESES = {
         "Aventura": {
             descripcion: "Naturaleza, adrenalina y experiencias intensas.",
-            imagen: "../images/aventura.jpg"
+            imagen: "images/aventura.jpg"
         },
         "Cosmopolita": {
             descripcion: "Arte, cultura y ciudades vibrantes.",
-            imagen: "../images/cosmopolita.jpg"
+            imagen: "images/cosmopolita.jpg"
         },
         "Relax": {
             descripcion: "Descanso, bienestar y paraísos tranquilos.",
-            imagen: "../images/relax.jpg"
+            imagen: "images/relax.jpg"
         }
     };
 

@@ -4,7 +4,7 @@
     --tierra: #c08a5b;
     --tierra-oscura: #8b5e3b;
     --texto: #444;
-
+}
 
 /* Fondo general blanco */
 body {
@@ -119,20 +119,7 @@ body {
   transform: translateY(-1px);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .new-exp-main {
-    padding: 0 20px;
-  }
 
-  .new-exp-inner {
-    max-width: 100%;
-  }
-
-  .photos-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* Caja arena única */
 .new-exp-hero {
@@ -180,4 +167,95 @@ body {
 .breadcrumbs-hero a { text-decoration: none; color: #666; }
 .separator { margin: 0 10px; }
 
+@media (max-width: 768px) {
+
+  .new-exp-main {
+    margin: 40px auto 60px;
+    padding: 0 20px;
+  }
+
+  .new-exp-inner {
+    max-width: 100%;
+  }
+
+  /* HERO */
+  .new-exp-hero {
+    padding: 20px 22px;
+  }
+
+  .new-exp-title {
+    font-size: 26px;
+  }
+
+  .new-exp-subtitle {
+    font-size: 15px;
+  }
+
+  /* FORMULARIO */
+  .new-exp-form-wrapper {
+    padding: 18px 20px;
+  }
 }
+@media (max-width: 480px) {
+
+  /* CONTENEDOR GENERAL */
+  .new-exp-main {
+    margin: 20px auto 40px;
+    padding: 0 14px;
+  }
+
+  /* BREADCRUMBS */
+  .breadcrumbs-hero {
+    padding: 12px 14px;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+  }
+
+  /* HERO */
+  .new-exp-hero {
+    padding: 18px 16px;
+    border-radius: 10px;
+  }
+
+  .new-exp-title {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .new-exp-subtitle {
+    font-size: 14px;
+  }
+
+  .new-exp-intro {
+    font-size: 13px;
+  }
+
+  /* FORMULARIO */
+  .new-exp-form-wrapper {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .new-exp-form label {
+    font-size: 13px;
+  }
+
+  .new-exp-form input[type="text"],
+  .new-exp-form textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* BOTÓN */
+  .btn-submit-exp {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  /* GRID DE FOTOS (solo nueva_experiencia) */
+  .photos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -195,7 +195,7 @@ function loadPurchases(user) {
 
         container.innerHTML += `
             <div class="purchase-card">
-                <img class="purchase-img" src="${p.imagen || '../images/default.jpg'}" alt="${p.packName}">
+                <img class="purchase-img" src="${p.imagen || 'images/default.jpg'}" alt="${p.packName}">
                 
                 <div class="purchase-info">
                     <h3>${p.packName}</h3>
