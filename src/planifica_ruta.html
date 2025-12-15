@@ -58,7 +58,10 @@
 
                 <!-- 2. Continentes - CON BOCADILLO DE SELECCIÓN -->
                 <div class="campo-formulario">
-                    <label for="continente-select">¿A qué continente(s) te gustaría viajar?</label>
+                    <p class="label-formulario">
+                    ¿A qué continente(s) te gustaría viajar?
+                    </p>
+                    
                     <div class="bocadillo-seleccion">
                         <div class="bocadillo-caja">
                             <div class="bocadillo-texto" id="bocadillo-texto">Selecciona continente(s)</div>
@@ -143,28 +146,29 @@
                 <!-- 5. Presupuesto -->
                 <div class="campo-formulario">
                     <label for="presupuesto">¿Cuál es el presupuesto que tienes?</label>
+                    <input type="number" id="presupuesto" name="presupuesto">
                     
                     <!-- Contenedor del slider de presupuesto -->
                     <div class="budget-filter-container">
-                        <label for= "buget-value">
-                            Presupuesto máximo: 
+
+                        <label for="presupuesto-slider">
+                            Presupuesto máximo:
                             <span id="budget-value">5000€</span>
                         </label>
-                        
-                        <!-- Slider único -->
-                        <label for="presupuesto-slider"> 500€
-                        <input type="range" 
+
+                        <input 
+                            type="range" 
                             id="presupuesto-slider" 
                             min="500" 
                             max="5000" 
                             value="5000" 
                             step="100">
-                        </label>
-                 
                     </div>
                     
                     <p class="mensaje-presupuesto">Haremos lo posible por ajustarnos a tu presupuesto</p>
                 </div>
+            </section>
+        </div>
 
         <!-- Formulario de contacto -->
         <section class="formulario-contacto">
@@ -234,13 +238,13 @@
                     <div class="calendarios-dobles">
                         <!-- Mes 1 -->
                         <div class="calendario-mes">
-                            <h4 id="mes1-titulo"></h4>
+                            <h4 id="mes1-titulo">Mes1</h4>
                             <table class="calendario" id="calendario1"></table>
                         </div>
                         
                         <!-- Mes 2 -->
                         <div class="calendario-mes">
-                            <h4 id="mes2-titulo"></h4>
+                            <h4 id="mes2-titulo">Mes2</h4>
                             <table class="calendario" id="calendario2"></table>
                         </div>
                     </div>

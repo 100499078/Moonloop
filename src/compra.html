@@ -50,7 +50,7 @@
             <h1>Finaliza tu compra</h1>
 
             <div class="pack-resumen-box">
-                <img id="pack-img" src="" alt="Imagen del pack" class="pack-img">
+                <img id="pack-img" src="images/default.png" alt="Imagen del pack" class="pack-img">
                 <div class="pack-info">
                     <h2 id="pack-titulo">Cargando...</h2>
                     <p class="precio"><span id="pack-precio"></span> €</p>
@@ -92,8 +92,10 @@
                 </div>
 
                 <!-- Alergias -->
-                <label for="alergias">
-                <h3>Alergias o intolerancias</h3>
+                <h3>Alergia</h3>
+                <label>
+                <input type="checkbox" name="alergia">
+                Sin gluten
                 </label>
 
                 <textarea
@@ -119,13 +121,13 @@
 
                         <!-- Mes 1 -->
                         <div class="calendario-mes">
-                            <h4 id="mes1-titulo"></h4>
+                            <h4 id="mes1-titulo">Mes1</h4>
                             <table class="calendario" id="calendario1"></table>
                         </div>
 
                         <!-- Mes 2 -->
                         <div class="calendario-mes">
-                            <h4 id="mes2-titulo"></h4>
+                            <h4 id="mes2-titulo">Mes2</h4>
                             <table class="calendario" id="calendario2"></table>
                         </div>
 
